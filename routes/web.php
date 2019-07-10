@@ -28,3 +28,4 @@ Route::get('/admin', function () {
 Route::get('/inserir/comercio', function () {
     return view('inserir_comercio');
 }) ->middleware('auth');
+Route::get('/inserirComercio', 'AdminController@inserirComercio');

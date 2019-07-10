@@ -13,6 +13,16 @@
     <title>Document</title>
 </head>
 <body>
+<div class="panel-body">
+    @if(count($errors) > 0)
+        <div class="alert alert-danger">
+            <ul>
+            @foreach($errors->all() as $error)
+             <li>{{$error}}</li>  
+            @endforeach          
+            </ul>
+        </div>
+        @endif
 <br><br><br><br>
 <div class="container">
     <form method="get" action="/inserirComercio">
@@ -45,8 +55,8 @@
 
         <label>
         <div class="form-group">   
-        <label for="wpp" class="Texto">WhatsApp</label>
-        <input type="text" class="Texto form-control" name="wpp">
+        <label for="telefone" class="Texto">Telefone</label> 
+        <input type="text" class="Texto form-control" name="telefone"><input type="checkbox" name= "whats" value="1"> WhastApp 
         </div>
 
         <label>
@@ -62,15 +72,9 @@
         </div>
 
         <label>
-        <div class="form-group">   
-        <input type="radio" name= "capa" value="1">Sim
-        <input type="radio" name= "capa" value="0">Não
-        </div>
-        
-        <label>
-        <div class="form-group">   
-        <label for="atividade" class="Texto">Atividade</label>
-        <input type="text" class="Texto form-control" name= "atividade">
+        <div class="form-group">
+        Capa <input type="radio" name= "capa" value="1">Sim
+        <input type="radio" name= "capa" value="0" checked>Não
         </div>
 
         <button type="submit" class="btn btn-primary" style="background-color: greelight;border-color: greenlight;" >Enviar Garai</button>
