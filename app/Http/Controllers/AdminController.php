@@ -16,10 +16,17 @@ class AdminController extends Controller
 
         $this->validate($request,[
             'nome' => 'required',
-            'capa' => 'required'
+            'capa' => 'required',
+            'banner.*' => 'image|mimes:jpg,png,gif,jpeg|max:2048',
+            'icone.*' => 'image|mimes:jpg,png,gif,jpeg'
         ],[
             'nome.required' => 'Insira o nome do comércio',
             'capa.required' => 'Selecione uma opção para capa',
+            'banner.image' => 'O banner principal precisa ser uma imagem',
+            'banner.mimes' => 'O banner precisa estar no formato jpg, jpeg, png ou gif',
+            'icone.image' => 'A icone principal precisa ser uma imagem',
+            'icone.mimes' => 'A icone precisa estar no formato jpg, jpeg, png ou gif',
+            'banner.max' => 'Imagem pesada'
         ]);
 
         $comercio = new Comercio();

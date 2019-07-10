@@ -25,50 +25,50 @@
         @endif
 <br><br><br><br>
 <div class="container">
-    <form method="get" action="/inserirComercio">
+    <form method="get" action="/inserirComercio" enctype="multipart/form-data>">
     <div></div>
         {{ csrf_field() }}
 
         <label>
         <div class="form-group">   
         <label for="nome" class="Texto">Nome do comercio</label>
-        <input type="text" class="Texto form-control" name= "nome">
+        <input type="text" class="Texto form-control" name= "nome" autocomplete="off">
         </div>
 
         <label>
         <div class="form-group">   
         <label for="email" class="Texto">Email</label>
-        <input type="text" class="Texto form-control" name= "email">
+        <input type="text" class="Texto form-control" name= "email" autocomplete="off">
         </div>
 
         <label>
         <div class="form-group">   
         <label for="site" class="Texto">Site</label>
-        <input type="text" class="Texto form-control" name= "site">
+        <input type="text" class="Texto form-control" name= "site" autocomplete="off">
         </div>
 
         <label>
         <div class="form-group">   
         <label for="resumo" class="Texto">Resumo</label>
-        <input type="text" class="Texto form-control" name= "resumo">
+        <input type="text" class="Texto form-control" name= "resumo" autocomplete="off">
         </div>
 
         <label>
         <div class="form-group">   
         <label for="telefone" class="Texto">Telefone</label> 
-        <input type="text" class="Texto form-control" name="telefone"><input type="checkbox" name= "whats" value="1"> WhastApp 
+        <input type="text" class="Texto form-control" name="telefone"><input type="checkbox" name= "whats" value="1" autocomplete="off"> WhastApp 
         </div>
 
         <label>
         <div class="form-group">   
         <label for="facebook" class="Texto">Facebook</label>
-        <input type="text" class="Texto form-control" name= "facebook">
+        <input type="text" class="Texto form-control" name= "facebook" autocomplete="off">
         </div>
 
         <label>
         <div class="form-group">   
         <label for="atividade" class="Texto">Atividade</label>
-        <input type="text" class="Texto form-control" name= "atividade">
+        <input type="text" class="Texto form-control" name= "atividade" autocomplete="off">
         </div>
 
         <label>
@@ -76,6 +76,17 @@
         Capa <input type="radio" name= "capa" value="1">Sim
         <input type="radio" name= "capa" value="0" checked>Não
         </div>
+
+        <div class="form-group">   
+        <label for="banner" class="Texto">Banner</label>
+        <input type="file" class="Texto form-control" name="banner">
+        </div>
+
+        <div class="form-group">
+        <label for="icone" class="Texto">Icone</label>
+        <input type="file" class="Texto form-control" name="icone" id="icone" autocomplete="off">
+        </div>
+
 
         <button type="submit" class="btn btn-primary" style="background-color: greelight;border-color: greenlight;" >Enviar Garai</button>
 
