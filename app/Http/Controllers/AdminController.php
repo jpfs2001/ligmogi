@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Comercio;
 use App\Telefone;
+use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
@@ -13,7 +15,7 @@ class AdminController extends Controller
 
     public function inserirComercio(Request $request)
     {
-        dd($request);
+        // dd($request);
         $this->validate($request,[
             'nome' => 'required',
             'capa' => 'required',
@@ -38,8 +40,14 @@ class AdminController extends Controller
         $comercio->facebook = $request->facebook;
         $comercio->atividade = $request->atividade;
         $comercio->capa = $request->capa;
-        $comercio->icone = $request->icone;
-        $comercio->banner = $request->banner;
+        
+
+
+        $path = Storage::disk('public')->putFile('comercios',$request->banner);
+        $comercio->banner = ( URL::to('/storage') . "/" . $path);
+
+        $path = Storage::disk('public')->putFile('comercios',$request->icone);
+        $comercio->icone = ( URL::to('/storage') . "/" . $path);
     
         $comercio->save();
 

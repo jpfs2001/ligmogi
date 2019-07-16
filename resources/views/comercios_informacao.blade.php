@@ -23,7 +23,7 @@
       <img class="img-fluid rounded mb-3 mb-md-0  animated fadeInRight" src="{{ $dados->banner }}" >
     </div>
     <div class="col-md-7 img-fluid">
-      <img class="img-fluid rounded mb-3 mb-md-0  animated fadeInRight" src="{{ $dados->icone }}" >
+      <img class="img-fluid rounded mb-3 mb-md-0" src="{{ $dados->icone }}" >
     </div>
 
 
