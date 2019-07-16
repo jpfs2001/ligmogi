@@ -13,25 +13,23 @@ class AdminController extends Controller
 
     public function inserirComercio(Request $request)
     {
-
+        dd($request);
         $this->validate($request,[
             'nome' => 'required',
             'capa' => 'required',
-            'banner.*' => 'image|mimes:jpg,png,gif,jpeg|max:2048',
-            'icone.*' => 'image|mimes:jpg,png,gif,jpeg'
+            'banner' => 'mimes:png|max:2048',
+            'icone' => 'mimes:png'
         ],[
             'nome.required' => 'Insira o nome do comércio',
             'capa.required' => 'Selecione uma opção para capa',
-            'banner.image' => 'O banner principal precisa ser uma imagem',
-            'banner.mimes' => 'O banner precisa estar no formato jpg, jpeg, png ou gif',
-            'icone.image' => 'A icone principal precisa ser uma imagem',
-            'icone.mimes' => 'A icone precisa estar no formato jpg, jpeg, png ou gif',
+            'banner.mimes' => 'O banner precisa estar no formato png',
+            'icone.mimes' => 'A icone precisa estar no formato png',
             'banner.max' => 'Imagem pesada'
         ]);
 
         $comercio = new Comercio();
         $telefone = new Telefone();
-        // dd($request);
+        // 
 
         $comercio->nome = $request->nome;
         $comercio->email = $request->email;
@@ -55,6 +53,24 @@ class AdminController extends Controller
 
         return redirect('/inserir/comercio');
 
+    }
+
+    public function lista_comercios()
+    {
+        $dados = Comercio::All();
+
+        return view('lista_comercios', compact('dados'));
+
+
+    }
+
+    public function comercio_informacoes(Comercio $dados)
+    {
+        // dd($dados);
+
+        return view('comercios_informacao', compact('dados'));
+
+        
     }
 
 }

@@ -25,7 +25,7 @@
         @endif
 <br><br><br><br>
 <div class="container">
-    <form method="get" action="/inserirComercio" enctype="multipart/form-data>">
+    <form method="post" action="/inserirComercio" enctype="multipart/form-data">
     <div></div>
         {{ csrf_field() }}
 

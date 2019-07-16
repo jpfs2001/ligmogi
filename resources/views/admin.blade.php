@@ -14,9 +14,10 @@
     <font size="5">
 <ul>
     <li><p><a href="/inserir/comercio">Inserir comercio</a></li>
+    <li><p><a href="/lista/comercios">Ver comércios</a></li>
 </ul>
 </font>
-<center>
+</center>
 </div>
 </body>
 </html>
