@@ -8,8 +8,9 @@
 </head>
 <body>
 
-    <p>Adicionar telefone</p>
-    <p>Adicionar endereço</p>
+    <p><a href="/adicionar/telefone/{{$dados->id}}">Adicionar telefone</a></p>
+    <p><a href="/adicionar/endereco/{{$dados->id}}">Adicionar endereço</a></p>
+    <p><a href="/adicionar/horario/{{$dados->id}}">Adicionar horario de funcionamento</a></p>
     <br><br><br>
 
     <p>Nome: {{$dados->nome}}</p>
@@ -25,6 +26,8 @@
     <div class="col-md-7 img-fluid">
       <img class="img-fluid rounded mb-3 mb-md-0" src="{{ $dados->icone }}" >
     </div>
+
+    <button type="submit" class="btn btn-primary" style="background-color: greelight;border-color: greenlight;" >Enviar Garai</button>
 
 
 </body>

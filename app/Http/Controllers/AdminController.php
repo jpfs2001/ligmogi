@@ -11,8 +11,8 @@ use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
-    //
-
+    
+    //Controller para inserir comercio
     public function inserirComercio(Request $request)
     {
         // dd($request);
@@ -63,6 +63,24 @@ class AdminController extends Controller
 
     }
 
+    public function addTelefone(Request $request)
+    {
+     
+        $telefone = new Telefone(); 
+
+        $telefone->comercios_id = $request->comercios_id;
+        $telefone->telefone = $request->telefone;
+
+        if(isset($request->whats)){
+        $telefone->whats = $request->whats;
+        }
+
+        $telefone->save();
+
+        return redirect('/lista/comercios') ;
+    }
+
+    //controller que retorna os dados da tebela comercio para a view lista_comercios
     public function lista_comercios()
     {
         $dados = Comercio::All();
@@ -72,7 +90,35 @@ class AdminController extends Controller
 
     }
 
+    //pagina de informações de um comercio especifico
     public function comercio_informacoes(Comercio $dados)
+    {
+        // dd($dados);
+
+        return view('comercios_informacao', compact('dados'));
+
+        
+    }
+
+    public function adicionar_telefone($dados)
+    {
+        // dd($dados);
+
+        return view('adicionar_telefone', compact('dados'));
+
+        
+    }
+
+    public function adicionar_endereco(Comercio $dados)
+    {
+        // dd($dados);
+
+        return view('comercios_informacao', compact('dados'));
+
+        
+    }
+
+    public function adicionar_horario(Comercio $dados)
     {
         // dd($dados);
 

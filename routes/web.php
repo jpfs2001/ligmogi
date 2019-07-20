@@ -26,4 +26,8 @@ Route::view('/inserir/comercio', 'inserir_comercio');
 Route::post('/inserirComercio', 'AdminController@inserirComercio');
 Route::get('/lista/comercios', 'AdminController@lista_comercios');
 Route::get('/comercios/informacoes/{dados}', 'AdminController@comercio_informacoes');
+Route::get('/adicionar/telefone/{dados}', 'AdminController@adicionar_telefone');
+Route::get('/adicionar/endereco/{dados}', 'AdminController@adicionar_endereco');
+Route::get('/adicionar/horario/{dados}', 'AdminController@adicionar_horario');
+Route::post('/addTelefone', 'AdminController@addTelefone');
 });
