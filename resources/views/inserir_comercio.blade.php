@@ -25,7 +25,7 @@
         @endif
 <br><br><br><br>
 <div class="container">
-    <form method="post" action="/addEndereco" enctype="multipart/form-data">
+    <form method="post" action="/inserirComercio" enctype="multipart/form-data">
     <div></div>
         {{ csrf_field() }}
 
@@ -56,7 +56,7 @@
         <label>
         <div class="form-group">   
         <label for="telefone" class="Texto">Telefone</label> 
-        <input type="text" class="Texto form-control" name="telefone"><input type="checkbox" name= "whats" value="1" autocomplete="off"> WhastApp 
+        <input type="text" class="Texto form-control" name="telefone">&nbsp <input type="checkbox" name= "whats" value="1" autocomplete="off"> WhastApp 
         </div>
 
         <label>
@@ -85,7 +85,79 @@
         <div class="form-group">
         <label for="icone" class="Texto">Icone</label>
         <input type="file" class="Texto form-control" name="icone" id="icone" autocomplete="off">
-        </div>
+        </div><br>
+
+        Segunda-Feira&nbsp 
+        <div class="form-inline">
+        <label for="seg" class="Texto">Abre as</label>&nbsp 
+        <input type="time" class="Texto form-control" name = "seg1" autocomplete="off">&nbsp 
+        <label for="" class="Texto">fecha as as</label>&nbsp 
+        <input type="time" class="Texto form-control" name = "seg2" autocomplete="off">&nbsp <input type="checkbox" name= "semana" value="1" autocomplete="off">Semana inteira
+        </div><br>
+
+        Terça-Feira&nbsp 
+        <div class="form-inline">
+        <label for="ter" class="Texto">Abre as</label>&nbsp 
+        <input type="time" class="Texto form-control" name = "ter1" autocomplete="off">&nbsp 
+        <label for="" class="Texto">fecha as as</label>&nbsp 
+        <input type="time" class="Texto form-control" name = "ter2" autocomplete="off">
+        </div><br>
+
+        Quarta-Feira&nbsp 
+        <div class="form-inline">
+        <label for="quar" class="Texto">Abre as</label>&nbsp 
+        <input type="time" class="Texto form-control" name = "qua1" autocomplete="off">&nbsp 
+        <label for="" class="Texto">fecha as as</label>&nbsp 
+        <input type="time" class="Texto form-control" name = "qua2" autocomplete="off">
+        </div><br>
+
+        Quinta-Feira&nbsp 
+        <div class="form-inline">
+        <label for="qui" class="Texto">Abre as</label>&nbsp 
+        <input type="time" class="Texto form-control" name = "qui1" autocomplete="off">&nbsp 
+        <label for="" class="Texto">fecha as as</label>&nbsp 
+        <input type="time" class="Texto form-control" name = "qui2" autocomplete="off">
+        </div><br>
+
+        Sexta-Feira&nbsp 
+        <div class="form-inline">
+        <label for="sex" class="Texto">Abre as</label>&nbsp 
+        <input type="time" class="Texto form-control" name = "sex1" autocomplete="off">&nbsp 
+        <label for="" class="Texto">fecha as as</label>&nbsp 
+        <input type="time" class="Texto form-control" name = "sex2" autocomplete="off">
+        </div><br>
+
+        Sabado&nbsp 
+        <div class="form-inline">
+        <label for="sab" class="Texto">Abre as</label>&nbsp 
+        <input type="time" class="Texto form-control" name = "sab1" autocomplete="off">&nbsp 
+        <label for="" class="Texto">fecha as as</label>&nbsp 
+        <input type="time" class="Texto form-control" name = "sab2" autocomplete="off">
+        </div><br>
+
+        Domingo&nbsp 
+        <div class="form-inline">
+        <label for="" class="Texto">Abre as</label>&nbsp 
+        <input type="time" class="Texto form-control" name = "dom1" autocomplete="off">&nbsp 
+        <label for="" class="Texto">fecha as as</label>&nbsp 
+        <input type="time" class="Texto form-control" name = "dom2" autocomplete="off">
+        </div><br>
+
+        Feriados&nbsp 
+        <div class="form-inline">
+        <label for="" class="Texto">Abre as</label>&nbsp 
+        <input type="time" class="Texto form-control" name = "feriado1" autocomplete="off">&nbsp 
+        <label for="" class="Texto">fecha as as</label>&nbsp 
+        <input type="time" class="Texto form-control" name = "feriado2" autocomplete="off">
+        </div><br>
+
+        Feriados Nacionais&nbsp 
+        <div class="form-inline">
+        <label for="" class="Texto">Abre as</label>&nbsp 
+        <input type="time" class="Texto form-control" name = "nacional1" autocomplete="off">&nbsp 
+        <label for="" class="Texto">fecha as as</label>&nbsp 
+        <input type="time" class="Texto form-control" name = "nacional2" autocomplete="off">
+        </div><br>
 
 
         <button type="submit" class="btn btn-primary" style="background-color: greelight;border-color: greenlight;" >Enviar Garai</button>

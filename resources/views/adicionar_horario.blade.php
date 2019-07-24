@@ -35,9 +35,13 @@
         <input type="hidden" name = "comercios_id" value="{{$dados}}">
 
         <label>
-        <div class="form-group">
-        <label for="rua" class="Texto">Rua</label>
-        <input type="text" class="Texto form-control" name = "rua" autocomplete="off">
+
+        <div class="form-inline">
+        Segunda-Feira&nbsp 
+        <label for="aberto" class="Texto">Abre as</label>&nbsp 
+        <input type="time" class="Texto form-control" name = "aberto" autocomplete="off">&nbsp 
+        <label for="fechado" class="Texto">fecha as as</label>&nbsp 
+        <input type="time" class="Texto form-control" name = "fechado" autocomplete="off">
         </div>
 
         <label>
