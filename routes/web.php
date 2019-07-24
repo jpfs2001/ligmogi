@@ -30,4 +30,6 @@ Route::get('/adicionar/telefone/{dados}', 'AdminController@adicionar_telefone');
 Route::get('/adicionar/endereco/{dados}', 'AdminController@adicionar_endereco');
 Route::get('/adicionar/horario/{dados}', 'AdminController@adicionar_horario');
 Route::post('/addTelefone', 'AdminController@addTelefone');
+Route::post('/addEndereco', 'AdminController@addEndereco');
+Route::post('/addHorario', 'AdminController@addHorario');
 });
