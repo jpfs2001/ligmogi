@@ -20,4 +20,10 @@
       <img class="img-fluid rounded mb-3 mb-md-0" src="{{ $dados->icone }}" >
     </div>
 
-@stop
+    @foreach ($telefones as $t)
+
+    {{$t->telefone}}
+
+    @endforeach
+
+      @stop

@@ -194,15 +194,17 @@ class AdminController extends Controller
     //pagina de informações de um comercio especifico
     public function comercio_informacoes(Comercio $dados)
     {
-        // dd($dados);
+        $telefones = Telefone::where('comercios_id', $dados->id);
 
-        return view('comercios_informacao', compact('dados'));
+        // dd($telefones);
+
+        return view('comercios_informacao', compact('dados'), compact('telefones'));
 
         
     }
 
     //view com formulario para adicionar um novo telefone a um comercio
-    public function adicionar_telefone($dados)
+    public function adicionar_telefone(Comercio $dados)
     {
         // dd($dados);
         $dados = $dados->id;
