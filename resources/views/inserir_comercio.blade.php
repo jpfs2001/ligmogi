@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/modern-business.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <title>Document</title>
-</head>
-<body>
+@extends('layouts.nav')
+
+@section('content')
+
 <div class="panel-body">
     @if(count($errors) > 0)
         <div class="alert alert-danger">
@@ -30,15 +19,18 @@
         {{ csrf_field() }}
 
         <label>
-        <div class="form-group">   
+        <div class="form-inline">   
         <label for="nome" class="Texto">Nome do comercio</label>
         <input type="text" class="Texto form-control" name= "nome" autocomplete="off">
+        <div class="align-right">
+        <label for="email" class="Texto">Email</label>
+        <input type="text" class="Texto form-control" name= "email" autocomplete="off">
+        </div>
         </div>
 
         <label>
         <div class="form-group">   
-        <label for="email" class="Texto">Email</label>
-        <input type="text" class="Texto form-control" name= "email" autocomplete="off">
+        
         </div>
 
         <label>
@@ -165,5 +157,4 @@
 
     </form>
 </div>
-</body>
-</html>
+@stop
