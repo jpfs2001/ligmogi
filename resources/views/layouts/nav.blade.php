@@ -9,8 +9,9 @@
 				<meta name="Googlebot" content="all" />
                 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
                 <link rel="icon" href="favicon.ico" type="image/x-icon">
-                <base href="http://127.0.0.1:8000/Ligmogi/"><link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+                <base href="http://127.0.0.1:8000/Ligmogi/">
+                <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
                 <link rel="stylesheet" href="{{ URL::asset('css/ligmogi.css') }}" >
                 <style>
     .barraPesquisa { background: #B40404; }

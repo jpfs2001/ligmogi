@@ -111,7 +111,7 @@ class AdminController extends Controller
     
         $comercio->save();
 
-        $telefone->comercios_id = $comercio->id;
+        $telefone->comercios_id = $comercio->id;    
         $telefone->telefone = $request->telefone;
         if(isset($request->whats)){
         $telefone->whats = $request->whats;
@@ -122,6 +122,107 @@ class AdminController extends Controller
         return redirect('/inserir/comercio');
 
     }
+
+    public function editarComercios(Request $request)
+    {
+
+        // dd($request);
+        $this->validate($request,[
+            'nome' => 'required',
+            'capa' => 'required',
+            'banner' => 'mimes:png|max:2048',
+            'icone' => 'mimes:png'
+        ],[
+            'nome.required' => 'Insira o nome do comércio',
+            'capa.required' => 'Selecione uma opção para capa',
+            'banner.mimes' => 'O banner precisa estar no formato png',
+            'icone.mimes' => 'A icone precisa estar no formato png',
+            'banner.max' => 'Imagem pesada'
+        ]);
+
+        $comercio = Comercio::find($request->id);
+        // 
+
+        $comercio->nome = $request->nome;
+        $comercio->email = $request->email;
+        $comercio->site = $request->site;
+        $comercio->resumo = $request->resumo;
+        $comercio->facebook = $request->facebook;
+        $comercio->atividade = $request->atividade;
+        $comercio->capa = $request->capa;
+        
+
+        if(isset($request->banner)){
+        $path = Storage::disk('public')->putFile('comercios',$request->banner);
+        $comercio->banner = ( URL::to('/storage') . "/" . $path);
+        }
+
+        if(isset($request->icone)){
+        $path = Storage::disk('public')->putFile('comercios',$request->icone);
+        $comercio->icone = ( URL::to('/storage') . "/" . $path);
+        }
+
+        //horarios
+        if($request->semana = 1)
+        {
+            $comercio->seg = $request->seg1 . ' - ' . $request->seg2;
+            $comercio->ter = $request->seg1 . ' - ' . $request->seg2;
+            $comercio->qua = $request->seg1 . ' - ' . $request->seg2;
+            $comercio->qui = $request->seg1 . ' - ' . $request->seg2;
+            $comercio->sex = $request->seg1 . ' - ' . $request->seg2;
+            
+
+        }else
+        {   
+            if(isset($request->seg1) && isset($request->seg2)){
+            $comercio->seg = $request->seg1 . ' - ' . $request->seg2;
+            }
+
+            if(isset($request->ter1) && isset($request->ter2)){
+            $comercio->ter = $request->ter1 . ' - ' . $request->ter2;
+            }
+
+            if(isset($request->qua1) && isset($request->qua2)){
+            $comercio->qua = $request->qua1 . ' - ' . $request->qua2;
+            }
+
+            if(isset($request->qui1) && isset($request->qui2)){
+            $comercio->qui = $request->qui1 . ' - ' . $request->qui2;
+            }
+
+            if(isset($request->sex1) && isset($request->sex2)){
+            $comercio->sex = $request->sex1 . ' - ' . $request->sex2;
+            }
+
+            
+
+
+        }
+
+        if(isset($request->sab1) && isset($request->sab2)){
+            $comercio->sab = $request->sab1 . ' - ' . $request->sab2;
+        }
+
+        if(isset($request->dom1) && isset($request->dom2)){
+        $comercio->dom = $request->dom1 . ' - ' . $request->dom2;
+        }
+        
+        if(isset($request->feriado2) && isset($request->feriado2)){
+        $comercio->feriado = $request->feriado1 . ' - ' . $request->feriado2;
+        }
+
+        if(isset($request->feriado2) && isset($request->feriado2)){
+        $comercio->feriado_nacional = $request->seg1 . ' - ' . $request->seg2;
+        }
+    
+        $comercio->save();
+
+
+        return redirect('/lista/comercios');
+
+    }
+
+
 
     //inserir o telefone no banco de dados
     public function addTelefone(Request $request)
@@ -203,6 +304,12 @@ class AdminController extends Controller
         return view('comercios_informacao', compact('dados', 'telefones', 'enderecos'));
 
         
+    }
+
+    public function editar_comercios(Comercio $dados)
+    {
+
+        return view('editar_comercios', compact('dados'));
     }
 
     //view com formulario para adicionar um novo telefone a um comercio

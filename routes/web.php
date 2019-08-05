@@ -29,4 +29,6 @@ Route::get('/adicionar/horario/{dados}', 'AdminController@adicionar_horario');
 Route::post('/addTelefone', 'AdminController@addTelefone');
 Route::post('/addEndereco', 'AdminController@addEndereco');
 Route::post('/addHorario', 'AdminController@addHorario');
+Route::post('/editar/comercios/{dados}', 'AdminController@editar_comercios');
+Route::post('/editarComercios', 'AdminController@editarComercios');
 });
