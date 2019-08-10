@@ -30,47 +30,97 @@
       <img class="img-fluid rounded mb-3 mb-md-0" src="{{ $dados->icone }}" >
     </div>
     <font size="5px">TELEFONE</font>
-    @foreach ($telefones as $t)
-
-    <div class="">
-
-    {{$t->telefone}} &nbsp <i class="fa"></i>
-
+    <div class="col-sm-3">
+		<table id="employee_grid" class="table table-condensed table-hover table-striped" width="60%" cellspacing="0" data-toggle="bootgrid">
+		<thead>
+		<tr>  
+		<th>Telefone</th>
+		<th>editar</th>
+    <th>deletar</th>
+		</tr>
+		</thead>
     </div>
+<tbody>
+      @foreach ($telefones as $t)
+    <tr>
+        <td>{{$t->telefone}}</a></td>
 
-    @endforeach 
-    <br>
+        <form method="post" action="/editar/telefones/{{$t->id}}">
+        {{csrf_field()}}
+        <td><button type="submit" class="btn btn-info"><i class="fa fa-edit"></i></button></td>
+        </form>
+
+        <form method="post" action="/deletar/telefones/{{$t->id}}">
+        {{csrf_field()}}
+        <td><button type="submit" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja deletar esse registro?'); return false;"><i class="fa fa-trash"></i></button></td>
+        </form>
+
+    </tr>
+    @endforeach
+
+</tbody>
+
+</table>
+<br>
+
+
 
     <font size="5px">ENDEREÇOS</font>
 
-    @foreach ($enderecos as $e)
-
     <div class="">
-    {{$e->rua}}
+		<table id="employee_grid" class="table table-condensed table-hover table-striped" width="60%" cellspacing="0" data-toggle="bootgrid">
+		<thead>
+		<tr>
+		<th>Rua</th>
+    <th>Bairro</th>
+    <th>Numero</th>
+    <th>Cidade</th>
+    <th>CEP</th>
+    <th>Complemento</th>
+		<th>editar</th>
+    <th>deletar</th>
+		</tr>
+		</thead>
     </div>
+<tbody>
+      @foreach ($enderecos as $e)
+    <tr>
+        <td>{{$e->rua}}</td>
+        <td>{{$e->bairro}}</td>
+        <td>{{$e->numero}}</td>
+        <td>{{$e->cidade}}</td>
+        <td>{{$e->cep}}</td>
+        <td>{{$e->complemento}}</td>
+        
+        <form method="post" action="/editar/enderecos/{{$e->id}}">
+        {{csrf_field()}}
+        <td><button type="submit" class="btn btn-info"><i class="fa fa-edit"></i></button></td>
+        </form>
 
-    <div class="">
-    {{$e->bairro}}
-    </div>
-
-    <div class="">
-    {{$e->numero}}
-    </div>
-
-    <div class="">
-    {{$e->cidade}}
-    </div>
-
-    <div class="">
-    {{$e->cep}}
-    </div>
-
-    <div class="">
-    {{$e->complemento}}
-    </div>
-    <br>
-      
+        <form method="post" action="/deletar/enderecos/{{$e->id}}">
+        {{csrf_field()}}
+        <td><button type="submit" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja deletar esse registro?'); return false;"><i class="fa fa-trash"></i></button></td>
+        </form>
+        
+    </tr>
     @endforeach
+
+</tbody>
+
+</table>
+  
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+      
+  </div>
 
 
       @stop

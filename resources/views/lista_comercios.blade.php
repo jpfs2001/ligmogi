@@ -6,15 +6,16 @@
         
 
         <div class="col-sm-10">
-		<div class="well clearfix">
+		
 		<table id="employee_grid" class="table table-condensed table-hover table-striped" width="60%" cellspacing="0" data-toggle="bootgrid">
 		<thead>
 		<tr>
 		<th>NOME DO COMERCIO</th>
 		<th>editar</th>
+        <th>deletar</th>
 		</tr>
 		</thead>
-    </div>
+    
 <tbody>
     @foreach($dados as $d)
     <tr>
@@ -22,7 +23,12 @@
 
         <form method="post" action="/editar/comercios/{{$d->id}}">
         {{csrf_field()}}
-        <td><button type="submit"><i class="fa fa-edit"></i></button></td>
+        <td><button type="submit" class="btn btn-info"><i class="fa fa-edit"></i></button></td>
+        </form>
+
+        <form method="post" action="/deletar/comercios/{{$d->id}}">
+        {{csrf_field()}}
+        <td><button type="submit" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja deletar esse registro?'); return false;"><i class="fa fa-trash"></i></button></td>
         </form>
     </tr>
     @endforeach

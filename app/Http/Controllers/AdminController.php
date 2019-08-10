@@ -16,7 +16,9 @@ use Illuminate\Support\Facades\Storage;
 class AdminController extends Controller
 {
     
-    //Controller para inserir comercio
+    
+
+    //inserir comercio
     public function inserirComercio(Request $request)
     {
         // dd($request);
@@ -123,6 +125,8 @@ class AdminController extends Controller
 
     }
 
+    //editar comercios
+
     public function editarComercios(Request $request)
     {
 
@@ -218,13 +222,21 @@ class AdminController extends Controller
         $comercio->save();
 
 
+        return redirect('/lista/comerciosaa');
+
+    }
+
+    //deletar comercio
+
+    public function deletar_comercios(Comercio $dados)
+    {
+        $dados->delete();
         return redirect('/lista/comercios');
 
     }
 
 
-
-    //inserir o telefone no banco de dados
+    //inserir telefone
     public function addTelefone(Request $request)
     {
      
@@ -242,7 +254,32 @@ class AdminController extends Controller
         return redirect('/lista/comercios') ;
     }
 
-    //inserir o endereço no banco de dados
+    //editar telefone
+    public function editarTelefone(Request $request)
+    {
+     
+        
+
+        $telefone->telefone = $request->telefone;
+
+        if(isset($request->whats)){
+        $telefone->whats = $request->whats;
+        }
+
+        $telefone->save();
+
+        return redirect('/lista/comercios') ;
+    }
+
+    //deletar telefone
+    public function deletar_telefones(Telefone $dados)
+    {
+        $dados->delete();
+        return redirect('/lista/comercios');
+
+    }
+
+    //inserir o endereço
     public function addEndereco(Request $request)
     {
      
@@ -281,8 +318,53 @@ class AdminController extends Controller
         return redirect('/lista/comercios') ;
     }
 
+    //editar endereço
+    public function editarEnderecos(Request $request)
+    {
+        // dd($request);
+        $this->validate($request,[
+            'rua' => 'required',
+            'bairro' => 'required',
+            'numero' => 'required',
+            'cidade' => 'required',
+            'cep' => 'required'
+            
+        ],[
+            'rua.required' => 'Insira a rua do comércio',
+            'bairro.required' => 'Insira o bairro do comércio',
+            'numero.required' => 'Insira o numero do comércio',
+            'cidade.required' => 'Insira a cidade do comércio',
+            'cep.required' => 'Insira o cep do comércio'
+            
+        ]);
 
-    //controller que retorna os dados da tebela comercio para a view lista_comercios
+        $endereco = Endereco::find($request->id);
+
+        $endereco->rua = $request->rua;
+        $endereco->bairro = $request->bairro;
+        $endereco->numero = $request->numero;
+        $endereco->cidade = $request->cidade;
+        $endereco->cep = $request->cep;
+        $endereco->complemento = $request->complemento;
+        $endereco->latitude = $request->latitude;
+        $endereco->longitude = $request->longitude;
+
+        
+
+        $endereco->save();
+
+        return redirect('/lista/comercios') ;
+    }
+
+    //deletar endereco
+    public function deletar_enderecos(Endereco $dados)
+    {
+        $dados->delete();
+        return redirect('/lista/comercios');
+
+    }
+
+    //view com lista dos comercios 
     public function lista_comercios()
     {
         $dados = Comercio::All();
@@ -306,13 +388,29 @@ class AdminController extends Controller
         
     }
 
+    //view editar comercio
     public function editar_comercios(Comercio $dados)
     {
 
         return view('editar_comercios', compact('dados'));
     }
 
-    //view com formulario para adicionar um novo telefone a um comercio
+    //view editar telefone
+    public function editar_telefones(Telefone $dados)
+    {
+        return view('editar_telefone', compact('dados'));
+        
+    }
+
+    //view editar endereço
+    public function editar_enderecos(Endereco $dados)
+    {
+        
+        return view('editar_enderecos', compact('dados'));
+
+    }
+
+    //view adicionar telefone
     public function adicionar_telefone(Comercio $dados)
     {
         // dd($dados);
@@ -323,7 +421,7 @@ class AdminController extends Controller
         
     }
 
-    //view com formulario para adicionar um novo endereço a um comercio
+    //view adicionar endereço
     public function adicionar_endereco(Comercio $dados)
     {
         // dd($dados);
