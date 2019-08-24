@@ -30,136 +30,125 @@
 </style></head>
 
 <body >
-<nav class="navbar navbar-default">
-    <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/ "><img src="{{ URL::asset('image/logo.jpeg') }}" alt="Ligmogi" title="Ligmogi" class="img-responsive" /></a>
-        </div>
-
-        <div class="collapse navbar-collapse menuTopo" id="menu_recolhe">
-            <ul class="nav navbar-nav">
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container -->
-</nav>
-
-<div class="container-fluid barraPesquisa">
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wrapperPesquisa">
-
-                <div class="row tiposPesquisa">
-
-                    <span class="loading"><img src="img/carregando.gif" alt="carregando..." title="carregando..." width="100" height="31" style="float: right;"></span>
-
-                    <!-- nome -->
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 wrapperTab">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabs tabNome tabAtiva">
-                            <div class="icone" title="Nome"></div>
-                            <div class="labelTab">Nome</div>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/"><img src="{{URL::asset('image/logo.jpeg')}}" alt="Ligmogi" title="Ligmogi" class="img-responsive" /></a>
+            </div>
+    
+            <div class="collapse navbar-collapse menuTopo" id="menu_recolhe">
+                <ul class="nav navbar-nav">
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav>
+    <div class="container-fluid barraPesquisa">
+        <div class="container">
+    
+            <div class="row">
+    
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wrapperPesquisa">
+    
+                    <div class="row tiposPesquisa">
+    
+                        <span class="loading"><img src="img/carregando.gif" alt="carregando..." title="carregando..." width="100" height="31" style="float: right;"></span>
+    
+                        <!-- nome -->
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 wrapperTab">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabs tabNome tabAtiva">
+                                <div class="icone" title="Nome"></div>
+                                <div class="labelTab">Nome</div>
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- atividade -->
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 wrapperTab">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabs tabAtividade tabInativa">
-                            <div class="icone" title="Ativdade"></div>
-                            <div class="labelTab">Atividade</div>
+    
+                        <!-- atividade -->
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 wrapperTab">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabs tabAtividade tabInativa">
+                                <div class="icone" title="Atividade"></div>
+                                <div class="labelTab">Atividade</div>
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- telefone -->
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 wrapperTab">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabs tabTelefone tabInativa">
-                            <div class="icone" title="Telefone"></div>
-                            <div class="labelTab">Telefone</div>
+    
+                        <!-- telefone -->
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 wrapperTab">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabs tabTelefone tabInativa">
+                                <div class="icone" title="Telefone"></div>
+                                <div class="labelTab">Telefone</div>
+                            </div>
                         </div>
-                    </div>
-                </div> <!-- ./tiposPesquisa -->
-
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tiposFormularios">
-
-                    <!-- nome -->
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 divForm" id="nome" style="display:block;">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 formNome">
-                            <form name="formNome" action="resultados.php" enctype="multipart/form-data" method="get" id="form">
-                                <input type="text" name="e" id="e" placeholder="Digite o nome da Empresa" class="forms" autocomplete="off"  required >
-                                <button type="submit" class="btnPesquisar"></button>
-                            </form>
+                    </div> <!-- ./tiposPesquisa -->
+    
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tiposFormularios">
+    
+                        <!-- nome -->
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 divForm" id="nome" style="display:block;">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 formNome">
+                                <form action="/pesquisar" enctype="multipart/form-data" method="get" id="formEmpresa">
+                                    <input type="text" name="nome" id="e" placeholder="Empresa ou serviço" class="forms" autocomplete="off"  required >
+                                    <button type="submit" class="btnPesquisar"></button>
+                                </form>
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- atividade -->
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 divForm" id="ativdade" style="display:none;">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 formAtividade">
-                            <form name="formResidencia" action="resultados.php" enctype="multipart/form-data" method="get" id="formResidencia">
-                                <input type="text" name="r" id="r" placeholder="Nome" class="forms" autocomplete="off"  required >
-                                <button type="submit" class="btnPesquisar"></button>
-                            </form>
+    
+                        <!-- atividade -->
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 divForm" id="atividade" style="display:none;">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 formAtividade">
+                                <form name="formAtividade" action="resultados.php" enctype="multipart/form-data" method="get" id="formAtividade">
+                                    <input type="text" name="r" id="r" placeholder="Nome" class="forms" autocomplete="off"  required >
+                                    <button type="submit" class="btnPesquisar"></button>
+                                </form>
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- telefone -->
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 divForm" id="telefone" style="display:none;">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 formTelefone">
-                            <form name="formTelefone" action="resultados.php" enctype="multipart/form-data" method="get" id="formTelefone">
-                                <input type="text" name="t" id="t" placeholder="Telefone" class="forms tel" autocomplete="off"  required >
-                                <button type="submit" class="btnPesquisar"></button>
-                            </form>
+    
+                        <!-- telefone -->
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 divForm" id="telefone" style="display:none;">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 formTelefone">
+                                <form name="formTelefone" action="resultados.php" enctype="multipart/form-data" method="get" id="formTelefone">
+                                    <input type="text" name="t" id="t" placeholder="Telefone" class="forms tel" autocomplete="off"  required >
+                                    <button type="submit" class="btnPesquisar"></button>
+                                </form>
+                            </div>
                         </div>
-                    </div>
-
-                </div> <!-- ./tiposformulario -->
-            </div> <!-- ./wrapper pesquisa -->
-        </div><!-- ./row -->
-    </div><!-- ./container -->
-</div> <!-- ./container-fluid -->
-
-<div class="container" id="resultado">
-    <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 anunciosHome hidden-xs hidden-sm" id="anunciosHome">
-
-                    
-               <!--exibindo anuncios-->
-                                            </div><!-- ./anunciosHome -->
-    </div> <!-- ./row -->
-</div> <!-- ./container -->
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    
+                    </div> <!-- ./tiposformulario -->
+                </div> <!-- ./wrapper pesquisa -->
+            </div><!-- ./row -->
+        </div><!-- ./container -->
+    </div> <!-- ./container-fluid -->
+    
+    <div class="container" id="resultado">
+     
+    </div> <!-- ./container -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+        <script>
+            var pagina = false;
+        </script>
+    <script src="{{ URL::asset('js/funcoes.js') }}"></script>
     <script>
-        var pagina = false;
-    </script>
-<script src="{{ URL::asset('js/funcoes.js') }}"></script>
-<script>
-    // popup
-    function abrir(){
-        document.getElementById('bg').style.display='block';
-        document.getElementById('popup').style.display = 'block';
-        setTimeout ("fechar()", 10000);
-    }
-
-    function fechar(){
-        document.getElementById('bg').style.display='none';
-        document.getElementById('popup').style.display = 'none';
-
-    }
-</script><div class="container-fluid">
-<div class="container">
-@yield('content')
-</div>
-
-    <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margemTopo20">
-            <p class="rodape text-center">&copy; 2019 Ligmogi - Todos os direitos reservados<br><a href="">Desenvolvido por João Pedro de Freitas Silva</a></p>
+        // popup
+        function abrir(){
+            document.getElementById('bg').style.display='block';
+            document.getElementById('popup').style.display = 'block';
+            setTimeout ("fechar()", 10000);
+        }
+    
+        function fechar(){
+            document.getElementById('bg').style.display='none';
+            document.getElementById('popup').style.display = 'none';
+    
+        }
+    </script><div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margemTopo20">
+                <p class="rodape text-center">&copy; 2019 Lista & Cia - Todos os direitos reservados<br><a href="https://www.mz2.com.br/servicos/webdesign">Desenvolvido por mz2</a></p>
+            </div>
         </div>
     </div>
-</div>
-
-</body>
+    
+    </body>
 </html>

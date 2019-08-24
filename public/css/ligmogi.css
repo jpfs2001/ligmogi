@@ -81,7 +81,7 @@ button.btnPesquisar{ height: 89px; width: 10%; border-top: 2px solid #FFF; borde
 
 .formNome button.btnPesquisar,
 .formAtividade button.btnPesquisar,
-.formTelefone button.btnPesquisar { background: url("../../res/ico-pesquisa.png") center center no-repeat #47cbaf; padding: 5px;}
+.formTelefone button.btnPesquisar { background: url("{{ URL::asset('image/ico-pesquisa') }}") center center no-repeat #47cbaf; padding: 5px;}
 
 .formNome button.btnPesquisar:hover,
 .formAtividade button.btnPesquisar:hover,
