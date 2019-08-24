@@ -257,9 +257,7 @@ class AdminController extends Controller
     //editar telefone
     public function editarTelefone(Request $request)
     {
-     
-        
-
+        $telefone = Telefone::find($request->id);
         $telefone->telefone = $request->telefone;
 
         if(isset($request->whats)){

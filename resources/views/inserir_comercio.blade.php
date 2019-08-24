@@ -19,13 +19,15 @@
         {{ csrf_field() }}
 
         <label>
-        <div class="form-inline">   
-        <label for="nome" class="Texto">Nome do comercio</label>
+        <div class="form-group">   
+        <label for="nome" class="Texto">Nome do comercio</label><br>
         <input type="text" class="Texto form-control" name= "nome" autocomplete="off">
-        <div class="align-right">
+        </div>
+
+
+        <div class="fom-group">
         <label for="email" class="Texto">Email</label>
         <input type="text" class="Texto form-control" name= "email" autocomplete="off">
-        </div>
         </div>
 
         <label>

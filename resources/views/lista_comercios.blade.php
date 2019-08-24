@@ -1,6 +1,6 @@
 @extends('layouts.nav')
 
-@section('content')<!DOCTYPE html>
+@section('content')
 
 <br><br>
         

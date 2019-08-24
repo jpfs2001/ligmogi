@@ -39,3 +39,5 @@ Route::post('/deletar/comercios/{dados}', 'AdminController@deletar_comercios');
 Route::post('/deletar/telefones/{dados}', 'AdminController@deletar_telefones');
 Route::post('/deletar/enderecos/{dados}', 'AdminController@deletar_enderecos');
 });
+
+Route::get('/pesquisar', 'ComercioController@pesquisar');
