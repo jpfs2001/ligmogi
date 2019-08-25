@@ -14,7 +14,7 @@ class ComercioController extends Controller
     public function pesquisar(Request $request)
     {
         // $dados = Comercio()->where('nome', like, '%' + $request->nome + '%');
-        $dados = Comercio::where('nome', 'like', '%' . $request->nome . '%')->get();
+        $dados = Comercio::where('nome', 'like', '%' . $request->nome . '%')->get();    
 
         return view("resultados", compact('dados'));
     }

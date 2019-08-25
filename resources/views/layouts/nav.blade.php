@@ -13,6 +13,7 @@
                 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
                 <link rel="stylesheet" href="{{ URL::asset('css/ligmogi.css') }}" >
+                
                 <style>
     .barraPesquisa { background: #B40404; }
     .tabNome.tabAtiva:after,
@@ -32,7 +33,7 @@
 <body >
     <nav class="navbar navbar-default">
         <div class="container">
-            <div class="navbar-header">
+            <div class="">
                 <a class="navbar-brand" href="/"><img src="{{URL::asset('image/logo.jpeg')}}" alt="Ligmogi" title="Ligmogi" class="img-responsive" /></a>
             </div>
     
@@ -117,6 +118,7 @@
     </div> <!-- ./container-fluid -->
     
     <div class="container" id="resultado">
+    @yield('content')
      
     </div> <!-- ./container -->
     
@@ -143,9 +145,11 @@
     
         }
     </script><div class="container-fluid">
+    
+
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margemTopo20">
-                <p class="rodape text-center">&copy; 2019 Lista & Cia - Todos os direitos reservados<br><a href="https://www.mz2.com.br/servicos/webdesign">Desenvolvido por mz2</a></p>
+                <p class="rodape text-center">&copy; LigMogi - Todos os direitos reservados<br><a href="">Desenvolvido por Altamir Junior</a></p>
             </div>
         </div>
     </div>

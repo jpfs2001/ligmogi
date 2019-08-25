@@ -4,7 +4,7 @@
 
 @foreach($dados as $d)
 
-    <p>{{$d->nome}}</p><br>
+    <p>{{$d->nome}}</p><br>s
 
 @endforeach
 
