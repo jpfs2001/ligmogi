@@ -75,7 +75,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 wrapperTab">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabs tabTelefone tabInativa">
                                 <div class="icone" title="Telefone"></div>
-                                <div class="labelTab">Telefone</div>
+                                <div class="labelTab"> Telefone</div>
                             </div>
                         </div>
                     </div> <!-- ./tiposPesquisa -->
@@ -154,6 +154,6 @@
             </div>
         </div>
     </div>
-    
+
     </body>
 </html>

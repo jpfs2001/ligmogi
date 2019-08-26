@@ -13,7 +13,7 @@
 
 
 Auth::routes();
-Route::view('/ ', 'index');
+Route::get('/ ', 'ComercioController@index');
 
 
 Route::middleware('auth')->group(function ()
@@ -41,3 +41,4 @@ Route::post('/deletar/enderecos/{dados}', 'AdminController@deletar_enderecos');
 });
 
 Route::get('/pesquisar', 'ComercioController@pesquisar');
+Route::get('/comercios/{dados}', 'ComercioController@comercios');

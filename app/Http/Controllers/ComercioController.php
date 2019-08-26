@@ -66,7 +66,17 @@ class ComercioController extends Controller
         return view("resultados", compact('dados'));
     }
 
+    // rota que retorna a pagina index com os comercios em destaque
+    public function index()
+    {
+      $dados = Comercio::where('capa', '=', '1')->get();
+      //dd($dados);
+      return view('index', compact('dados'));
+    }
 
-
+    public function comercios(Comercio $dados)
+    {
+      return view('comercios', compact('dados'));
+    }
 
 }

@@ -222,7 +222,7 @@ class AdminController extends Controller
         $comercio->save();
 
 
-        return redirect('/lista/comerciosaa');
+        return redirect('/lista/comercios');
 
     }
 

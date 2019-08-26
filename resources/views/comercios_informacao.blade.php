@@ -43,7 +43,7 @@
 <tbody>
       @foreach ($telefones as $t)
     <tr>
-        <td>{{$t->telefone}}</a></td>
+        <td>{{$t->telefone}} <i class="{{$t->whats == 1 ? 'fa fa-whatsapp' : ''}}"></i></a></td>
 
         <form method="post" action="/editar/telefones/{{$t->id}}">
         {{csrf_field()}}

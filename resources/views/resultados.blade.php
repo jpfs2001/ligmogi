@@ -22,7 +22,8 @@ $count = count($dados);
     @endif
     <div class="container">
         <h4><b>{{$d->nome}}</b></h4> 
-        <p>{{$d->rua}}, {{$d->numero}} - {{$d->bairro}}</p> 
+        <p>{{$d->rua}}, {{$d->numero}} - {{$d->bairro}}</p>
+        <p><i class="{{$d->whats == 1 ? 'fa fa-whatsapp' : ''}}"></i> {{$d->telefone}}</p>
     </div>
     </div>
     <br><br>
