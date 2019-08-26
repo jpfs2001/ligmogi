@@ -55,14 +55,14 @@ p.rodape a:hover { color: #54008B; text-decoration: underline; }
 
 .icone{ float: left; width: 48px; height: 42px; padding: 0; margin: 5px 0 0 0; background: none; }
 
-.tabNome.tabAtiva .icone, .tabNome.tabInativa:hover .icone { background: url("../../res/ico-nome.png") top center no-repeat; }
-.tabNome.tabInativa .icone{ background: url("../../res/ico-nome.png") bottom center no-repeat; }
+.tabNome.tabAtiva .icone, .tabNome.tabInativa:hover .icone { background: url("http://127.0.0.1:8000/image/ico-nome.png") top center no-repeat; }
+.tabNome.tabInativa .icone{ background: url("http://127.0.0.1:8000/image/ico-nome.png") bottom center no-repeat; }
 
-.tabAtividade.tabAtiva .icone, .tabAtividade.tabInativa:hover .icone { background: url("../../res/ico-residencia.png") top center no-repeat; }
-.tabAtividade.tabInativa .icone{ background: url("../../res/ico-residencia.png") bottom center no-repeat; }
+.tabAtividade.tabAtiva .icone, .tabAtividade.tabInativa:hover .icone { background: url("http://127.0.0.1:8000/image/ico-residencia.png") top center no-repeat; }
+.tabAtividade.tabInativa .icone{ background: url("http://127.0.0.1:8000/image/ico-residencia.png") bottom center no-repeat; }
 
-.tabTelefone.tabAtiva .icone, .tabTelefone.tabInativa:hover .icone { background: url("../../res/ico-telefone.png") top center no-repeat; }
-.tabTelefone.tabInativa .icone{ background: url("../../res/ico-telefone.png") bottom center no-repeat; }
+.tabTelefone.tabAtiva .icone, .tabTelefone.tabInativa:hover .icone { background: url("http://127.0.0.1:8000/image/ico-telefone.png") top center no-repeat; }
+.tabTelefone.tabInativa .icone{ background: url("http://127.0.0.1:8000/image/ico-telefone.png") bottom center no-repeat; }
 
 .labelTab{ /*float: left;*/ font-size: 22px; height: 52px; line-height: 52px; margin-left: 5px; font-weight: lighter; color:#FFF; }
 
@@ -81,11 +81,11 @@ button.btnPesquisar{ height: 89px; width: 10%; border-top: 2px solid #FFF; borde
 
 .formNome button.btnPesquisar,
 .formAtividade button.btnPesquisar,
-.formTelefone button.btnPesquisar { background: url("{{ URL::asset('image/ico-pesquisa') }}") center center no-repeat #47cbaf; padding: 5px;}
+.formTelefone button.btnPesquisar { background: url("http://127.0.0.1:8000/image/ico-pesquisa.png") center center no-repeat #47cbaf; padding: 5px;}
 
 .formNome button.btnPesquisar:hover,
 .formAtividade button.btnPesquisar:hover,
-.formTelefone button.btnPesquisar:hover{ background: url("../../res/ico-pesquisa.png") center center no-repeat #54008B;}
+.formTelefone button.btnPesquisar:hover{ background: url("http://127.0.0.1:8000/image/ico-pesquisa.png") center center no-repeat #54008B;}
 
 
 .anunciosHome { padding-right: 0; padding-left: 21px; }
