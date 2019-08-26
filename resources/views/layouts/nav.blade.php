@@ -95,8 +95,8 @@
                         <!-- atividade -->
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 divForm" id="atividade" style="display:none;">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 formAtividade">
-                                <form name="formAtividade" action="resultados.php" enctype="multipart/form-data" method="get" id="formAtividade">
-                                    <input type="text" name="r" id="r" placeholder="Nome" class="forms" autocomplete="off"  required >
+                                <form name="formAtividade" action="/pesquisar" enctype="multipart/form-data" method="get" id="formAtividade">
+                                    <input type="text" name="atividade" id="r" placeholder="Atividade" class="forms" autocomplete="off"  required >
                                     <button type="submit" class="btnPesquisar"></button>
                                 </form>
                             </div>
@@ -105,8 +105,8 @@
                         <!-- telefone -->
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 divForm" id="telefone" style="display:none;">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 formTelefone">
-                                <form name="formTelefone" action="resultados.php" enctype="multipart/form-data" method="get" id="formTelefone">
-                                    <input type="text" name="t" id="t" placeholder="Telefone" class="forms tel" autocomplete="off"  required >
+                                <form name="formTelefone" action="/pesquisar" enctype="multipart/form-data" method="get" id="formTelefone">
+                                    <input type="text" name="telefone" id="t" placeholder="Telefone" class="forms tel" autocomplete="off"  required >
                                     <button type="submit" class="btnPesquisar"></button>
                                 </form>
                             </div>
