@@ -25,13 +25,13 @@ class AdminController extends Controller
         $this->validate($request,[
             'nome' => 'required',
             'capa' => 'required',
-            'banner' => 'mimes:png|max:2048',
-            'icone' => 'mimes:png'
+            'banner' => 'mimes:png,jpg,jpeg|max:2048',
+            'icone' => 'mimes:png,jpg,jpeg'
         ],[
             'nome.required' => 'Insira o nome do comércio',
             'capa.required' => 'Selecione uma opção para capa',
-            'banner.mimes' => 'O banner precisa estar no formato png',
-            'icone.mimes' => 'A icone precisa estar no formato png',
+            'banner.mimes' => 'O banner precisa estar no formato png, jpg ou jpeg',
+            'icone.mimes' => 'A icone precisa estar no formato png, jpg ou jpeg',
             'banner.max' => 'Imagem pesada'
         ]);
 
@@ -134,13 +134,13 @@ class AdminController extends Controller
         $this->validate($request,[
             'nome' => 'required',
             'capa' => 'required',
-            'banner' => 'mimes:png|max:2048',
-            'icone' => 'mimes:png'
+            'banner' => 'mimes:png, jpg, jpeg|max:2048',
+            'icone' => 'mimes:png, jpg, jpeg'
         ],[
             'nome.required' => 'Insira o nome do comércio',
             'capa.required' => 'Selecione uma opção para capa',
-            'banner.mimes' => 'O banner precisa estar no formato png',
-            'icone.mimes' => 'A icone precisa estar no formato png',
+            'banner.mimes' => 'O banner precisa estar no formato png, jpg ou jpeg',
+            'icone.mimes' => 'A icone precisa estar no formato png, jpg ou jpeg',
             'banner.max' => 'Imagem pesada'
         ]);
 

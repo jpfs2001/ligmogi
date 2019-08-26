@@ -17,12 +17,15 @@ $count = count($dados);
 
 <div class="col-md-4">
     <div class="card" style="width:92%;max-width:300px;">
-    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:100%">
+    @if(isset($d->banner))
+    <img src="{{$d->banner}}" alt="Avatar" style="width:100%">
+    @endif
     <div class="container">
         <h4><b>{{$d->nome}}</b></h4> 
-        <p>Architect & Engineer</p> 
+        <p>{{$d->rua}}, {{$d->numero}} - {{$d->bairro}}</p> 
     </div>
     </div>
+    <br><br>
     </div>
 
     
