@@ -18,10 +18,10 @@ $count = count($dados);
 <div class="col-md-4">
     <div class="card" style="width:92%;max-width:300px;">
     @if(isset($d->banner))
-    <img src="{{$d->banner}}" alt="Avatar" style="width:100%">
+    <a href="/comercios/{{$d->id}}"> <img src="{{$d->banner}}" alt="Avatar" style="width:100%"></a>
     @endif
     <div class="container">
-        <h4><b>{{$d->nome}}</b></h4> 
+    <a href="/comercios/{{$d->id}}"><h4><b>{{$d->nome}}</b></h4></a> 
         <p>{{$d->rua}}, {{$d->numero}} - {{$d->bairro}}</p>
         <p><i class="{{$d->whats == 1 ? 'fa fa-whatsapp' : ''}}"></i> {{$d->telefone}}</p>
     </div>

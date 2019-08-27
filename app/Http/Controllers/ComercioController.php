@@ -23,7 +23,7 @@ class ComercioController extends Controller
         $dados = DB::table('comercios')
         ->select('comercios.nome as nome', 'comercios.banner as banner', 'comercios.facebook as facebook',
         'enderecos.rua as rua', 'enderecos.bairro as bairro', 'enderecos.numero as numero',
-        'telefones.telefone as telefone', 'telefones.whats as whats')
+        'telefones.telefone as telefone', 'telefones.whats as whats', 'comercios.id as id')
         ->join('enderecos', 'comercios.id', '=', 'enderecos.comercios_id')
         ->join('telefones', 'telefones.comercios_id', '=', 'comercios.id')
         ->where('comercios.nome', 'like', '%' . $request->nome . '%' )
@@ -38,7 +38,7 @@ class ComercioController extends Controller
         $dados = DB::table('comercios')
         ->select('comercios.nome as nome', 'comercios.banner as banner', 'comercios.facebook as facebook',
         'enderecos.rua as rua', 'enderecos.bairro as bairro', 'enderecos.numero as numero',
-        'telefones.telefone as telefone', 'telefones.whats as whats')
+        'telefones.telefone as telefone', 'telefones.whats as whats', 'comercios.id as id')
         ->join('enderecos', 'comercios.id', '=', 'enderecos.comercios_id')
         ->join('telefones', 'telefones.comercios_id', '=', 'comercios.id')
         ->where('comercios.atividade', 'like', '%' . $request->atividade . '%' )
@@ -53,7 +53,7 @@ class ComercioController extends Controller
         $dados = DB::table('comercios')
         ->select('comercios.nome as nome', 'comercios.banner as banner', 'comercios.facebook as facebook',
         'enderecos.rua as rua', 'enderecos.bairro as bairro', 'enderecos.numero as numero',
-        'telefones.telefone as telefone', 'telefones.whats as whats')
+        'telefones.telefone as telefone', 'telefones.whats as whats', 'comercio.id as id')
         ->join('enderecos', 'comercios.id', '=', 'enderecos.comercios_id')
         ->join('telefones', 'telefones.comercios_id', '=', 'comercios.id')
         ->where('telefones.telefone', 'like', '%' . $request->telefone . '%' )
@@ -76,7 +76,33 @@ class ComercioController extends Controller
 
     public function comercios(Comercio $dados)
     {
-      return view('comercios', compact('dados'));
+      $telefones = Telefone::where('comercios_id', '=', $dados->id)
+      ->limit('2')
+      ->get();
+      
+      $enderecos = Endereco::where('comercios_id', '=', $dados->id)
+      ->limit('2')
+      ->get();
+
+      if(isset($enderecos))
+      {
+
+        $address = Endereco::where('comercios_id', '=', $dados->id)
+        ->limit('1')
+        ->get();
+
+        foreach($address as $e)
+        {
+          
+          $address = $e->rua . ', ' . $e->numero . ' - ' . $e->bairro . ', ' . $e->cidade;    
+        }
+        $address = str_replace(' ','%20', $address);
+
+      }
+
+      //dd($address);
+
+      return view('comercios', compact('dados', 'telefones', 'enderecos', 'address'));
     }
 
 }

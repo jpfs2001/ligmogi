@@ -19,20 +19,15 @@
         {{ csrf_field() }}
 
         <input type="hidden" name="id" value="{{$dados->id}}">
-
-        <label>
-        <div class="form-inline">   
+   
+        <div class="form-group">
         <label for="nome" class="Texto">Nome do comercio</label>
         <input type="text" class="Texto form-control" name= "nome" autocomplete="off" value="{{$dados->nome}}">
-        <div class="align-right">
-        <label for="email" class="Texto">Email</label>
-        <input type="text" class="Texto form-control" name= "email" autocomplete="off" value="{{$dados->email}}">
-        </div>
         </div>
 
-        <label>
-        <div class="form-group">   
-        
+        <div class="form-group">
+        <label for="email" class="Texto">Email</label>
+        <input type="text" class="Texto form-control" name= "email" autocomplete="off" value="{{$dados->email}}">
         </div>
 
         <label>
