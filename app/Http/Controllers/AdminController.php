@@ -103,12 +103,12 @@ class AdminController extends Controller
         $comercio->dom = $request->dom1 . ' - ' . $request->dom2;
         }
         
-        if(isset($request->feriado2) && isset($request->feriado2)){
+        if(isset($request->feriado1) && isset($request->feriado2)){
         $comercio->feriado = $request->feriado1 . ' - ' . $request->feriado2;
         }
 
-        if(isset($request->feriado2) && isset($request->feriado2)){
-        $comercio->feriado_nacional = $request->seg1 . ' - ' . $request->seg2;
+        if(isset($request->nacional1) && isset($request->nacional2)){
+        $comercio->feriado_nacional = $request->nacional1 . ' - ' . $nacional2->seg2;
         }
     
         $comercio->save();
@@ -167,7 +167,8 @@ class AdminController extends Controller
         }
 
         //horarios
-        if($request->semana = 1)
+        
+        if($request->semana = 1 && isset($request->seg1))
         {
             $comercio->seg = $request->seg1 . ' - ' . $request->seg2;
             $comercio->ter = $request->seg1 . ' - ' . $request->seg2;
@@ -211,12 +212,12 @@ class AdminController extends Controller
         $comercio->dom = $request->dom1 . ' - ' . $request->dom2;
         }
         
-        if(isset($request->feriado2) && isset($request->feriado2)){
+        if(isset($request->feriado1) && isset($request->feriado2)){
         $comercio->feriado = $request->feriado1 . ' - ' . $request->feriado2;
         }
 
-        if(isset($request->feriado2) && isset($request->feriado2)){
-        $comercio->feriado_nacional = $request->seg1 . ' - ' . $request->seg2;
+        if(isset($request->nacional1) && isset($request->nacional2)){
+        $comercio->feriado_nacional = $request->nacional1 . ' - ' . $request->nacional2;
         }
     
         $comercio->save();
@@ -306,8 +307,6 @@ class AdminController extends Controller
         $endereco->cidade = $request->cidade;
         $endereco->cep = $request->cep;
         $endereco->complemento = $request->complemento;
-        $endereco->latitude = $request->latitude;
-        $endereco->longitude = $request->longitude;
 
         
 
@@ -344,8 +343,7 @@ class AdminController extends Controller
         $endereco->cidade = $request->cidade;
         $endereco->cep = $request->cep;
         $endereco->complemento = $request->complemento;
-        $endereco->latitude = $request->latitude;
-        $endereco->longitude = $request->longitude;
+
 
         
 

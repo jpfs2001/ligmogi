@@ -2,35 +2,36 @@
 
 @section('content')
 
-    <center>
-    <font size="7px"
-    <p><a href="/adicionar/telefone/{{$dados->id}}">Adicionar telefone</a></p>
-    <p><a href="/adicionar/endereco/{{$dados->id}}">Adicionar endereço</a></p>
+    <div align="center">
+    
+    <h1><p><a href="/adicionar/telefone/{{$dados->id}}">Adicionar telefone</a></p>
+    <p><a href="/adicionar/endereco/{{$dados->id}}">Adicionar endereço</a></p></h1>
     <br><br><br>
-    </font>
-    </center>
+    
+    </div>
 
-    <div class="col-md-7">
-    <font size="5px">INFORMAÇÕES</font>
+    <div class="col-md-6">
+    <h1>INFORMAÇÕES</h1 >
       
-      <p>Nome: {{$dados->nome}}</p>
+      <h4><p>Nome: {{$dados->nome}}</p>
       <p>Email: {{$dados->email}}</p>
       <p>site: {{$dados->site}}</p>
       <p>resumo: {{$dados->resumo}}</p>
       <p>Facebook: {{$dados->facebook}}</p>
       <p>Atividade: {{$dados->atividades}}</p>
-      <p>Capa: {{$dados->capa == 1 ? 'sim' : 'não'}}</p>
+      <p>Capa: {{$dados->capa == 1 ? 'sim' : 'não'}}</p></h4>
 
     </div>
 
-    <div class="col-md-7 img-fluid">
-      <img class="img-fluid rounded mb-3 mb-md-0  animated fadeInRight" src="{{ $dados->banner }}" >
+    <div class="img-fluid">
+      <img class="img-fluid" src="{{ $dados->banner }}" width="50%">
     </div>
-    <div class="col-md-7 img-fluid">
-      <img class="img-fluid rounded mb-3 mb-md-0" src="{{ $dados->icone }}" >
+    <div class="img-fluid">
+      <img class="img-fluid" src="{{ $dados->icone }}"  width="10%">
     </div>
-    <font size="5px">TELEFONE</font>
-    <div class="col-sm-3">
+
+    <h3>TELEFONE</h3>
+    <div class="col-sm-10">
 		<table id="employee_grid" class="table table-condensed table-hover table-striped" width="60%" cellspacing="0" data-toggle="bootgrid">
 		<thead>
 		<tr>  

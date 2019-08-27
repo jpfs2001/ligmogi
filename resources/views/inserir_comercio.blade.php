@@ -13,26 +13,23 @@
         </div>
         @endif
 <br><br><br><br>
-<div class="container">
+
     <form method="post" action="/inserirComercio" enctype="multipart/form-data">
-    <div></div>
+    
         {{ csrf_field() }}
 
+        
+        <div class="col-md-6">
         <label>
         <div class="form-group">   
         <label for="nome" class="Texto">Nome do comercio</label><br>
         <input type="text" class="Texto form-control" name= "nome" autocomplete="off">
         </div>
 
-
+        <label>
         <div class="fom-group">
         <label for="email" class="Texto">Email</label>
         <input type="text" class="Texto form-control" name= "email" autocomplete="off">
-        </div>
-
-        <label>
-        <div class="form-group">   
-        
         </div>
 
         <label>
@@ -44,7 +41,7 @@
         <label>
         <div class="form-group">   
         <label for="resumo" class="Texto">Resumo</label>
-        <input type="text" class="Texto form-control" name= "resumo" autocomplete="off">
+        <textarea type="text" class="Texto form-control" name= "resumo" autocomplete="off"></textarea>
         </div>
 
         <label>
@@ -81,6 +78,10 @@
         <input type="file" class="Texto form-control" name="icone" id="icone" autocomplete="off">
         </div><br>
 
+        <button type="submit" class="btn btn-success" style="background-color: greelight;border-color: greenlight;" >Enviar </button>
+</div>
+
+<div class="col-md-6">
         Segunda-Feira&nbsp 
         <div class="form-inline">
         <label for="seg" class="Texto">Abre as</label>&nbsp 
@@ -152,11 +153,12 @@
         <label for="" class="Texto">fecha as as</label>&nbsp 
         <input type="time" class="Texto form-control" name = "nacional2" autocomplete="off">
         </div><br>
-
-
-        <button type="submit" class="btn btn-primary" style="background-color: greelight;border-color: greenlight;" >Enviar Garai</button>
-
-
-    </form>
 </div>
+
+
+        
+       
+    
+    </form>
+
 @stop

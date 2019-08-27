@@ -17,7 +17,7 @@
         <input type="text" class="Texto form-control" name="telefone" value="{{$dados->telefone}}"><input type="checkbox" name= "whats" value="1" autocomplete="off"> WhastApp 
         </div>
 
-        <button type="submit" class="btn btn-primary" style="background-color: greelight;border-color: greenlight;" >Enviar</button>
+        <button type="submit" class="btn btn-success" style="background-color: greelight;border-color: greenlight;" >Enviar</button>
 
 
 @stop

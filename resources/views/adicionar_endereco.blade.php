@@ -70,7 +70,7 @@
         <input type="text" class="Texto form-control" name = "longitude" autocomplete="off">
         </div>
 
-        <button type="submit" class="btn btn-primary" style="background-color: greelight;border-color: greenlight;" >Enviar Garai</button>
+        <button type="submit" class="btn btn-success" style="background-color: greelight;border-color: greenlight;" >Enviar Garai</button>
 
 
     </form>

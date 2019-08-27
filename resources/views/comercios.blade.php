@@ -10,7 +10,7 @@
     <h4 align="justify">{{$dados->resumo}}</h4>
 
     <div class="resp-container">
-        <div class="resp-iframe mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q={{$address}}=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net/blog/best-wordpress-themes/">best wordpress themes</a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
+        <div class="resp-iframe mapouter"><div class="gmap_canvas"><iframe width="480   " height="400" id="gmap_canvas" src="https://maps.google.com/maps?q={{$address}}=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net/blog/best-wordpress-themes/">best wordpress themes</a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
     </div>
 </div>
 <div class="col-md-6">
@@ -91,7 +91,7 @@
 
                     <tr>
                         <td><h4>Feriados nacionais</h4></td>
-                        <td><h4>{{$dados->feriado_nacionais == 0 ? '-' : $dados->feriado_nacionais}}</h4></td>
+                        <td><h4>{{$dados->feriado_nacional == 0 ? '-' : $dados->feriado_nacional}}</h4></td>
                     </tr>
 
                 </tbody>

@@ -6,7 +6,7 @@
 				<meta name="description" content="Ligmogi é o guia comercial ideal para você que procura o contado de algum prestador de serviços na região de Mogi Mirim" />
 				<meta name="keywords" content="Ligmogi, Mogi, Mirim, Guia, Empresas, Lista, Telefonia">
 				<meta name="author" content="João Pedro e Altamir Silva" />
-				<meta name="Googlebot" content="all" />
+				
                 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
                 <link rel="icon" href="favicon.ico" type="image/x-icon">
                 
@@ -125,27 +125,13 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
         <script>
             var pagina = false;
         </script>
     <script src="{{ URL::asset('js/funcoes.js') }}"></script>
-    <script>
-        // popup
-        function abrir(){
-            document.getElementById('bg').style.display='block';
-            document.getElementById('popup').style.display = 'block';
-            setTimeout ("fechar()", 10000);
-        }
-    
-        function fechar(){
-            document.getElementById('bg').style.display='none';
-            document.getElementById('popup').style.display = 'none';
-    
-        }
-    </script><div class="container-fluid">
+    <div class="container-fluid">
     
 
         <div class="row">
