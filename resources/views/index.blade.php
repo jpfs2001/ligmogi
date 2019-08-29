@@ -11,12 +11,12 @@ $count = 0;
   <br><br>
   <div class="row">
     <div class="col-md-12">
-      <div class="carousel slide multi-item-carousel" id="theCarousel">
+      <div class="carousel slide multi-carousel-item" id="theCarousel" data-ride="carousel"> 
         <div class="carousel-inner">
           
         @foreach($dados as $d)
           <div class="item{{$count == 0 ? ' active' : '' }}">
-            <div class="col-xs-4"><a href="/comercios/{{$d->id}}"><img src="{{$d->banner}}" class="img" width="150%"></a></div> <?php $count++;?>
+            <div class="col-xs-4"><a href="/comercios/{{$d->id}}"><img src="{{$d->banner}}" class="img" width="100%"></a></div> <?php $count++;?>
           </div>
         @endforeach
         </div>
@@ -26,5 +26,8 @@ $count = 0;
     </div>
   </div>
 
+
+  
+ 
 
 @stop

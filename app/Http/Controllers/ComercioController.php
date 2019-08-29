@@ -102,7 +102,7 @@ class ComercioController extends Controller
 
       //dd($address);
 
-      return view('comercios_teste', compact('dados', 'telefones', 'enderecos', 'address'));
+      return view('comercios', compact('dados', 'telefones', 'enderecos', 'address'));
     }
 
 }

@@ -696,28 +696,24 @@ a.logo-troca img { width: 100%; height: 100%; float: left; }
         padding-bottom: 12px;
         padding-left: 12px;
     }
-
-        
-         
-            
-          
-    .multi-item-carousel .carousel-inner > .item {
+                      
+    .multi-carousel-item .carousel-inner > .item {
         transition: 500ms ease-in-out left;
       }
-      .multi-item-carousel .carousel-inner .active.left {
+      .multi-carousel-item .carousel-inner .active.left {
         left: -33%;
       }
-      .multi-item-carousel .carousel-inner .active.right {
+      .multi-carousel-item .carousel-inner .active.right {
         left: 33%;
       }
-      .multi-item-carousel .carousel-inner .next {
+      .multi-carousel-item .carousel-inner .next {
         left: 33%;
       }
-      .multi-item-carousel .carousel-inner .prev {
+      .multi-carousel-item .carousel-inner .prev {
         left: -33%;
       }
       @media all and (transform-3d), (-webkit-transform-3d) {
-        .multi-item-carousel .carousel-inner > .item {
+        .multi-carousel-item .carousel-inner > .item {
           transition: 500ms ease-in-out left;
           transition: 500ms ease-in-out all;
           -webkit-backface-visibility: visible;
@@ -726,10 +722,13 @@ a.logo-troca img { width: 100%; height: 100%; float: left; }
                   transform: none !important;
         }
       }
-      .multi-item-carousel .carouse-control.left,
-      .multi-item-carousel .carouse-control.right {
+      .multi-carousel-item .carouse-control.left,
+      .multi-carousel-item .carouse-control.right {
         background-image: none;
       }
+
+   
+      
         
        
       
