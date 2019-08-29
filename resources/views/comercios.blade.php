@@ -52,11 +52,13 @@
     <div class="row">
         <div class="col-lg-6">
 		
-		    <table id="employee_grid" class="table table-condensed table-hover table-striped" width="60%" cellspacing="0" data-toggle="bootgrid">
-                <thead>
+		    <table class="table table-condensed table-hover" width="60%" cellspacing="0" data-toggle="bootgrid">
+                <thead style="background-color:#b40404; color:#ffffff" >
                     <tr>
-                        <th><h3>Dia da Semana</h3></th>
-                        <th><h3>Horario<h3></th>
+                        <div class="responsive">
+                            <th><h3>Dia da semana</h3></th>
+                            <th><h3>Horário</h3></th>
+                        </div>
                     </tr>
                 </thead>
                 <tbody>
@@ -108,7 +110,7 @@
                 </tbody>
             </table>
         </div>
-        <br><br>
+        
 
         <div class="col-lg-6">
             <iframe width="100%" height="450px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q={{$address}}&amp;zoom=16&amp;key=AIzaSyCjCHTUredoQH1u_K1J4OCs4ODp_hKQ0Zk" allowfullscreen=""></iframe>
