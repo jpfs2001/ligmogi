@@ -1,46 +1,56 @@
 @extends('layouts.nav')
 
 @section('content')
-<div align="center"><h1 >{{$dados->nome}}</h1></div>
+<div align="center"><h1 style="color:#b40404">{{$dados->nome}}</h1></div>
 <br>
-<div class="col-md-6">
 
-    <img src="{{$dados->banner}}" width="100%">
-    <br>
-    <h4 align="justify">{{$dados->resumo}}</h4>
+<div class="card ">
+        <div class="row">
+        
+        <div class="col-lg-6">
+            <img src="{{$dados->banner}}" width="100%">
+            
+            
+            <div class="card-content">
+                <h4 align="justify">{{$dados->resumo}}</h4>
+            </div>
 
-    <br>
-    <div class="resp-container">
-        <div class="resp-iframe"><div class="gmap_canvas"><iframe width="480   " height="321" id="gmap_canvas" src="https://maps.google.com/maps?q={{$address}}=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net/blog/best-wordpress-themes/">best wordpress themes</a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card-content">
+            @foreach($enderecos as $e)
+
+                <h3><i class="fa fa-map-marker" style="color:#ff0000"></i>  {{$e->rua}}, {{$e->numero}} - {{$e->bairro}}</h3>
+                <h3>{{$e->cep}}, {{$e->cidade}}</h3 >
+
+            @endforeach
+
+            @foreach($telefones as $t)
+
+                <h3><i class="{{$t->whats == 1 ? 'fa fa-whatsapp' : 'fa fa-phone'}}"  style="color:#25d366"></i> {{$t->telefone}}</h3>
+                
+            @endforeach
+
+                @if(isset($dados->email))
+
+                    <h3><i class="fa fa-envelope-o" style="color:blue"></i> {{$dados->email}}</h3>
+
+                @endif
+
+                @if(isset($dados->site))
+
+                <h3><a href="{{$dados->site}}"> {{$dados->site}} </a></h3>
+
+                @endif
+            </div>
+        </div>
     </div>
-</div>
-<div class="col-md-6">
-    @foreach($enderecos as $e)
+</div>      
 
-        <h3><i class="fa fa-map-marker"></i>  {{$e->rua}}, {{$e->numero}} - {{$e->bairro}}</h3>
-        <h3>{{$e->cep}}, {{$e->cidade}}</h3 >
-
-    @endforeach
-
-    @foreach($telefones as $t)
-
-        <h3><i class="{{$t->whats == 1 ? 'fa fa-whatsapp' : 'fa fa-phone'}}"></i> {{$t->telefone}}</h3>
-        
-    @endforeach
-
-        @if(isset($dados->email))
-
-        <h3><i class="fa fa-envelope-o" aria-hidden="true"></i> {{$dados->email}}</h3>
-
-        @endif
-
-        @if(isset($dados->site))
-
-        <h3><a href="{{$dados->site}}"> {{$dados->site}} </a></h3>
-
-        @endif
-        
-        <div class="col-sm-10">
+<br><br>
+    <div class="row">
+        <div class="col-lg-6">
 		
 		    <table id="employee_grid" class="table table-condensed table-hover table-striped" width="60%" cellspacing="0" data-toggle="bootgrid">
                 <thead>
@@ -98,10 +108,11 @@
                 </tbody>
             </table>
         </div>
-    </div>
+        <br><br>
 
-
-        
+        <div class="col-lg-6">
+            <iframe width="100%" height="450px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q={{$address}}&amp;zoom=16&amp;key=AIzaSyCjCHTUredoQH1u_K1J4OCs4ODp_hKQ0Zk" allowfullscreen=""></iframe>
+        </div>
     
 
 @stop

@@ -96,13 +96,13 @@ class ComercioController extends Controller
           
           $address = $e->rua . ', ' . $e->numero . ' - ' . $e->bairro . ', ' . $e->cidade;    
         }
-        $address = str_replace(' ','%20', $address);
+        $address = str_replace(' ','+', $address);
 
       }
 
       //dd($address);
 
-      return view('comercios', compact('dados', 'telefones', 'enderecos', 'address'));
+      return view('comercios_teste', compact('dados', 'telefones', 'enderecos', 'address'));
     }
 
 }

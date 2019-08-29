@@ -7,16 +7,16 @@ $count = 0;
 
 
 
-  <h2>Comércios em destaque</h2>
+  <h2 clas="font-family:Roboto">Comércios em destaque</h2>
   <br><br>
   <div class="row">
-    <div class="col-md-18">
+    <div class="col-md-12">
       <div class="carousel slide multi-item-carousel" id="theCarousel">
         <div class="carousel-inner">
           
         @foreach($dados as $d)
           <div class="item{{$count == 0 ? ' active' : '' }}">
-            <div class="col-xs-4"><a href="/comercios/{{$d->id}}"><img src="{{$d->banner}}" class="img-responsive"></a></div> <?php $count++;?>
+            <div class="col-xs-4"><a href="/comercios/{{$d->id}}"><img src="{{$d->banner}}" class="img" width="150%"></a></div> <?php $count++;?>
           </div>
         @endforeach
         </div>
