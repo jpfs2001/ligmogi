@@ -23,7 +23,7 @@ $count = count($dados);
     <div class="container">
     <a href="/comercios/{{$d->id}}"><h4><b>{{$d->nome}}</b></h4></a> 
         <p>{{$d->rua}}, {{$d->numero}} - {{$d->bairro}}</p>
-        <p><i class="{{$d->whats == 1 ? 'fa fa-whatsapp' : ''}}"></i> {{$d->telefone}}</p>
+        <p><i class="{{$d->whats == 1 ? 'fa fa-whatsapp' : ''}}" style="color:#25d366;font-size:18px"></i> {{$d->telefone}}</p>
     </div>
     </div>
     <br><br>

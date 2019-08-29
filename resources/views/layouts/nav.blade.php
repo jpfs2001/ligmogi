@@ -135,9 +135,10 @@
     <div class="container-fluid">
     
 
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margemTopo20">
-                <p class="rodape text-center">&copy; LigMogi - Todos os direitos reservados<br><a href="">Desenvolvido por Altamir Junior</a></p>
+        <div class="row ">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margemTopo20" align="center">
+                <footer class="fixarRodape">
+                <p class="rodape">&copy; LigMogi - Todos os direitos reservados<br><a href="">Desenvolvido por Altamir Junior</a></p>
             </div>
         </div>
     </div>

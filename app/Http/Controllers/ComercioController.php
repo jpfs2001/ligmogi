@@ -53,7 +53,7 @@ class ComercioController extends Controller
         $dados = DB::table('comercios')
         ->select('comercios.nome as nome', 'comercios.banner as banner', 'comercios.facebook as facebook',
         'enderecos.rua as rua', 'enderecos.bairro as bairro', 'enderecos.numero as numero',
-        'telefones.telefone as telefone', 'telefones.whats as whats', 'comercio.id as id')
+        'telefones.telefone as telefone', 'telefones.whats as whats', 'comercios.id as id')
         ->join('enderecos', 'comercios.id', '=', 'enderecos.comercios_id')
         ->join('telefones', 'telefones.comercios_id', '=', 'comercios.id')
         ->where('telefones.telefone', 'like', '%' . $request->telefone . '%' )

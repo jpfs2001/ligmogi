@@ -7,7 +7,7 @@ $count = 0;
 
 
 
-  <h2 clas="font-family:Roboto">Comércios em destaque</h2>
+  <div align="center" style="color:#b40404"><h1 clas="font-family:Roboto">Comércios em destaque</h1></div>
   <br><br>
   <div class="row">
     <div class="col-md-12">
