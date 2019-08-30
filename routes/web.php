@@ -30,7 +30,6 @@ Route::post('/addTelefone', 'AdminController@addTelefone');
 Route::post('/addEndereco', 'AdminController@addEndereco');
 Route::post('/addHorario', 'AdminController@addHorario');
 Route::post('/editar/comercios/{dados}', 'AdminController@editar_comercios');
-Route::post('/editarComercios', 'AdminController@editarComercios');
 Route::post('/editar/telefones/{dados}', 'AdminController@editar_telefones');
 Route::post('/editarTelefone', 'AdminController@editarTelefone');
 Route::post('/editar/enderecos/{dados}', 'AdminController@editar_enderecos');
@@ -38,6 +37,7 @@ Route::post('/editarEnderecos', 'AdminController@editarEnderecos');
 Route::post('/deletar/comercios/{dados}', 'AdminController@deletar_comercios');
 Route::post('/deletar/telefones/{dados}', 'AdminController@deletar_telefones');
 Route::post('/deletar/enderecos/{dados}', 'AdminController@deletar_enderecos');
+Route::post('/editarComercios', 'AdminController@editarComercios');
 });
 
 Route::get('/pesquisar', 'ComercioController@pesquisar');

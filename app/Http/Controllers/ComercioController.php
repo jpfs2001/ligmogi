@@ -29,6 +29,7 @@ class ComercioController extends Controller
         ->where('comercios.nome', 'like', '%' . $request->nome . '%' )
         ->groupBy('comercios.id')
         ->orderBy('comercios.capa', 'DESC')
+        ->orderBy('comercios.banner', 'DESC')
         ->get();
       }
 
@@ -44,6 +45,7 @@ class ComercioController extends Controller
         ->where('comercios.atividade', 'like', '%' . $request->atividade . '%' )
         ->groupBy('comercios.id')
         ->orderBy('comercios.capa', 'DESC')
+        ->orderBy('comercios.banner', 'DESC')
         ->get();
       }
 
@@ -59,6 +61,7 @@ class ComercioController extends Controller
         ->where('telefones.telefone', 'like', '%' . $request->telefone . '%' )
         ->groupBy('comercios.id')
         ->orderBy('comercios.capa', 'DESC')
+        ->orderBy('comercios.banner', 'DESC')
         ->get();
       }
       //dd($dados);

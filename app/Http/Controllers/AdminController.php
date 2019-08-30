@@ -129,18 +129,15 @@ class AdminController extends Controller
 
     public function editarComercios(Request $request)
     {
-
-        // dd($request);
+        //dd($request);
         $this->validate($request,[
             'nome' => 'required',
             'capa' => 'required',
-            'banner' => 'mimes:png, jpg, jpeg|max:2048',
-            'icone' => 'mimes:png, jpg, jpeg'
+            'banner' => 'required|image|mimes:jpg,png,jpeg|max:2048'
         ],[
             'nome.required' => 'Insira o nome do comércio',
             'capa.required' => 'Selecione uma opção para capa',
             'banner.mimes' => 'O banner precisa estar no formato png, jpg ou jpeg',
-            'icone.mimes' => 'A icone precisa estar no formato png, jpg ou jpeg',
             'banner.max' => 'Imagem pesada'
         ]);
 
