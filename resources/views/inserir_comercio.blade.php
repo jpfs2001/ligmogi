@@ -1,7 +1,7 @@
 @extends('layouts.nav')
 
 @section('content')
-
+<h3><a href="/admin">/Admin</a></h3>
 <div class="panel-body">
     @if(count($errors) > 0)
         <div class="alert alert-danger">

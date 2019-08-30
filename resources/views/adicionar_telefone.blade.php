@@ -1,6 +1,7 @@
 @extends('layouts.nav')
 
 @section('content')
+<h3><a href="/admin">/Admin</a><a href="/lista/comercios">/Comercios</a></h3>
 <body>
 
 

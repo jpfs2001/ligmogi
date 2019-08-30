@@ -2,7 +2,9 @@
 
 @section('content')
 
-<br><br>
+<br>
+<h3><a href="/admin">/Admin</a></h3>
+<br>
         
     
         <div class="col-sm-10">
