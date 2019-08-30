@@ -40,9 +40,14 @@
 
                 @if(isset($dados->site))
 
-                <h3><a href="{{$dados->site}}"> {{$dados->site}} </a></h3>
+                    <h3><a href="{{$dados->site}}"> {{$dados->site}} </a></h3>
 
                 @endif
+
+                @if(isset($dados->facebook))
+                    <a href="{{$dados->facebook}}"><i class="fa fa-facebook facebook"></i></a>
+                @endif
+
             </div>
         </div>
     </div>
