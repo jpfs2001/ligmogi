@@ -80,7 +80,7 @@ class ComercioController extends Controller
     public function comercios(Comercio $dados)
     {
       $telefones = Telefone::where('comercios_id', '=', $dados->id)
-      ->limit('2')
+      ->orderBy('whats', 'desc')
       ->get();
       
       $enderecos = Endereco::where('comercios_id', '=', $dados->id)

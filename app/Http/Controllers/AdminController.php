@@ -133,7 +133,7 @@ class AdminController extends Controller
         $this->validate($request,[
             'nome' => 'required',
             'capa' => 'required',
-            'banner' => 'required|image|mimes:jpg,png,jpeg|max:2048'
+            'banner' => 'image|mimes:jpg,png,jpeg|max:2048'
         ],[
             'nome.required' => 'Insira o nome do comércio',
             'capa.required' => 'Selecione uma opção para capa',
