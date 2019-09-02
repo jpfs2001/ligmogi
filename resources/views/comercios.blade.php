@@ -1,5 +1,7 @@
 @extends('layouts.nav')
 
+
+
 @section('content')
 <div align="center"><h1 style="color:#b40404">{{$dados->nome}}</h1></div>
 <br>

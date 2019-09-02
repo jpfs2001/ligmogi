@@ -36,7 +36,7 @@
         <label>
         <div class="form-group">   
         <label for="site" class="Texto">Site</label>
-        <input type="text" class="Texto form-control" name= "site" autocomplete="off">
+        <input type="text" class="Texto form-control" name= "site" autocomplete="off" value="https://">
         </div>
 
         <label>
@@ -54,7 +54,7 @@
         <label>
         <div class="form-group">   
         <label for="facebook" class="Texto">Facebook</label>
-        <input type="text" class="Texto form-control" name= "facebook" autocomplete="off">
+        <input type="text" class="Texto form-control" name= "facebook" autocomplete="off" value="https://">
         </div>
 
         <label>

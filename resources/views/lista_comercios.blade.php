@@ -23,7 +23,7 @@
     <tr>
         <td><a href="/comercios/informacoes/{{$d->id}}">{{$d->nome}}</a></td>
 
-        <form method="post" action="/editar/comercios/{{$d->id}}">
+        <form method="get" action="/editar/comercios/{{$d->id}}">
         {{csrf_field()}}
         <td><button type="submit" class="btn btn-info"><i class="fa fa-edit"></i></button></td>
         </form>

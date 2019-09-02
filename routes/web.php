@@ -29,7 +29,7 @@ Route::get('/adicionar/horario/{dados}', 'AdminController@adicionar_horario');
 Route::post('/addTelefone', 'AdminController@addTelefone');
 Route::post('/addEndereco', 'AdminController@addEndereco');
 Route::post('/addHorario', 'AdminController@addHorario');
-Route::post('/editar/comercios/{dados}', 'AdminController@editar_comercios');
+Route::get('/editar/comercios/{dados}', 'AdminController@editar_comercios');
 Route::post('/editar/telefones/{dados}', 'AdminController@editar_telefones');
 Route::post('/editarTelefone', 'AdminController@editarTelefone');
 Route::post('/editar/enderecos/{dados}', 'AdminController@editar_enderecos');
