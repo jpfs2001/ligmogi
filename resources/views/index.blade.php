@@ -16,7 +16,7 @@ $count = 0;
           
         @foreach($dados as $d)
           <div class="item{{$count == 0 ? ' active' : '' }}">
-            <div class="col-xs-4"><a href="/comercios/{{$d->id}}"><img src="{{$d->banner}}}" class="img" width="100%"></a></div> <?php $count++;?>
+            <div class="col-xs-4"><a href="/comercios/{{$d->id}}"><img src="{{$d->banner}}" class="img" width="100%"></a></div> <?php $count++;?>
           </div>
         @endforeach
         </div>
