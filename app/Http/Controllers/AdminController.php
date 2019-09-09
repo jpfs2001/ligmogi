@@ -10,6 +10,7 @@ use App\Comercio;
 use App\Telefone;
 use App\Endereco;
 use App\Horario;
+use App\Image;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Storage;
 
@@ -351,6 +352,20 @@ class AdminController extends Controller
         return redirect('/lista/comercios') ;
     }
 
+    //adicionar imagem
+
+    public function addImages(Request $request)
+    {
+        $dados = new Image();
+
+        $dados->link = $request->link;
+        $dados->comercios_id = $request->comercios_id;
+        $dados->save();
+
+        return redirect('/lista/comercios');
+
+    }
+
     //deletar endereco
     public function deletar_enderecos(Endereco $dados)
     {
@@ -428,4 +443,11 @@ class AdminController extends Controller
     }
 
 
+    public function adicionar_images(Comercio $dados)
+    {
+        
+        $dados = $dados->id;
+
+        return view('adicionar_images', compact('dados'));
+    }
 }

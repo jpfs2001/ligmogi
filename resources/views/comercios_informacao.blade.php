@@ -5,7 +5,8 @@
     <div align="center">
     
     <h1><p><a href="/adicionar/telefone/{{$dados->id}}">Adicionar telefone</a></p>
-    <p><a href="/adicionar/endereco/{{$dados->id}}">Adicionar endereço</a></p></h1>
+    <p><a href="/adicionar/endereco/{{$dados->id}}">Adicionar endereço</a>
+    <a href="/adicionar/images/{{$dados->id}}">Adicionar imagem</a></p></h1>
     <br><br><br>
     
     </div>
