@@ -3,6 +3,12 @@
 
 
 @section('content')
+<link rel="stylesheet" href="{{ URL::asset('css/comercios.css') }}" >
+
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v4.0"></script>
+
 <div align="center"><h1 style="color:#b40404">{{$dados->nome}}</h1></div>
 <br>
 
@@ -122,6 +128,65 @@
         <div class="col-lg-6">
             <iframe width="100%" height="450px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q={{$address}}&amp;zoom=16&amp;key=AIzaSyCjCHTUredoQH1u_K1J4OCs4ODp_hKQ0Zk" allowfullscreen=""></iframe>
         </div>
-    
+    </div>
+            <br>
 
+            <script src="{{ URL::asset('js/comercios.js') }}"></script>
+
+        <div class="row">
+
+            <div class="col-lg-8">
+                
+            <section class="awSlider">
+                <div  class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                    <li data-target=".carousel" data-slide-to="0" class="active"></li>
+                    <li data-target=".carousel" data-slide-to="1"></li>
+                    <li data-target=".carousel" data-slide-to="2"></li>
+                    <li data-target=".carousel" data-slide-to="3"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="http://www.adobewordpress.com/wp-content/uploads/2014/02/wallpaper-thumb-941.jpg" class="img" width="100%">
+                        <div class="carousel-caption">Görsel #1</div>
+                    </div>
+                    <div class="item">
+                        <img src="http://www.adobewordpress.com/wp-content/uploads/2014/02/wallpaper-thumb-101.jpg" width="100%">
+                        <div class="carousel-caption">Görsel #2</div>
+                    </div>
+                    <div class="item">
+                        <img src="http://www.adobewordpress.com/wp-content/uploads/2014/02/wallpaper-thumb-1051.jpg" width="100%">
+                        <div class="carousel-caption">Görsel #3</div>
+                    </div>
+                    <div class="item">
+                        <img src="http://www.adobewordpress.com/wp-content/uploads/2013/07/wallpaper-thumb-74.jpg" width="100%">
+                        <div class="carousel-caption">Görsel #4</div>
+                    </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href=".carousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Geri</span>
+                    </a>
+                    <a class="right carousel-control" href=".carousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">İleri</span>
+                    </a>
+                </div>
+                </section>
+                    
+
+
+            </div>
+
+        @if(isset($dados->facebook))
+            <div class="col-lg-4"> 
+                <div class="fb-page" data-href="{{$dados->facebook}}" data-tabs="timeline" data-width="" data-height="550" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="{{$dados->facebook}}" class="fb-xfbml-parse-ignore"><a href="{{$dados->facebook}}"></a></blockquote></div>
+            </div>
+        @endif
+        </div>
 @stop

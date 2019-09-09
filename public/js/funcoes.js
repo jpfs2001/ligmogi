@@ -2,7 +2,7 @@ var _0x89fd=['ajaxSetup','keyup','input[name=\x22e\x22]','val','trim','show','sp
 
 // Instantiate the Bootstrap carousel
 $('.multi-carousel-item').carousel({
-  interval: 2000
+  interval: 3000
 });
 
 // for every slide in carousel, copy the next slide's item in the slide.
@@ -14,10 +14,13 @@ $('.multi-carousel-item .item').each(function(){
   }
   next.children(':first-child').clone().appendTo($(this));
   
-  if (next.next().length>0) {
-    next.next().children(':first-child').clone().appendTo($(this));
-  } else {
-  	$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-  }
+    if (next.next().length>0) {
+      next.next().children(':first-child').clone().appendTo($(this));
+    } else {
+      $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+    }
 });
+
+
+
 
