@@ -358,7 +358,9 @@ class AdminController extends Controller
     {
         $dados = new Image();
 
-        $dados->link = $request->link;
+        $path = Storage::disk('public')->putFile('comercios',$request->link);
+        $dados->link = ( URL::to('/storage') . "/" . $path);
+
         $dados->comercios_id = $request->comercios_id;
         $dados->save();
 

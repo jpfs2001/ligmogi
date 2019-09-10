@@ -8,6 +8,9 @@ use App\Comercio;
 use App\Telefone;
 use App\Endereco;
 use App\Horario;
+use App\Image;
+use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\Storage;
 use DB;
 
 class ComercioController extends Controller
@@ -84,28 +87,31 @@ class ComercioController extends Controller
       ->get();
       
       $enderecos = Endereco::where('comercios_id', '=', $dados->id)
-      ->limit('2')
       ->get();
 
       if(isset($enderecos))
       {
 
         $address = Endereco::where('comercios_id', '=', $dados->id)
-        ->limit('1')
+        ->limit('1')  
         ->get();
 
         foreach($address as $e)
         {
           
-          $address = $e->rua . ', ' . $e->numero . ' - ' . $e->bairro . ', ' . $e->cidade;    
+          $address = $e->rua . ', ' . $e->numero . ' - ' . $e->bairro . ', ' . $e->cidade; 
+
         }
         $address = str_replace(' ','+', $address);
 
       }
 
+      $images = Image::where('comercios_id', '=', $dados->id)
+      ->get();
+
       //dd($address);
 
-      return view('comercios', compact('dados', 'telefones', 'enderecos', 'address'));
+      return view('comercios', compact('dados', 'telefones', 'enderecos', 'address', 'images'));
     }
 
 }

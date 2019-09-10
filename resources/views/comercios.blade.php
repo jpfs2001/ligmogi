@@ -1,5 +1,9 @@
 @extends('layouts.nav')
+<?php 
 
+$count = 0;
+$count2 = 0;
+?>
 
 
 @section('content')
@@ -141,30 +145,35 @@
                 <div  class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
-                    <li data-target=".carousel" data-slide-to="0" class="active"></li>
-                    <li data-target=".carousel" data-slide-to="1"></li>
-                    <li data-target=".carousel" data-slide-to="2"></li>
-                    <li data-target=".carousel" data-slide-to="3"></li>
+                        @foreach($images as $i)
+                        
+                            <li data-target=".carousel" data-slide-to="{{$count}}" class="{{$count == 0 ? 'active' : ''}}"></li>
+                        
+                        <?php 
+                        
+                            $count++;
+
+                        ?>
+
+                        @endforeach
+
                     </ol>
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <img src="http://www.adobewordpress.com/wp-content/uploads/2014/02/wallpaper-thumb-941.jpg" class="img" width="100%">
+
+                    @foreach($images as $i)
+                    <div class="item{{$count2 == 0 ? ' active' : ''}}">
+
+                        <img src="{{$i->link}}" class="img" width="100%">
                         <div class="carousel-caption">Görsel #1</div>
+                        <?php $count2++; ?>
                     </div>
-                    <div class="item">
-                        <img src="http://www.adobewordpress.com/wp-content/uploads/2014/02/wallpaper-thumb-101.jpg" width="100%">
-                        <div class="carousel-caption">Görsel #2</div>
+                    @endforeach
+
+
                     </div>
-                    <div class="item">
-                        <img src="http://www.adobewordpress.com/wp-content/uploads/2014/02/wallpaper-thumb-1051.jpg" width="100%">
-                        <div class="carousel-caption">Görsel #3</div>
-                    </div>
-                    <div class="item">
-                        <img src="http://www.adobewordpress.com/wp-content/uploads/2013/07/wallpaper-thumb-74.jpg" width="100%">
-                        <div class="carousel-caption">Görsel #4</div>
-                    </div>
+
                     </div>
 
                     <!-- Controls -->
