@@ -401,10 +401,12 @@ class AdminController extends Controller
         $telefones = Telefone::where('comercios_id', '=', $dados->id)->get();
 
         $enderecos = Endereco::where('comercios_id', '=', $dados->id)->get();
+        
+        $images = Image::where('comercios_id', '=', $dados->id)->get();
 
         // dd($telefones);
 
-        return view('comercios_informacao', compact('dados', 'telefones', 'enderecos'));
+        return view('comercios_informacao', compact('dados', 'telefones', 'enderecos', 'images'));
 
         
     }
@@ -460,5 +462,12 @@ class AdminController extends Controller
         $dados = $dados->id;
 
         return view('adicionar_images', compact('dados'));
+    }
+
+    public function deletar_images(Image $dados)
+    {
+        $dados->delete();
+        return redirect('/lista/comercios');
+
     }
 }

@@ -1,6 +1,14 @@
 @extends('layouts.nav')
 
+<?php 
+
+$count = 0;
+$count2 = 0;
+?>
+
 @section('content')
+<link rel="stylesheet" href="{{ URL::asset('css/comercios.css') }}" >
+
 <h3><a href="/admin">/Admin</a><a href="/lista/comercios">/Comercios</a></h3>
     <div align="center">
     
@@ -110,6 +118,50 @@
 </tbody>
 
 </table>
+<script src="{{ URL::asset('js/comercios.js') }}"></script> 
+        <div class="row">
+
+        <div class="col-lg-8">
+            
+        <section class="awSlider">
+            <div  class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    @foreach($images as $i)                    
+                        <li data-target=".carousel" data-slide-to="{{$count}}" class="{{$count == 0 ? 'active' : ''}}"></li>
+                    <?php 
+                        $count++;
+                    ?>
+                    @endforeach
+
+                </ol>
+                  <div class="carousel-inner" role="listbox">
+
+                    @foreach($images as $i)
+                    <div class="item{{$count2 == 0 ? ' active' : ''}}">
+
+                        <img src="{{$i->link}}" class="img" width="100%">
+                        <form method="post" action="/deletar/images/{{$i->id}}">
+                            {{csrf_field()}}
+                          <div align="center"><button type="submit" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja deletar esse registro?'); return false;"><i class="fa fa-trash"></i></button></div>
+                        </form>
+                        <?php $count2++; ?>
+                    </div>
+                    @endforeach
+                  </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href=".carousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Geri</span>
+                </a>
+                <a class="right carousel-control" href=".carousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">İleri</span>
+                </a>
+              </div>
+              </section>
       
   </div>
 

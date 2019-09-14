@@ -166,7 +166,7 @@ $count2 = 0;
                     <div class="item{{$count2 == 0 ? ' active' : ''}}">
 
                         <img src="{{$i->link}}" class="img" width="100%">
-                        <div class="carousel-caption">Görsel #1</div>
+                        
                         <?php $count2++; ?>
                     </div>
                     @endforeach
