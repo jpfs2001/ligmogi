@@ -16,7 +16,12 @@ $count = 0;
           
         @foreach($dados as $d)
           <div class="item{{$count == 0 ? ' active' : '' }}">
-            <div class="col-xs-4"><a href="/comercios/{{$d->id}}"><img src="{{$d->banner}}" class="img" width="100%"></a></div> <?php $count++;?>
+
+          <?php 
+          $nomee = str_replace(' ', '-', $d->nome);
+          ?>
+
+            <div class="col-xs-4"><a href="/Detalhes/Destaques/{{$d->id}}/{{$nomee}}"><img src="{{$d->banner}}" class="img" width="100%"></a></div> <?php $count++;?>
           </div>
         @endforeach
         </div>

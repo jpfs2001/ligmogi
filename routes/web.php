@@ -43,4 +43,4 @@ Route::post('/editarComercios', 'AdminController@editarComercios');
 });
 
 Route::get('/pesquisar', 'ComercioController@pesquisar');
-Route::get('/comercios/{dados}', 'ComercioController@comercios');
+Route::get('/Detalhes/Destaques/{dados}/{nome}', 'ComercioController@comercios');

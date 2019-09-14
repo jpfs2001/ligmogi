@@ -22,7 +22,7 @@ class AdminController extends Controller
     //inserir comercio
     public function inserirComercio(Request $request)
     {
-        // dd($request);
+        //dd($request);
         $this->validate($request,[
             'nome' => 'required',
             'capa' => 'required',
@@ -356,12 +356,21 @@ class AdminController extends Controller
 
     public function addImages(Request $request)
     {
+        // dd($request);
+        $this->validate($request,[
+            'link' => 'required',
+            'link' => 'mimes:png,jpg,jpeg,gif'
+        ],[
+            'link.mimes' => 'A imagem precisa estar no formato png, jpg, jpeg ou gif',
+            'link.required' => 'A imagem é obrigatoria'
+        ]);
+
         $dados = new Image();
 
-        $path = Storage::disk('public')->putFile('comercios',$request->link);
+        $path = Storage::disk('public')->putFile('images',$request->link);
         $dados->link = ( URL::to('/storage') . "/" . $path);
-
         $dados->comercios_id = $request->comercios_id;
+        
         $dados->save();
 
         return redirect('/lista/comercios');
