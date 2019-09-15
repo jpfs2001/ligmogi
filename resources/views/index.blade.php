@@ -20,13 +20,13 @@ $count = 0;
             <?php 
             $nomee = str_replace(' ', '-', $d->nome);
             ?>
-                <div class="col-xs-12 col-sm-6 col-md-4"><a href="/Detalhes/Destaques/{{$d->id}}/{{$nomee}}"><img src="{{$d->banner}}" class="img" width="100%" alt="{{$d->nome}}"></a></div> <?php $count++;?> 
+                <div class="col-xs-12 col-sm-6 col-md-4"><a href="/Detalhes/Destaques/{{$d->id}}/{{$nomee}}"><img src="{{$d->banner}}" class="img-responsive" alt="{{$d->nome}}"></a></div> <?php $count++;?> 
             </div>
             @endforeach
 
         </div>
-        <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-        <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+        <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left" aria-label="Item anterior"></i></a>
+        <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right" aria-label="Próximo Item"></i></a>
       </div>
     </div>
   </div>

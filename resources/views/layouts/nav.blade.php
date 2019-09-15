@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><title>Ligmogi - O guia comercial da região de Mogi Mirim</title>
+    <meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" /><title>Ligmogi - O guia comercial da região de Mogi Mirim</title>
 				<meta name="description" content="Ligmogi é o guia comercial ideal para você que procura o contado de algum prestador de serviços na região de Mogi Mirim" />
 				<meta name="keywords" content="Ligmogi, Mogi, Mirim, Guia, Empresas, Lista, Telefonia">
 				<meta name="author" content="João Pedro e Altamir Silva" />
@@ -84,8 +84,8 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 divForm" id="nome" style="display:block;">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 formNome">
                                 <form action="/pesquisar" enctype="multipart/form-data" method="get" id="formEmpresa">
-                                    <input type="text" name="nome" id="e" placeholder="Empresa ou serviço" class="forms" autocomplete="off"  required >
-                                    <button type="submit" class="btnPesquisar"></button>
+                                    <input type="text" name="nome" id="e" placeholder="Empresa ou serviço" class="forms" autocomplete="off"  required aria-label="Campo nome do comercio">
+                                    <button type="submit" class="btnPesquisar" aria-label="Pesquisar"></button>
                                 </form>
                             </div>
                         </div>
@@ -94,21 +94,13 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 divForm" id="atividade" style="display:none;">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 formAtividade">
                                 <form name="formAtividade" action="/pesquisar" enctype="multipart/form-data" method="get" id="formAtividade">
-                                    <input type="text" name="atividade" id="r" placeholder="Atividade" class="forms" autocomplete="off"  required >
-                                    <button type="submit" class="btnPesquisar"></button>
+                                    <input type="text" name="atividade" id="r" placeholder="Atividade" class="forms" autocomplete="off"  required aria-label="Campo Atividade" >
+                                    <button type="submit" class="btnPesquisar" aria-label="Pesquisar"></button>
                                 </form>
                             </div>
                         </div>
     
-                        <!-- telefone -->
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 divForm" id="telefone" style="display:none;">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 formTelefone">
-                                <form name="formTelefone" action="/pesquisar" enctype="multipart/form-data" method="get" id="formTelefone">
-                                    <input type="text" name="telefone" id="t" placeholder="Telefone" class="forms tel" autocomplete="off"  required >
-                                    <button type="submit" class="btnPesquisar"></button>
-                                </form>
-                            </div>
-                        </div>
+
     
                     </div> <!-- ./tiposformulario -->
                 </div> <!-- ./wrapper pesquisa -->
