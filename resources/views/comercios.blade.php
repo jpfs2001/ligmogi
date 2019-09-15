@@ -7,8 +7,6 @@ $count2 = 0;
 
 
 @section('content')
-<link rel="stylesheet" href="{{ URL::asset('css/comercios.css') }}" >
-
 
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v4.0"></script>
@@ -20,7 +18,7 @@ $count2 = 0;
         <div class="row">
         
         <div class="col-lg-6">
-            <img src="{{$dados->banner}}" width="100%">
+            <img src="{{$dados->banner}}" width="100%" alt="Capa {{$dados->nome}}">
             
             
             <div class="card-content">
@@ -57,7 +55,7 @@ $count2 = 0;
                 @endif
 
                 @if(isset($dados->facebook))
-                    <a href="{{$dados->facebook}}"><i class="fa fa-facebook facebook"></i></a>
+                    <a href="{{$dados->facebook}}" aria-label="Pagina do facebook"><i class="fa fa-facebook facebook"></i></a>
                 @endif
 
             </div>
@@ -130,7 +128,7 @@ $count2 = 0;
         
 
         <div class="col-lg-6">
-            <iframe width="100%" height="450px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q={{$address}}&amp;zoom=16&amp;key=AIzaSyCjCHTUredoQH1u_K1J4OCs4ODp_hKQ0Zk" allowfullscreen=""></iframe>
+            <iframe width="100%" height="450px" frameborder="0" title="Mapa" style="border:0" src="https://www.google.com/maps/embed/v1/place?q={{$address}}&amp;zoom=16&amp;key=AIzaSyCjCHTUredoQH1u_K1J4OCs4ODp_hKQ0Zk" allowfullscreen=""></iframe>
         </div>
     </div>
             <br>
@@ -165,7 +163,7 @@ $count2 = 0;
                     @foreach($images as $i)
                     <div class="item{{$count2 == 0 ? ' active' : ''}}">
 
-                        <img src="{{$i->link}}" class="img" width="100%">
+                        <img src="{{$i->link}}" class="img" width="100%" alt="Imagem {{$count + 1}} da galeria">
                         
                         <?php $count2++; ?>
                     </div>
