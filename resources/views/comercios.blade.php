@@ -177,11 +177,11 @@ $count2 = 0;
                     <!-- Controls -->
                     <a class="left carousel-control" href=".carousel" role="button" data-slide="prev">
                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Geri</span>
+                    
                     </a>
                     <a class="right carousel-control" href=".carousel" role="button" data-slide="next">
                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">İleri</span>
+                    
                     </a>
                 </div>
                 </section>

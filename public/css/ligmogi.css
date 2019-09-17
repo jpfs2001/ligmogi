@@ -41,15 +41,16 @@ p.rodape a:hover { color: #54008B; text-decoration: underline; }
 .tiposPesquisa{ height: 60px; margin:20px 0 10px 0;}
 .tabs{ border-radius: 2px; height: 55px; cursor: pointer; }
 
-.tabNome.tabAtiva:after, .tabAtividade.tabAtiva:after, .tabTelefone.tabAtiva:after{ border-top-color: #47cbaf; }
+.tabNome.tabAtiva:after, .tabAtividade.tabAtiva:after { border-top-color: #ff4000; }
+.tabTelefone.tabAtiva:after{ border-top-color: #ff4000; }
 
 .tabNomel.tabAtiva,
 .tabNome.tabInativa:hover,
 .tabAtividade.tabAtiva,
 .tabAtividade.tabInativa:hover,
-.tabTelefone.tabAtiva, .tabTelefone.tabInativa:hover { background: #47cbaf; border-top-color: #47cbaf;}
+.tabTelefone.tabAtiva, .tabTelefone.tabInativa:hover { background: #ff4000; border-top-color: #ff4000;}
 
-.tabs:after, .tabNome.tabInativa:after, .tabAtividade.tabInativa:after, .tabTelefone.tabInativa:after { content: ''; display: block; position: absolute; left: 47.33%; bottom: -20px; width: 0; height: 0; border-top: 10px solid rgba(255, 255, 255, 0.12); border-bottom: 10px solid transparent; border-left: 10px solid transparent; border-right: 10px solid transparent; }
+.tabs:after, .tabNome.tabInativa:after, .tabAtividade.tabInativa:after { content: ''; display: block; position: absolute; left: 47.33%; bottom: -20px; width: 0; height: 0; border-top: 10px solid rgba(255, 255, 255, 0.12); border-bottom: 10px solid transparent; border-left: 10px solid transparent; border-right: 10px solid transparent; }
 
 .tabNome.tabInativa, .tabAtividade.tabInativa, .tabTelefone.tabInativa { background: rgba(255, 255, 255, 0.15); }
 
@@ -61,7 +62,7 @@ p.rodape a:hover { color: #54008B; text-decoration: underline; }
 .tabAtividade.tabAtiva .icone, .tabAtividade.tabInativa:hover .icone { background: url("http://127.0.0.1:8000/image/ico-residencia.png") top center no-repeat; }
 .tabAtividade.tabInativa .icone{ background: url("http://127.0.0.1:8000/image/ico-residencia.png") bottom center no-repeat; }
 
-.tabTelefone.tabAtiva .icone, .tabTelefone.tabInativa:hover .icone { background: url("http://127.0.0.1:8000/image/ico-telefone.png") top center no-repeat; }
+.tabTelefone.tabAtiva .icone, .tabInativa:hover .icone {   }
 .tabTelefone.tabInativa .icone{ background: url("http://127.0.0.1:8000/image/ico-telefone.png") bottom center no-repeat; }
 
 .labelTab{ /*float: left;*/ font-size: 22px; height: 52px; line-height: 52px; margin-left: 5px; font-weight: lighter; color:#FFF; }
@@ -77,11 +78,11 @@ button.btnPesquisar{ height: 89px; width: 10%; border-top: 2px solid #FFF; borde
 
 .formNome,
 .formAtividade,
-.formTelefone { background: #FFF; border-radius: 3px; padding: 0; border: 4px solid #47cbaf; height: 97px; }
+.formTelefone { background: #FFF; border-radius: 3px; padding: 0; border: 4px solid #ff4000; height: 97px; }
 
 .formNome button.btnPesquisar,
 .formAtividade button.btnPesquisar,
-.formTelefone button.btnPesquisar { background: url("http://127.0.0.1:8000/image/ico-pesquisa.png") center center no-repeat #47cbaf; padding: 5px;}
+.formTelefone button.btnPesquisar { background: url("http://127.0.0.1:8000/image/ico-pesquisa.png") center center no-repeat #ff4000; padding: 5px;}
 
 .formNome button.btnPesquisar:hover,
 .formAtividade button.btnPesquisar:hover,
@@ -869,3 +870,11 @@ a.logo-troca img { width: 100%; height: 100%; float: left; }
     right: 28px;
   }
 }
+
+ .h1-destaque
+ {
+    font-size: 14px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+
+ }
