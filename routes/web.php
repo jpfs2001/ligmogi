@@ -40,6 +40,7 @@ Route::post('/deletar/comercios/{dados}', 'AdminController@deletar_comercios');
 Route::post('/deletar/telefones/{dados}', 'AdminController@deletar_telefones');
 Route::post('/deletar/enderecos/{dados}', 'AdminController@deletar_enderecos');
 Route::post('/deletar/images/{dados}', 'AdminController@deletar_images');
+Route::post('/duplicar/comercios/{dados}', 'AdminController@duplicar_comercios');
 Route::post('/editarComercios', 'AdminController@editarComercios');
 });
 

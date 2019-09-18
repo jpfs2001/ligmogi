@@ -455,7 +455,7 @@ class AdminController extends Controller
         
     }
 
-
+    // adiciona uma imagem ao banco para usar na galeria
     public function adicionar_images(Comercio $dados)
     {
         
@@ -464,10 +464,79 @@ class AdminController extends Controller
         return view('adicionar_images', compact('dados'));
     }
 
+    //deletar imagem da galeria
     public function deletar_images(Image $dados)
     {
         $dados->delete();
         return redirect('/lista/comercios');
 
+    }
+
+
+    //duplica um comércio
+    public function duplicar_comercios(Comercio $dados)
+    {
+        $comercio = new Comercio();
+
+        $comercio->nome = $dados->nome ;
+        $comercio->email = $dados->email ;
+        $comercio->site = $dados->site ;
+        $comercio->resumo = $dados->resumo ;
+        $comercio->facebook = $dados->facebook ;
+        $comercio->atividade = $dados->atividade ;
+        $comercio->capa = $dados->capa ;
+        $comercio->icone = $dados->icone ;
+        $comercio->banner = $dados->banner ;
+        $comercio->seg = $dados->seg ;
+        $comercio->ter = $dados->ter ;
+        $comercio->qua = $dados->qua ;
+        $comercio->qui = $dados->qui ;
+        $comercio->sex = $dados->sex ;
+        $comercio->sab = $dados->sab ;
+        $comercio->dom = $dados->dom ;
+        $comercio->feriado = $dados->feriado ;
+        $comercio->feriado_nacional = $dados->feriado_nacional ;
+        
+        $comercio->save();
+
+        $telefones = Telefone::where('comercios_id', '=', $dados->id)->get();
+
+        $enderecos = Endereco::where('comercios_id', '=', $dados->id)->get();
+        
+        $images = Image::where('comercios_id', '=', $dados->id)->get();
+
+        
+        foreach($telefones as $t)
+        {
+            $tel = new Telefone();
+            $tel->comercios_id = $comercio->id;
+            $tel->telefone = $t->telefone;
+            $tel->save();
+
+        }
+
+        foreach($enderecos as $e)
+        {
+            $en = new Endereco();
+            $en->comercios_id = $comercio->id;
+            $en->cidade = $e->cidade;
+            $en->bairro = $e->bairro;
+            $en->cep = $e->cep;
+            $en->complemento = $e->complemento;
+            $en->numero = $e->numero;
+            $en->rua = $e->rua;
+            $en->save();
+
+        }
+
+        foreach($images as $i)
+        {
+            $img = new Image();
+            $img->comercios_id = $comercio->id;
+            $img->link = $i->link;
+            $img->save();
+        }
+
+        return redirect('/lista/comercios');
     }
 }

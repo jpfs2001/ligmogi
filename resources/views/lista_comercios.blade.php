@@ -15,6 +15,7 @@
 		<th>NOME DO COMERCIO</th>
 		<th>editar</th>
         <th>deletar</th>
+        <th>duplicar</th>
 		</tr>
 		</thead>
     
@@ -31,6 +32,11 @@
         <form method="post" action="/deletar/comercios/{{$d->id}}">
         {{csrf_field()}}
         <td><button type="submit" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja deletar esse registro?'); return false;"><i class="fa fa-trash"></i></button></td>
+        </form>
+
+        <form method="post" action="/duplicar/comercios/{{$d->id}}">
+        {{csrf_field()}}
+        <td><button type="submit" class="btn btn-danger"><i class="fa fa-whatsapp"></i></button></td>
         </form>
     </tr>
     @endforeach

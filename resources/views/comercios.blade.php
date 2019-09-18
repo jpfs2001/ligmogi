@@ -188,7 +188,7 @@ $count2 = 0;
                     
 
 
-            </div>
+            
 
         @if(isset($dados->facebook))
             <div class="col-lg-4"> 
