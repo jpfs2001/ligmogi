@@ -390,7 +390,7 @@ class AdminController extends Controller
     //view com lista dos comercios 
     public function lista_comercios()
     {
-        $dados = Comercio::All();
+        $dados = Comercio::paginate(20);
 
         return view('lista_comercios', compact('dados'));
 
@@ -540,5 +540,15 @@ class AdminController extends Controller
         }
 
         return redirect('/lista/comercios');
+    }
+
+    public function pesquisarLista(Request $request)
+    {
+        $dados = Comercio::where('comercios.nome', 'like', '%' . $request->nome . '%' )
+        ->paginate(20);
+
+
+        return view('lista_comercios', compact('dados'));
+
     }
 }

@@ -82,7 +82,7 @@
                         <!-- nome -->
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 divForm" id="nome" style="display:block;">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 formNome">
-                                <form action="/pesquisar" enctype="multipart/form-data" method="get" id="formEmpresa">
+                                <form action="/pesquisar/nome" enctype="multipart/form-data" method="get" id="formEmpresa">
                                     <input type="text" name="nome" id="e" placeholder="Empresa ou serviço" class="forms" autocomplete="off"  required aria-label="Campo nome do comercio">
                                     <button type="submit" class="btnPesquisar" aria-label="Pesquisar"></button>
                                 </form>
@@ -92,7 +92,7 @@
                         <!-- atividade -->
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 divForm" id="atividade" style="display:none;">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 formAtividade">
-                                <form name="formAtividade" action="/pesquisar" enctype="multipart/form-data" method="get" id="formAtividade">
+                                <form name="formAtividade" action="/pesquisar/atividade" enctype="multipart/form-data" method="get" id="formAtividade">
                                     <input type="text" name="atividade" id="r" placeholder="Atividade" class="forms" autocomplete="off"  required aria-label="Campo Atividade" >
                                     <button type="submit" class="btnPesquisar" aria-label="Pesquisar"></button>
                                 </form>

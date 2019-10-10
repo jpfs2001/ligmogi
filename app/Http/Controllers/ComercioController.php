@@ -17,12 +17,9 @@ class ComercioController extends Controller
 {
 
     //rota que busca resultados da pesquisa
-    public function pesquisar(Request $request)
+    public function pesquisarNome(Request $request)
     {
 
-      //pesquisa por nome do comercio
-      if(isset($request->nome))
-      {
         $dados = DB::table('comercios')
         ->select('comercios.nome as nome', 'comercios.banner as banner', 'comercios.facebook as facebook',
         'enderecos.rua as rua', 'enderecos.bairro as bairro', 'enderecos.numero as numero',
@@ -33,12 +30,16 @@ class ComercioController extends Controller
         ->groupBy('comercios.id')
         ->orderBy('comercios.capa', 'DESC')
         ->orderBy('comercios.banner', 'DESC')
-        ->get();
-      }
+        ->paginate(15);
 
-      //pesquisa por atividade
-      if(isset($request->atividade))
-      {
+      //dd($dados);
+
+        return view("resultados", compact('dados'));
+    }
+
+    public function pesquisarAtividade(Request $request)
+    { 
+
         $dados = DB::table('comercios')
         ->select('comercios.nome as nome', 'comercios.banner as banner', 'comercios.facebook as facebook',
         'enderecos.rua as rua', 'enderecos.bairro as bairro', 'enderecos.numero as numero',
@@ -49,24 +50,8 @@ class ComercioController extends Controller
         ->groupBy('comercios.id')
         ->orderBy('comercios.capa', 'DESC')
         ->orderBy('comercios.banner', 'DESC')
-        ->get();
-      }
+        ->paginate(15);
 
-      //pesquisa por telefone
-      if(isset($request->telefone))
-      {
-        $dados = DB::table('comercios')
-        ->select('comercios.nome as nome', 'comercios.banner as banner', 'comercios.facebook as facebook',
-        'enderecos.rua as rua', 'enderecos.bairro as bairro', 'enderecos.numero as numero',
-        'telefones.telefone as telefone', 'telefones.whats as whats', 'comercios.id as id')
-        ->join('enderecos', 'comercios.id', '=', 'enderecos.comercios_id')
-        ->join('telefones', 'telefones.comercios_id', '=', 'comercios.id')
-        ->where('telefones.telefone', 'like', '%' . $request->telefone . '%' )
-        ->groupBy('comercios.id')
-        ->orderBy('comercios.capa', 'DESC')
-        ->orderBy('comercios.banner', 'DESC')
-        ->get();
-      }
       //dd($dados);
 
         return view("resultados", compact('dados'));

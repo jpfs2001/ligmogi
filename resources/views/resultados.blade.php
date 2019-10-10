@@ -7,7 +7,7 @@ $count = count($dados);
 ?>
 
 <br>
-<h3>A sua pesquisa encontrou {{$count}} resultados</h3>
+<h2 style="color:#b40404">Exibindo {{$count}} resultados</h3>
 <br>
 <div class="card">
     
@@ -42,5 +42,6 @@ $count = count($dados);
 
 </div>
 
+   <div align="center"> {!! $dados->links() !!}</div> 
 
 @stop
