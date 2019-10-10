@@ -137,8 +137,12 @@ $count2 = 0;
 
         <div class="row">
 
+            <br>
+            
             <div class="col-lg-8">
-                
+            <div align="center"><h1 style="color:#b40404">Galeria</h1></div>
+            
+            <br>
             <section class="awSlider">
                 <div  class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
@@ -187,11 +191,14 @@ $count2 = 0;
                 </section>
                     
 
-
+<br>
             
 
         @if(isset($dados->facebook))
             <div class="col-lg-4"> 
+
+            <div align="center"><h1 style="color:#b40404">Facebook</h1></div>
+            <br>
                 <div class="fb-page" data-href="{{$dados->facebook}}" data-tabs="timeline" data-width="" data-height="550" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="{{$dados->facebook}}" class="fb-xfbml-parse-ignore"><a href="{{$dados->facebook}}"></a></blockquote></div>
             </div>
         @endif

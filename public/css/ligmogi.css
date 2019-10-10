@@ -19,13 +19,6 @@ body { font-family: 'Source Sans Pro', sans-serif; }
 li a.atual { font-weight: bold; }
 ul li.home{ margin-left:28px; }
 ul li.favorito {width: 28px; height: 28px; float: left;}
-ul li.favorito a.favoritos{ width: 28px; height: 28px; float: left; background: url("../../img/ico-fav.png") top left no-repeat; margin: 10px 0 0 13px; padding: 0 !important; line-height: 28px;}
-ul li.favorito a.favoritos:hover{ background: url("../../img/ico-fav.png") bottom left no-repeat; }
-.cidade{ float: left; background: url("../../img/bg-topo.png") top left no-repeat; width: 180px; height: 133px;}
-.cidade h5{ font-size: 18px; color: #470386; font-weight: normal; float: left; margin:10px 0 0 45px; text-align: center; width: 135px; }
-.cidade p{ font-size: 15px; color: #470386; font-weight: bold; float: left; margin: 20px 0 0 45px; text-align: center; width: 135px; }
-.cidade a.trocar{ cursor: pointer; font-size: 14px; color: #470386; font-weight: normal; float: left; margin: 5px 0 0 45px; text-align: center; width: 135px; }
-
 .pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus { background:#54008B; border-color: #54008B; }
 .pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus, .pagination>li>a, .pagination>li>span { color: #54008B; }
 
@@ -56,14 +49,7 @@ p.rodape a:hover { color: #54008B; text-decoration: underline; }
 
 .icone{ float: left; width: 48px; height: 42px; padding: 0; margin: 5px 0 0 0; background: none; }
 
-.tabNome.tabAtiva .icone, .tabNome.tabInativa:hover .icone { background: url("http://127.0.0.1:8000/image/ico-nome.png") top center no-repeat; }
-.tabNome.tabInativa .icone{ background: url("http://127.0.0.1:8000/image/ico-nome.png") bottom center no-repeat; }
 
-.tabAtividade.tabAtiva .icone, .tabAtividade.tabInativa:hover .icone { background: url("http://127.0.0.1:8000/image/ico-residencia.png") top center no-repeat; }
-.tabAtividade.tabInativa .icone{ background: url("http://127.0.0.1:8000/image/ico-residencia.png") bottom center no-repeat; }
-
-.tabTelefone.tabAtiva .icone, .tabInativa:hover .icone {   }
-.tabTelefone.tabInativa .icone{ background: url("http://127.0.0.1:8000/image/ico-telefone.png") bottom center no-repeat; }
 
 .labelTab{ /*float: left;*/ font-size: 22px; height: 52px; line-height: 52px; margin-left: 5px; font-weight: lighter; color:#FFF; }
 
@@ -89,10 +75,6 @@ button.btnPesquisar{ height: 89px; width: 10%; border-top: 2px solid #FFF; borde
 .formTelefone button.btnPesquisar:hover{ background: url("http://127.0.0.1:8000/image/ico-pesquisa.png") center center no-repeat #54008B;}
 
 
-.anunciosHome { padding-right: 0; padding-left: 21px; }
-.flash{ max-width: 170px; max-height: 100px; background: #FFF; float: left; margin:20px 21px 0 0; position: relative; width: 100%; }
-#anunciosHome .flash { height: 100px; width: 170px; }
-.linkLogo{ max-width: 170px; max-height: 100px; top:0; right: 0; padding: 0; position: absolute; background: transparent; }
 
 .barraPaginas, .wrapperPaginas { background: #54008B; }
 .wrapperPaginas h1{ min-height: 30px; line-height: 80px; font-size: 40px; font-weight: lighter; color:#FFF; margin: 0; padding: 0; }
@@ -121,150 +103,7 @@ h3.titulo span.pesquisa { font-size:26px; color: #c7254e; font-weight: 500;}
 
 #website { display: none !important; }
 
-#cidades{ float:left; background: url("../../img/bg-trocar.png") top center no-repeat; width:125px; height: 42px; display: none; margin-left:50px; }
-#cidades a{ float: left; width: 125px; height: 30px; margin-top:8px; text-align: center; color:#FFF; font-weight: normal; line-height: 30px; font-size:14px;}
 
-#cidadesSmall{ float:left; background: url("../../img/bg-trocar.png") top center no-repeat; width:100%; height: 42px; display: none; margin:0; }
-#cidadesSmall a{ float: left; width: 100%; height: 30px; margin-top:8px; text-align: center; color:#FFF; font-weight: normal; line-height: 30px; font-size:14px;}
-
-
-/* resultados */
-.pesquisaPatrocinador{ border:1px solid #54008B; margin-top:15px; background: #FFF; padding-top:15px; padding-bottom: 0; }
-.pesquisaNaoPatrocinador{ border:1px solid #cfcfcf; margin-top:15px; background: #FFF; padding-top:5px; padding-bottom: 5px; }
-
-.dadosPatrocinador{ min-height: 105px; float: left; }
-.dadosNaoPatrocinador{ min-height: 65px; float: left; }
-
-.dadosPatrocinador h1.nome{ font-size: 28px; margin: 0 0 10px 5px; padding: 0; color: #54008B; font-weight: bold; }
-.dadosPatrocinador h2.telefone{ margin: 0; padding: 0; float: left; }
-.dadosPatrocinador h2.telefone a{ font-size: 33px; line-height: 30px; margin: 0 15px 4px 0; padding: 0 0 0 32px; float: left; color: #54008B; text-decoration: none; background: url("../../img/ico-tel.png") top left no-repeat; }
-.dadosPatrocinador h2.telefone a:hover{ color: #c7254e; background: url("../../img/ico-tel-hover.png") top left no-repeat; }
-.dadosPatrocinador address.endereco{ font-size: 16px; margin: 5px 0 0 5px; padding: 0; float: left; color: #54008B;  }
-.dadosPatrocinador address.endereco a{ font-size: 12px; color: #c7254e; text-decoration: none; margin-left: 10px;  }
-.dadosPatrocinador address.endereco a:hover{ color: #54008B; text-decoration: underline;  }
-
-
-.dadosNaoPatrocinador h1.nome{ font-size: 20px; margin: 0 0 0 5px; padding: 0; color: #7d7d7d; font-weight: bold; width: 100%; }
-.dadosNaoPatrocinador h2.telefone{ margin: 0 0 0 5px; padding: 0; float: left; width: 100%; }
-.dadosNaoPatrocinador h2.telefone a{ font-size: 20px; line-height: 18px; margin: 5px 10px 4px 0; padding: 0 0 0 24px; float: left; color: #7d7d7d; text-decoration: none; background: url("../../img/ico-tel-peq.png") top left no-repeat; }
-.dadosNaoPatrocinador h2.telefone a:hover{ color: #c7254e; background: url("../../img/ico-tel-hover-peq.png") top left no-repeat; }
-.dadosNaoPatrocinador address.endereco{ font-size: 14px; margin: 0 0 0 5px; padding: 0; float: left; color: #7d7d7d; width: 100%;  }
-
-
-.pesquisaPatrocinador:hover, .pesquisaNaoPatrocinador:hover { background: #54008B; }
-.pesquisaPatrocinador:hover .dadosPatrocinador h1.nome { color: #FFF;}
-.pesquisaPatrocinador:hover .dadosPatrocinador h2.telefone { color: #ffd511;}
-.pesquisaPatrocinador:hover .dadosPatrocinador address.endereco{ color: #FFF; }
-.pesquisaPatrocinador:hover .dadosPatrocinador h2.telefone a{ background: url("../../img/ico-tel-hover.png") top left no-repeat; color:#ffd511; }
-.pesquisaPatrocinador:hover .dadosPatrocinador address.endereco a{ color: #ffd511; }
-
-.pesquisaPatrocinador:hover .links { background: #6900a0; }
-.pesquisaPatrocinador:hover .links .icoEmail a,
-.pesquisaPatrocinador:hover .links .icoSite a,
-.pesquisaPatrocinador:hover .links .icoMapa a,
-.pesquisaPatrocinador:hover .links .icoSkype a,
-.pesquisaPatrocinador:hover .links .icoFacebook a,
-.pesquisaPatrocinador:hover .links .icoWhatsapp a,
-.pesquisaPatrocinador:hover .links .icoCardapio a,
-.pesquisaPatrocinador:hover .links .icoInstagram a { color:#FFF; }
-
-
-.pesquisaNaoPatrocinador:hover .dadosNaoPatrocinador h1.nome { color: #FFF;}
-.pesquisaNaoPatrocinador:hover .dadosNaoPatrocinador h2.telefone { color: #ffd511;}
-.pesquisaNaoPatrocinador:hover .dadosNaoPatrocinador address.endereco{ color: #FFF; }
-.pesquisaNaoPatrocinador:hover .dadosNaoPatrocinador h2.telefone a{ background: url("../../img/ico-tel-hover-peq.png") top left no-repeat; color:#ffd511; }
-
-
-.pesquisaPatrocinador .links{ height: 34px; line-height: 34px; text-align: left; background: #eceae8; }
-.pesquisaPatrocinador .flashResultado .verAnuncioLink { height: 20px; line-height: 20px; text-align: center; width: 100%; float: right; margin:0; padding: 0; background: #8d81ce; font-size: 12px; color:#FFF; text-decoration: none; }
-.pesquisaPatrocinador .flashResultado .verAnuncioLink:hover { background: #ffd511; text-decoration: underline; color:#3e3e3e; }
-.icoEmail a, .icoSite a, .icoMapa a, .icoSkype a, .icoFacebook a, .icoWhatsapp a, .icoCardapio a, .icoTelefone a, .icoInstagram a{ float: left; padding:0 0 0 30px; height: 34px; line-height: 34px; text-decoration: none; color: #7d7d7d; font-size: 12px; }
-.icoEmail a:hover, .icoSite a:hover, .icoMapa a:hover, .icoSkype a:hover, .icoFacebook a:hover, .icoWhatsapp a:hover, .icoCardapio a:hover, .icoInstagram a:hover { color: #3e3e3e; }
-
-.icoEmail a { background: url("../../img/icoEmail.png") top left no-repeat; }
-.icoSite a { background: url("../../img/icoSite.png") top left no-repeat; }
-.icoMapa a { background: url("../../img/icoMapa.png") top left no-repeat; }
-.icoSkype a { background: url("../../img/icoSkype.png") top left no-repeat; }
-.icoFacebook a { background: url("../../img/icoFacebook.png") top left no-repeat; }
-.icoWhatsapp a { background: url("../../img/icoWhatsapp.png") top left no-repeat; }
-.icoCardapio a { background: url("../../img/icoCardapio.png") top left no-repeat; }
-.icoTelefone a { background: url("../../img/icoTelefone.png") top left no-repeat; }
-.icoInstagram a { background: url("../../img/icoInstagram.png") top left no-repeat; }
-
-.icoEmail a:hover { background: url("../../img/icoEmail.png") bottom left no-repeat; }
-.icoSite a:hover { background: url("../../img/icoSite.png") bottom left no-repeat; }
-.icoMapa a:hover { background: url("../../img/icoMapa.png") bottom left no-repeat; }
-.icoSkype a:hover { background: url("../../img/icoSkype.png") bottom left no-repeat; }
-.icoFacebook a:hover { background: url("../../img/icoFacebook.png") bottom left no-repeat; }
-.icoWhatsapp a:hover { background: url("../../img/icoWhatsapp.png") bottom left no-repeat; }
-.icoCardapio a:hover { background: url("../../img/icoCardapio.png") bottom left no-repeat; }
-.icoTelefone a:hover { background: url("../../img/icoTelefone.png") bottom left no-repeat; }
-.icoInstagram a:hover { background: url("../../img/icoInstagram.png") bottom left no-repeat; }
-
-.whatsappNumero{ position:absolute; background: url("../../img/bg-trocar-whatsapp.png") top center no-repeat; width:115px; height: 42px; display: none; left:0; top: 28px; padding-top: 13px; line-height: 20px; color:#FFF; text-align: center; z-index: 999; }
-
-.img-responsive { width:100%; height: auto; }
-.flashResultado { margin-bottom: 5px; }
-
-.btnVejaMais { color: #ffffff; font-size: 16px; background: #f3be00; padding: 10px 20px; border-bottom: solid #be8200 4px; text-decoration: none; float: right; cursor: pointer; margin-top: 50px; width: 100%; border-radius: 10px; }
-.btnVejaMais:hover { background: #eb5a06; text-decoration: none; color: #ffffff; border-bottom: solid #ad4306 4px;  }
-
-/* pesquisa ajax */
-.loading { position: absolute; height: 97px; width: 1080px; z-index: 90; top: 90px; left: 30px; border-radius: 3px; /*background-color: rgba(255,255,255,0.9);*/ padding: 33px 130px 0 30px; display: none; }
-.promocoes { width: 100%; background: #eb5a06; margin-top:0; float: left; height: 38px; }
-.promocoes .row a { width: 100%; margin:0; float: left; height: 38px; }
-.promocoes .row a img { height:100%; width: auto; }
-
-/* mapa */
-#map-canvas { height: 500px; width: 100%; margin: 0; padding: 0; }
-#map-canvas{ position: relative; margin: 0; z-index: 1;}
-#dados h5{ font-size: 16px; font-weight: bold; color: #54008B; margin: 0 0 6px 0; padding: 0;}
-#dados h6{ font-size: 18px; font-weight: bold; color: #FFF; margin: 0 0 6px 0; padding: 8px; background-color: #54008B; }
-#dados h6 a{ color: #FFF; margin: 0; text-decoration: none; }
-#dados p{ font-size: 14px; font-weight: normal; color: #3e3e3e; margin: 0; padding: 0;}
-#texto_balao img { display: block !important; }
-#googleMap { height: 400px; width: 750px; }
-#fechar a { text-decoration: none; font-weight: bold; display: block; }
-#fechar img { border: none; }
-#texto_balao { width: 360px; float: left; font-size: 12px; margin-top: 0; padding-left: 0; color: #666; }
-.texto_mapa_p { margin-left: 5px; display: block; float: left; padding: 0; margin-top: 0; margin-bottom: 0; }
-.img_mapa_img { float: left; display: block; }
-
-
-/* popup */
-#popup { position:absolute; top:10%; z-index:150; }
-#popup a img, #popup img { border:5px solid #FFF; }
-a.popup { color:#000; float:right; font-size:15px; font-weight:700; text-decoration:none; background-color:#FFF; padding:5px; }
-
-/* interna */
-#corpo { margin-top:360px; }
-#topo { position: absolute; top:0; left: 0; width: 100%; }
-.boxInfoContato{background-color: #eceae8; padding: 15px}
-p.infoMultiLinhas{line-height: 16px; margin: 0;}
-p.linhaContato.owhatsapp, p.linhaContato.owhatsapp {line-height: 34px; margin: 0;}
-.margemBase5{margin-bottom: 5px;}
-h3.linhaContato{font-size: 24px; line-height: 34px; margin: 0}
-p.linhaContato.owhatsapp{font-size: 18px}
-h3.linhaContato:hover{color: #000;}
-.subtitulo{color: #666; font-size: 22px; font-weight: 700; }
-h2.subtitulo{font-size: 28px; color: #6900a0;}
-.icoTelefone a{clear: both; font-size: 20px;}
-.icoFacebook a {clear: both;}
-.boxGaleria{border: 1px solid #ccc; padding: 15px}
-.boxGaleria h2.subtitulo{margin: 0}
-.logo-interna { width: 100%; }
-
-a[name=contato], a[name=mapa] { margin-top: 30px; float: left; background: transparent; height: 1px; width: 1px;}
-
-
-/*PÃGINA TROCA CIDADE*/
-.trocaCidade { background: url("../../img/bg-troca-cidade.jpg") top center no-repeat;}
-a.botaoCidade{ width: 30%; margin-left: 35%; float: left; text-align: center; padding: 10px; background-color: #4f3890; color: #fff; margin-bottom:40px;font-size: 25px; border-radius: 5px; }
-a.botaoCidade:hover{ text-decoration: none; background-color: #6a4aba; color: #FFF; }
-a.botaoCidade:active{ text-decoration: none;  background-color: #44046e; color: #FFF; }
-.logos-troca { width: 218px; height:50px; margin: 0 0 0 24px; float: left; }
-a.logo-troca { width: 50px; height: 50px; float: left; margin: 0 22px 0 0; }
-a.logo-troca img { width: 100%; height: 100%; float: left; }
 
 
 /* tamanhos telas */
@@ -283,7 +122,7 @@ a.logo-troca img { width: 100%; height: 100%; float: left; }
     button.btnPesquisar{ width: 15%; }
     /* .wrapperPesquisa, .tiposPesquisa, .divForm { padding: 0; } */
     .tiposFormularios { padding: 0 15px;}
-    .labelTab{ font-size: 18px; }
+    .labelTab{ font-size: 22px; }
     .anunciosHome { padding-right: 0; padding-left: 15px; }
     .flash{ margin:20px 13px 0 0; }
     #cidades{ margin-left:26px; font-size:13px; }
@@ -320,7 +159,7 @@ a.logo-troca img { width: 100%; height: 100%; float: left; }
     input.forms { width: 87%; font-size: 30px; }
     button.btnPesquisar{ width: 13%; }
     .wrapperPesquisa, .tiposPesquisa, .tiposFormularios, .divForm { padding: 0 15px; }
-    .labelTab{ font-size: 20px; }
+    .labelTab{ font-size: 24px; }
     .anunciosHome { padding-right: 0; padding-left: 20px; }
     .flash{ margin:20px 18px 0 0; }
     #cidades{ margin-left:43px; }
@@ -357,7 +196,7 @@ a.logo-troca img { width: 100%; height: 100%; float: left; }
     input.forms { width: 90%; font-size: 35px; }
     button.btnPesquisar{ width: 10%; }
     .wrapperPesquisa, .tiposPesquisa, .tiposFormularios, .divForm { padding: 0 15px; }
-    .labelTab{ font-size: 22px; }
+    .labelTab{ font-size: 26px; }
     .anunciosHome { padding-right: 0; padding-left: 55px; }
     .flash{ margin:30px 52px 0 0; }
     .flashResultado .flash { margin: 0; padding: 0; }
@@ -412,7 +251,7 @@ a.logo-troca img { width: 100%; height: 100%; float: left; }
     .divForm, .wrapperTab { padding: 0 10px; }
     .tiposFormularios { padding: 0 15px;}
     .tabNome, .tabAtividade, .tabTelefone { padding: 0 !important; }
-    .labelTab{ font-size: 16px; }
+    .labelTab{ font-size: 20px; }
     .anunciosHome { padding-right: 0; padding-left: 72px; }
     .flash{ margin:20px 36px 0 0; }
     h4.titulo{ font-size: 17px; }
@@ -504,16 +343,10 @@ a.logo-troca img { width: 100%; height: 100%; float: left; }
 @media (max-width: 535px) {
     /*body { background: yellow; }*/
     .divForm, .wrapperTab { padding: 0 5px; }
-    .labelTab{ font-size: 14px; }
+    .labelTab{ font-size: 18px; }
     .anunciosHome { padding-right: 0; padding-left: 50px; }
     .dadosPatrocinador { min-height: 64px; }
     .dadosPatrocinador h1.nome{ font-size: 18px; margin: 0 0 2px 0; }
-    .dadosPatrocinador h2.telefone a{ font-size: 24px; margin: 0 10px 3px 0; background: url("../../img/ico-tel-peq.png") top left no-repeat; padding: 0 0 0 22px; line-height: 20px; }
-    .pesquisaPatrocinador:hover .dadosPatrocinador h2.telefone a { background: url("../../img/ico-tel-hover-peq.png") top left no-repeat; }
-    .dadosPatrocinador address.endereco{ font-size: 12px; margin: 3px 0 0 0; line-height: 11px; }
-    .dadosNaoPatrocinador h1.nome{ font-size: 13px; margin: 0 0 0 5px; }
-    .dadosNaoPatrocinador h2.telefone a{ font-size: 14px; margin: 5px 10px 5px 0; }
-    .dadosNaoPatrocinador address.endereco{ font-size: 10px; margin: 5px 0 0 5px; }
     .links .row div:first-of-type{margin-left: -11px; }
     h3.titulo{ font-size:12px; line-height: 12px; }
     h3.titulo span.pesquisa { font-size:13px;}
@@ -529,7 +362,7 @@ a.logo-troca img { width: 100%; height: 100%; float: left; }
     button.btnPesquisar{ width: 18%; }
     .wrapperPesquisa, .tiposPesquisa, .tiposFormularios, .divForm { padding: 0; }
     .tabNome, .tabAtividade, .tabTelefone { padding: 0 !important; }
-    .labelTab{ font-size: 14px; }
+    .labelTab{ font-size: 18px; }
     .anunciosHome { padding-right: 0; padding-left: 41px; }
     .flash{ margin:20px 36px 0 0; }
     .flashResultado {padding-right: 0; }
@@ -560,7 +393,7 @@ a.logo-troca img { width: 100%; height: 100%; float: left; }
     input.forms { width: 81%; font-size: 28px; }
     button.btnPesquisar{ width: 19%; }
     .tabNome, .tabAtividade, .tabTelefone { padding: 0 !important; }
-    .labelTab{ font-size: 14px; }
+    .labelTab{ font-size: 18px; }
     .anunciosHome { padding-right: 0; padding-left: 15px; }
     .flash{ margin:20px 10px 0 0; }
     .flashResultado {padding-right: 0; }
@@ -873,7 +706,7 @@ a.logo-troca img { width: 100%; height: 100%; float: left; }
 
  .h1-destaque
  {
-    font-size: 14px;
+    font-size: 18px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
 

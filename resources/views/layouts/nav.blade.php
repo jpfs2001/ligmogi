@@ -65,14 +65,14 @@
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 wrapperTab">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabs tabAtividade tabInativa">
                                 <div class="icone" title="Atividade"></div>
-                                <div class="labelTab">Atividade</div>
+                                <div class="labelTab"><i class="fa fa-file-text-o" aria-hidden="true"></i> Atividade</div>
                             </div>
                         </div>
     
                         <!-- telefone -->
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabTelefone tabInativa">
-                                <div class="labelTab"> Notícias (Em construção)</div>
+                                <div class="labelTab"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Notícias (Em construção)</div>
                             </div>
                         </div>
                     </div> <!-- ./tiposPesquisa -->

@@ -13,7 +13,7 @@ $count2 = 0;
     <div align="center">
     
     <h1><p><a href="/adicionar/telefone/{{$dados->id}}">Adicionar telefone</a></p>
-    <p><a href="/adicionar/endereco/{{$dados->id}}">Adicionar endereço</a>
+    <p><a href="/adicionar/endereco/{{$dados->id}}">Adicionar endereço</a><br>
     <a href="/adicionar/images/{{$dados->id}}">Adicionar imagem</a></p></h1>
     <br><br><br>
     
@@ -27,7 +27,8 @@ $count2 = 0;
       <p>site: {{$dados->site}}</p>
       <p>resumo: {{$dados->resumo}}</p>
       <p>Facebook: {{$dados->facebook}}</p>
-      <p>Atividade: {{$dados->atividades}}</p>
+      <p>Atividade: {{$dados->atividade}}</p>
+      <p>Departamento: {{$dados->departamento}}</p>
       <p>Capa: {{$dados->capa == 1 ? 'sim' : 'não'}}</p></h4>
 
     </div>
@@ -35,6 +36,7 @@ $count2 = 0;
     <div class="img-fluid">
       <img class="img-fluid" src="{{ $dados->banner }}" width="50%">
     </div>
+    <br>
     <div class="img-fluid">
       <img class="img-fluid" src="{{ $dados->icone }}"  width="10%">
     </div>

@@ -58,6 +58,12 @@
         </div>
 
         <label>
+        <div class="form-group">   
+        <label for="atividade" class="Texto">Departamento</label>
+        <input type="text" class="Texto form-control" name= "departamento" autocomplete="off">
+        </div>
+
+        <label>
         <div class="form-group">
         Capa <input type="radio" name= "capa" value="1"{{$dados->capa == 1 ? 'checked': ''}}>Sim
         <input type="radio" name= "capa" value="0" {{$dados->capa == 0 ? 'checked': ''}}>Não
@@ -67,6 +73,11 @@
         <label for="banner" class="Texto">Banner</label>
         <input type="file" class="Texto form-control" name="banner">
         </div>
+
+        <div class="form-group">
+        <label for="icone" class="Texto">Icone</label>
+        <input type="file" class="Texto form-control" name="icone" id="icone" autocomplete="off">
+        </div><br>
 
         <button type="submit" class="btn btn-success" style="background-color: greelight;border-color: greenlight;" >Enviar </button>
 </div>

@@ -46,6 +46,7 @@ class AdminController extends Controller
         $comercio->resumo = $request->resumo;
         $comercio->facebook = $request->facebook;
         $comercio->atividade = $request->atividade;
+        $comercio->departamento = $request->departamento;
         $comercio->capa = $request->capa;
         
 
@@ -153,6 +154,7 @@ class AdminController extends Controller
         $comercio->resumo = $request->resumo;
         $comercio->facebook = $request->facebook;
         $comercio->atividade = $request->atividade;
+        $comercio->departamento = $request->departamento;
         $comercio->capa = $request->capa;
         
 

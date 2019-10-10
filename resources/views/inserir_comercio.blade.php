@@ -64,6 +64,12 @@
         </div>
 
         <label>
+        <div class="form-group">   
+        <label for="atividade" class="Texto">Departamento</label>
+        <input type="text" class="Texto form-control" name= "departamento" autocomplete="off">
+        </div>
+
+        <label>
         <div class="form-group">
         Capa <input type="radio" name= "capa" value="1">Sim
         <input type="radio" name= "capa" value="0" checked>Não
