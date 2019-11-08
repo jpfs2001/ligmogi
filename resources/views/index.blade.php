@@ -1,5 +1,13 @@
 @extends('layouts.nav')
 
+@section('seo')
+<title>Liguemogi - O guia comercial da região de Mogi Mirim</title>
+<meta name="description" content="Liguemogi é o guia comercial ideal para você que procura o contado de algum prestador de serviços na região de Mogi Mirim" />
+<meta name="keywords" content="Ligmogi, Liguemogi, Mogi, Mirim, Guia, Empresas, Lista, Telefonia">
+<meta name="robots" content="index, follow">
+<meta name='googlebot' content='index, follow'>
+@stop
+
 @section('content')
 <?php 
 $count = 0;

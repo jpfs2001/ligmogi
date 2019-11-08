@@ -29,7 +29,7 @@ $count = count($dados);
     <a href="/Detalhes/Destaques/{{$d->id}}/{{$nomee}}"> <img src="{{$d->banner}}" alt="Avatar" style="width:100%"></a>
     @endif
     <div class="container">
-    <a href="/Detalhes/Destaques/{{$d->id}}/{{$nomee}}"><h4><b>{{$d->nome}}</b></h4></a> 
+    <a href="/Detalhes/Destaques/{{$d->id}}/{{$nomee}}"><h4><p>{{$d->nome}}</p></h4></a> 
         <p>{{$d->rua}}, {{$d->numero}} - {{$d->bairro}}</p>
         <p><i class="{{$d->whats == 1 ? 'fa fa-whatsapp' : 'fa fa-phone'}}" style="color:#25d366;font-size:18px"></i> {{$d->telefone}}</p>
     </div>

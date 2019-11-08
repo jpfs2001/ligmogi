@@ -32,8 +32,6 @@ class ComercioController extends Controller
         ->orderBy('comercios.banner', 'DESC')
         ->paginate(15);
 
-      //dd($dados);
-
         return view("resultados", compact('dados'));
     }
 
@@ -52,17 +50,21 @@ class ComercioController extends Controller
         ->orderBy('comercios.banner', 'DESC')
         ->paginate(15);
 
-      //dd($dados);
-
         return view("resultados", compact('dados'));
     }
 
     // rota que retorna a pagina index com os comercios em destaque
     public function index()
     {
-      $dados = Comercio::where('capa', '=', '1')->get();
+
+      
+      $dados = Comercio::orderBy("capa", "DESC")
+      ->orderBy("nome", "ASC")
+      ->get();
+
       //dd($dados);
       return view('index', compact('dados'));
+
     }
 
     public function comercios(Comercio $dados)
@@ -77,15 +79,21 @@ class ComercioController extends Controller
       if(isset($enderecos))
       {
 
-        $address = Endereco::where('comercios_id', '=', $dados->id)
+        $addresss = Endereco::where('comercios_id', '=', $dados->id)
         ->limit('1')  
         ->get();
 
-        foreach($address as $e)
+          
+
+        foreach($addresss as $e)
         {
           
           $address = $e->rua . ', ' . $e->numero . ' - ' . $e->bairro . ', ' . $e->cidade; 
-
+          $rua = $e->rua;
+          $bairro = $e->bairro;
+          $numero = $e->numero;
+          $cep = $e->cep;
+          $cidade = $e->cidade;
         }
         $address = str_replace(' ','+', $address);
 
@@ -94,9 +102,10 @@ class ComercioController extends Controller
       $images = Image::where('comercios_id', '=', $dados->id)
       ->get();
 
-      //dd($address);
+      
+      
 
-      return view('comercios', compact('dados', 'telefones', 'enderecos', 'address', 'images'));
+      return view('comercios', compact('dados', 'telefones', 'enderecos', 'address', 'images','rua', 'numero', 'bairro', 'cep', 'cidade'));
     }
 
 }

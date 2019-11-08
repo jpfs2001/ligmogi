@@ -44,19 +44,13 @@
         <label>
         <div class="form-group">   
         <label for="cidade" class="Texto">cidade</label>
-        <input type="text" class="Texto form-control" name = "cidade" autocomplete="off">
+        <input type="text" class="Texto form-control" name = "cidade" autocomplete="off" value="Mogi Mirim">
         </div>
 
         <label>
         <div class="form-group">   
         <label for="cep" class="Texto">cep</label> 
         <input type="text" class="Texto form-control" name = "cep" autocomplete="">
-        </div>
-
-        <label>
-        <div class="form-group">   
-        <label for="complemento" class="Texto">complemento</label>
-        <input type="text" class="Texto form-control" name = "complemento" autocomplete="off">
         </div>
 
         <label>
@@ -71,7 +65,7 @@
         <input type="text" class="Texto form-control" name = "longitude" autocomplete="off">
         </div>
 
-        <button type="submit" class="btn btn-success" style="background-color: greelight;border-color: greenlight;" >Enviar Garai</button>
+        <button type="submit" class="btn btn-success" style="background-color: greelight;border-color: greenlight;" >Enviar</button>
 
 
     </form>

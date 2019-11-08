@@ -19,17 +19,17 @@ body { font-family: 'Source Sans Pro', sans-serif; }
 li a.atual { font-weight: bold; }
 ul li.home{ margin-left:28px; }
 ul li.favorito {width: 28px; height: 28px; float: left;}
-.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus { background:#54008B; border-color: #54008B; }
-.pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus, .pagination>li>a, .pagination>li>span { color: #54008B; }
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus { background:#c7254e; border-color: #c7254e; }
+.pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus, .pagination>li>a, .pagination>li>span { color: #c7254e; }
 
 .pagination>li>a, .pagination>li>span { padding: 6px 12px; }
 
 p.rodape { color: #b0b0b0; font-size: 14px; }
 p.rodape a{ text-decoration: none; color: #cdcdcd; }
-p.rodape a:hover { color: #54008B; text-decoration: underline; }
+p.rodape a:hover { color: #c7254e; text-decoration: underline; }
 
 /* pesquisa */
-.barraPesquisa{ height: 205px; background: #54008B; }
+.barraPesquisa{ height: 205px; background: #c7254e; }
 .wrapperPesquisa {height: 205px; }
 .tiposPesquisa{ height: 60px; margin:20px 0 10px 0;}
 .tabs{ border-radius: 2px; height: 55px; cursor: pointer; }
@@ -68,15 +68,15 @@ button.btnPesquisar{ height: 89px; width: 10%; border-top: 2px solid #FFF; borde
 
 .formNome button.btnPesquisar,
 .formAtividade button.btnPesquisar,
-.formTelefone button.btnPesquisar { background: url("http://127.0.0.1:8000/image/ico-pesquisa.png") center center no-repeat #ff4000; padding: 5px;}
+.formTelefone button.btnPesquisar { background: url("/image/ico-pesquisa.png") center center no-repeat #ff4000; padding: 5px;}
 
 .formNome button.btnPesquisar:hover,
 .formAtividade button.btnPesquisar:hover,
-.formTelefone button.btnPesquisar:hover{ background: url("http://127.0.0.1:8000/image/ico-pesquisa.png") center center no-repeat #54008B;}
+.formTelefone button.btnPesquisar:hover{ background: url("/image/ico-pesquisa.png") center center no-repeat #c7254e;}
 
 
 
-.barraPaginas, .wrapperPaginas { background: #54008B; }
+.barraPaginas, .wrapperPaginas { background: #c7254e; }
 .wrapperPaginas h1{ min-height: 30px; line-height: 80px; font-size: 40px; font-weight: lighter; color:#FFF; margin: 0; padding: 0; }
 
 input.has-warning, select.has-warning, textarea.has-warning, input.has-warningPesquisa{ color:#c7254e; background: #ecd8e0; border-color: #c7254e; }
@@ -84,18 +84,18 @@ label.has-warning{ color: #FFF; background: #c7254e; padding: 3px 10px; font-wei
 label.has-warningPesquisa{ color: #FFF; background: #c7254e; padding: 3px 10px; font-weight: normal; font-size:14px; float: left; margin-left: 6px; margin-top:0;}
 
 .form-group.aviso{ margin-bottom: 0; margin-top: 10px; }
-label.aviso { color:#54008B; font-size: 16px; }
+label.aviso { color:#c7254e; font-size: 16px; }
 
-.btn-primary { color: #ffffff; background-color: #54008B; border-color: #6E00B0; }
+.btn-primary { color: #ffffff; background-color: #c7254e; border-color: #6E00B0; }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary { color: #ffffff; background-color: #6E00B0; border-color: #54008B; }
+.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary { color: #ffffff; background-color: #6E00B0; border-color: #c7254e; }
 
 .bg-info{ background: #e9e7ff; }
 .bg-alerta {background: #c7254e; }
 .bg-alerta h4, .bg-alerta p{ color: #FFF;}
 .arredondar { border-radius: 5px; }
 
-h4.titulo{ color: #54008B;  }
+h4.titulo{ color: #c7254e;  }
 h3.titulo{ color: #3e3e3e; font-size:20px; font-weight:300; line-height: 20px; }
 h3.titulo span.pesquisa { font-size:26px; color: #c7254e; font-weight: 500;}
 
@@ -239,7 +239,7 @@ h3.titulo span.pesquisa { font-size:26px; color: #c7254e; font-weight: 500;}
     .cidadeSmall a { float: left; width: 100%; }
     .cidadeSmall h5{ font-size: 15px; color: #FFF; font-weight: bold; margin: 0; text-align: left; }
 
-    .cidadeSmall .trocar { float: left; border-radius: 5px; width: 110px; padding: 3px 10px; margin-top:20px; margin-left: 4px; height: 51px; background: #54008b;}
+    .cidadeSmall .trocar { float: left; border-radius: 5px; width: 110px; padding: 3px 10px; margin-top:20px; margin-left: 4px; height: 51px; background: #c7254e;}
     .cidadeSmall .trocar .trocarIcone { float: left; width: 40px; height: 44px; margin-top:4px;}
     .cidadeSmall .trocar .trocarIcone img{ float: left; width: 32px;}
     .cidadeSmall .trocar .trocarTexto { float: left; width: 50px; height: 26px; line-height: 14px; margin-top: 8px; }
@@ -409,7 +409,7 @@ h3.titulo span.pesquisa { font-size:26px; color: #c7254e; font-weight: 500;}
 
     .cidadeSmall{ height: 90px; margin: 0 auto; width: 55%; padding: 0; }
     .cidadeSmall .nomeCidade { padding: 5px 2px; width: 75px; margin-top:22px; margin-left:4px; background: #00c49a; }
-    .cidadeSmall .trocar { width: 85px; padding: 3px; margin-top:22px; margin-left: 4px; height: 40px; background: #54008b;}
+    .cidadeSmall .trocar { width: 85px; padding: 3px; margin-top:22px; margin-left: 4px; height: 40px; background: #c7254e;}
     .cidadeSmall .trocar .trocarIcone { float: left; width: 30px; height: 30px; margin-top:1px;}
     .cidadeSmall .trocar .trocarIcone img{ float: left; width: 30px;}
     .cidadeSmall .trocar .trocarTexto { float: left; width: 43px; height: 26px; line-height: 12px; margin-top: 4px; }
@@ -419,19 +419,16 @@ h3.titulo span.pesquisa { font-size:26px; color: #c7254e; font-weight: 500;}
     input.forms { width: 78%; font-size: 22px; }
     button.btnPesquisar{ width: 22%; }
     .tabNome, .tabAtividade, .tabTelefone { padding: 0 !important; margin: 0 auto; float: none !important; text-align: center; }
-    .labelTab{ display: block; height: 12px; line-height: 12px; padding: 0; margin: 0; float: left; width: 100%; } /* update fev 2016 */
+    .labelTab{  line-height: 30px; padding: 0; margin: 0; float: left; width: 100%; } /* update fev 2016 */
     .icone { margin: 5px 0 0 0; width: 100%; }
     .anunciosHome { padding-right: 0; padding-left: 95px; }
     .form-group .form-control.input-lg{ font-size: 14px;}
     .wrapperPaginas h1{ font-size: 25px; line-height: 24px; margin:13px 0; }
     label.has-warning{ padding: 3px 15px; font-weight: normal; font-size:12px; float: none; margin: 0 0 0 5px; border-radius: 0; }
-    .escondeFlash{ display: none; }
-    .dadosPatrocinador{ width: 100%; min-height: 75px; }
-    .tabs { height: 70px; }
+
+    .tabs { height: 40px; }
     input.forms {padding: 5px; line-height: 50px; }
-    .loading { top:100px; padding-right: 78px; }
-    .flash{ margin:10px 0 0 0; }
-    .flashResultado {padding-right: 0; }
+  
 }
 
 @media (max-width: 330px) {
@@ -567,6 +564,25 @@ h3.titulo span.pesquisa { font-size:26px; color: #c7254e; font-weight: 500;}
   width: 4%;
   background-image: none;
 }
+.carousel-control.right {
+  right: 0;
+  left: auto;
+  background-image: -webkit-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,0) 100%);
+  background-image: -o-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,0) 100%);
+
+  background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(0,0,0,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+  background-repeat: repeat-x;
+}
+
+.carousel-control.left {
+  background-image: -webkit-linear-gradient(left,rgba(0,0,0,0) 0,rgba(0,0,0,.0001) 100%);
+  background-image: -o-linear-gradient(left,rgba(0,0,0,0) 0,rgba(0,0,0,.0001) 100%);
+  background-image: linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,.0001) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+  background-repeat: repeat-x;
+}
+
 .carousel-showmanymoveone .carousel-control.left {
   margin-left: 15px;
 }

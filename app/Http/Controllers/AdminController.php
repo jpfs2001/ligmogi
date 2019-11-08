@@ -110,7 +110,7 @@ class AdminController extends Controller
         }
 
         if(isset($request->nacional1) && isset($request->nacional2)){
-        $comercio->feriado_nacional = $request->nacional1 . ' - ' . $nacional2->seg2;
+        $comercio->feriado_nacional = $request->nacional1 . ' - ' . $request->nacional2;
         }
     
         $comercio->save();
@@ -286,10 +286,8 @@ class AdminController extends Controller
      
         $this->validate($request,[
             'rua' => 'required',
-            'bairro' => 'required',
             'numero' => 'required',
             'cidade' => 'required',
-            'cep' => 'required'
             
         ],[
             'rua.required' => 'Insira a rua do comércio',
@@ -323,17 +321,13 @@ class AdminController extends Controller
         // dd($request);
         $this->validate($request,[
             'rua' => 'required',
-            'bairro' => 'required',
             'numero' => 'required',
             'cidade' => 'required',
-            'cep' => 'required'
             
         ],[
             'rua.required' => 'Insira a rua do comércio',
-            'bairro.required' => 'Insira o bairro do comércio',
             'numero.required' => 'Insira o numero do comércio',
             'cidade.required' => 'Insira a cidade do comércio',
-            'cep.required' => 'Insira o cep do comércio'
             
         ]);
 

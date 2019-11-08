@@ -2,9 +2,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" /><title>Ligmogi - O guia comercial da região de Mogi Mirim</title>
-				<meta name="description" content="Ligmogi é o guia comercial ideal para você que procura o contado de algum prestador de serviços na região de Mogi Mirim" />
-				<meta name="keywords" content="Ligmogi, Mogi, Mirim, Guia, Empresas, Lista, Telefonia">
+    <meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 				<meta name="author" content="João Pedro e Altamir Silva" />
                 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
                 <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -16,6 +14,10 @@
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
                 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
                 
+
+            @yield('seo')
+
+
                 <style>
     .barraPesquisa { background: #B40404; }
     .tabNome.tabAtiva:after,
@@ -30,7 +32,9 @@
 
     .formNome button.btnPesquisar, .formAtividade button.btnPesquisar, .formTelefone button.btnPesquisar { background-color: #FF4000; }
 
-</style></head>
+</style>
+@laravelPWA
+</head>
 
 <body >
     <nav class="navbar navbar-default">
@@ -56,7 +60,7 @@
                         <!-- nome -->
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 wrapperTab">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabs tabNome tabAtiva">
-                                <div class="icone" title="Nome"></div>
+                                
                                 <div class="labelTab">Nome</div>
                             </div>
                         </div>
@@ -64,7 +68,7 @@
                         <!-- atividade -->
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 wrapperTab">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabs tabAtividade tabInativa">
-                                <div class="icone" title="Atividade"></div>
+                                
                                 <div class="labelTab"><i class="fa fa-file-text-o" aria-hidden="true"></i> Atividade</div>
                             </div>
                         </div>

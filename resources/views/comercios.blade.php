@@ -1,9 +1,52 @@
-@extends('layouts.nav')
 <?php 
 
 $count = 0;
 $count2 = 0;
+
+$nomee = str_replace(' ', '-', $dados->nome);
+
 ?>
+
+@extends('layouts.nav')
+
+ @section('seo')
+
+ <!-- SEO -->
+        <title>{{$dados->nome}} - {{$cep}} | Ligue Mogi</title>
+
+        <meta name="description" content="{{$dados->nome}} - {{$cidade}} | {{$rua}}, {{$numero}}">
+        <meta itemprop="description" content="{{$dados->nome}} - {{$cidade}} | {{$rua}}, {{$numero}}">
+        <meta name="keywords" content="{{$dados->nome}}, Ligmogi, Liguemogi, Mogi, Mirim, Guia, Empresas, Lista, Telefonia">
+        <meta itemprop="name" content="{{$dados->nome}} - {{$cidade}}">
+        <meta name="robots" content="index, follow">
+        <meta name='googlebot' content='index, follow'>
+
+
+        <meta name="news_keywords" content="{{$dados->nome}}">
+        <meta name="original-source" content="https://www.liguemogi.com.br/Detalhes/Destaques/{{$dados->id}}/{{$nomee}}" />
+        <link rel="canonical" href="https://www.liguemogi.com.br/Detalhes/Destaques/{{$dados->id}}/{{$nomee}}" />
+        <meta property="og:locale" content="pt_BR" />
+        <meta property="og:type" content="article" />
+        <meta property="business:contact_data:street_address" content="{{$rua}}, {{$numero}}" />
+        <meta property="business:contact_data:locality" content="{{$cidade}}" />
+        <meta property="business:contact_data:country_name" content="BRAZIL" />
+        <meta property="business:contact_data:postal_code" content="{{$cep}}" />
+        <meta property="business:contact_data:website" content="www.liguemogi.com.br" />
+        <meta property="og:title" content="{{$dados->nome}} - {{$cidade}} | {{$rua}}, {{$numero}}" />
+        <meta property="og:description" content="{{$dados->nome}} - {{$cidade}} | {{$rua}}, {{$numero}}" />
+        <meta property="og:url" content="https://www.liguemogi.com.br/Detalhes/Destaques/{{$dados->id}}/{{$nomee}}" />
+        <meta property="og:site_name" content="Lig Mogi" />
+        <meta property="article:section" content="Detalhes" />
+        <meta property="article:published_time" content="2019-11-08 18:22:39Z" />
+            <meta property="og:image" content="{{$dados->banner}}" />
+            <meta property="og:image:width" content="980" />
+            <meta property="og:image:height" content="550" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:description" content="{{$dados->nome}} - {{$cidade}} | {{$rua}}, {{$numero}}" />
+        <meta name="twitter:title" content="{{$dados->nome}} - {{$cidade}} | {{$rua}}, {{$numero}}" />
+
+
+@stop
 
 
 @section('content')
@@ -128,7 +171,7 @@ $count2 = 0;
         
 
         <div class="col-lg-6">
-            <iframe width="100%" height="450px" frameborder="0" title="Mapa" style="border:0" src="https://www.google.com/maps/embed/v1/place?q={{$address}}&amp;zoom=16&amp;key=AIzaSyCjCHTUredoQH1u_K1J4OCs4ODp_hKQ0Zk" allowfullscreen=""></iframe>
+            <iframe width="100%" height="450px" frameborder="0" title="Mapa" style="border:0" src="https://www.google.com/maps/embed/v1/place?q={{$address}}&amp;zoom=20&amp;key=AIzaSyCjCHTUredoQH1u_K1J4OCs4ODp_hKQ0Zk" allowfullscreen=""></iframe>
         </div>
     </div>
             <br>
@@ -140,6 +183,7 @@ $count2 = 0;
             <br>
             
             <div class="col-lg-8">
+            <br>
             <div align="center"><h1 style="color:#b40404">Galeria</h1></div>
             
             <br>
@@ -160,19 +204,19 @@ $count2 = 0;
                         @endforeach
 
                     </ol>
-
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
 
-                    @foreach($images as $i)
-                    <div class="item{{$count2 == 0 ? ' active' : ''}}">
+                    
+                        @foreach($images as $i)
+                        <div class="item{{$count2 == 0 ? ' active' : ''}}">
 
-                        <img src="{{$i->link}}" class="img" width="100%" alt="Imagem {{$count + 1}} da galeria">
-                        
-                        <?php $count2++; ?>
-                    </div>
-                    @endforeach
-
+                            <img src="{{$i->link}}" class="img" width="100%" alt="Imagem {{$count + 1}} da galeria">
+                            
+                            <?php $count2++; ?>
+                        </div>
+                        @endforeach
+                    
 
                     </div>
 
@@ -188,8 +232,8 @@ $count2 = 0;
                     
                     </a>
                 </div>
-                </section>
-                    
+            </section>
+                
 
 <br>
             

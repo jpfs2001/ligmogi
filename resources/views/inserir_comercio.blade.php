@@ -36,7 +36,7 @@
         <label>
         <div class="form-group">   
         <label for="site" class="Texto">Site</label>
-        <input type="text" class="Texto form-control" name= "site" autocomplete="off" value="https://">
+        <input type="text" class="Texto form-control" name= "site" autocomplete="off" value="">
         </div>
 
         <label>
@@ -48,13 +48,13 @@
         <label>
         <div class="form-group">   
         <label for="telefone" class="Texto">Telefone</label> 
-        <input type="text" class="Texto form-control" name="telefone">&nbsp <input type="checkbox" name= "whats" value="1" autocomplete="off"> WhastApp 
+        <input type="text" class="Texto form-control" name="telefone" value="(19) ">&nbsp <input type="checkbox" name= "whats" value="1" autocomplete="off"> WhastApp 
         </div>
 
         <label>
         <div class="form-group">   
         <label for="facebook" class="Texto">Facebook</label>
-        <input type="text" class="Texto form-control" name= "facebook" autocomplete="off" value="https://">
+        <input type="text" class="Texto form-control" name= "facebook" autocomplete="off" value="">
         </div>
 
         <label>
