@@ -60,14 +60,15 @@
         <label>
         <div class="form-group">   
         <label for="atividade" class="Texto">Departamento</label>
-        <input type="text" class="Texto form-control" name= "departamento" autocomplete="off">
+        <input type="text" class="Texto form-control" name= "departamento" autocomplete="off" value="{{$dados->departamento}}">
         </div>
 
         <label>
-        <div class="form-group">
-        Capa <input type="radio" name= "capa" value="1"{{$dados->capa == 1 ? 'checked': ''}}>Sim
-        <input type="radio" name= "capa" value="0" {{$dados->capa == 0 ? 'checked': ''}}>Não
-        </div>
+        
+            <div class="form-group">   
+            <label for="capa" class="Texto">capa</label>
+            <input type="text" class="Texto form-control" name= "capa" autocomplete="off" value="{{$dados->capa}}">
+            </div>
 
         <div class="form-group">   
         <label for="banner" class="Texto">Banner</label>

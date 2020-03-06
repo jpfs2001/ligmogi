@@ -10,7 +10,7 @@
         <div class="col-sm-10">
 
             <div align="right">
-                <form action="/pesquisar/lista" method="post">
+                <form action="/pesquisar/lista" method="get">
                     {{csrf_field()}}
                     <label for="busca">Buscar</label>
                     <input type="search" name="nome">

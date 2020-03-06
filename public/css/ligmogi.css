@@ -1,729 +1,750 @@
-body { font-family: 'Source Sans Pro', sans-serif; }
-.margemTopo15{ margin-top:15px; }
-.margemTopo10{ margin-top:10px; }
-.margemTopo2{ margin-top:2px; }
-.margemBase15{ margin-bottom:15px; }
-.margemBase30{ margin-bottom:30px; }
-.margemTopo20{ margin-top:20px; }
-.margemTopo40{ margin-top:40px; margin-bottom: 20px; }
-.centralizado{ text-align: center; }
+  body { font-family: 'Source Sans Pro', sans-serif; }
+  .margemTopo15{ margin-top:15px; }
+  .margemTopo10{ margin-top:10px; }
+  .margemTopo2{ margin-top:2px; }
+  .margemBase15{ margin-bottom:15px; }
+  .margemBase30{ margin-bottom:30px; }
+  .margemTopo20{ margin-top:20px; }
+  .margemTopo40{ margin-top:40px; }
+  .centralizado{ text-align: center; }
 
-/* topo */
-.navbar-default{ border-radius: 0; border: 0;  /* height: 133px; */ margin: 0; padding: 0; background: #fff; }
-.navbar-default .navbar-collapse { border:0; background: #FFF; }
-.navbar>.container .navbar-brand { margin: 12px 0 0 0; width: 300px; height: 100px; padding: 0; }
-.navbar-nav { margin-top: 44px; }
-.menuTopo{ padding: 0; margin: 0; }
-.navbar-default .navbar-nav>li>a{ color:#5a5a5a; }
-.navbar-default .navbar-nav>li>a:hover {color: #470386; }
-li a.atual { font-weight: bold; }
-ul li.home{ margin-left:28px; }
-ul li.favorito {width: 28px; height: 28px; float: left;}
-.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus { background:#c7254e; border-color: #c7254e; }
-.pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus, .pagination>li>a, .pagination>li>span { color: #c7254e; }
+  /* topo */
+  .navbar-default{ border-radius: 0; border: 0;  /* height: 133px; */ margin: 0; padding: 0; background: #fff; }
+  .navbar-default .navbar-collapse { border:0; background: #FFF; }
+  .navbar>.container .navbar-brand { margin: 12px 0 0 0; width: 300px; height: 100px; padding: 0; }
+  .navbar-nav { margin-top: 44px; }
+  .menuTopo{ padding: 0; margin: 0; }
+  .navbar-default .navbar-nav>li>a{ color:#5a5a5a; }
+  .navbar-default .navbar-nav>li>a:hover {color: #470386; }
+  li a.atual { font-weight: bold; }
+  ul li.home{ margin-left:28px; }
+  ul li.favorito {width: 28px; height: 28px; float: left;}
+  .pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus { background:#c7254e; border-color: #c7254e; }
+  .pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus, .pagination>li>a, .pagination>li>span { color: #c7254e; }
 
-.pagination>li>a, .pagination>li>span { padding: 6px 12px; }
+  .pagination>li>a, .pagination>li>span { padding: 6px 12px; }
 
-p.rodape { color: #b0b0b0; font-size: 14px; }
-p.rodape a{ text-decoration: none; color: #cdcdcd; }
-p.rodape a:hover { color: #c7254e; text-decoration: underline; }
+  p.rodape { color: #b0b0b0; font-size: 14px; }
+  p.rodape a{ text-decoration: none; color: #cdcdcd; }
+  p.rodape a:hover { color: #c7254e; text-decoration: underline; }
 
-/* pesquisa */
-.barraPesquisa{ height: 205px; background: #c7254e; }
-.wrapperPesquisa {height: 205px; }
-.tiposPesquisa{ height: 60px; margin:20px 0 10px 0;}
-.tabs{ border-radius: 2px; height: 55px; cursor: pointer; }
+  /* pesquisa */
+  .barraPesquisa{ height: 205px; background: #c7254e; }
+  .wrapperPesquisa {height: 205px; }
+  .tiposPesquisa{ height: 30px; margin:20px 0 10px 0;}
+  .tabs{ border-radius: 2px; height: 55px; cursor: pointer; }
 
-.tabNome.tabAtiva:after, .tabAtividade.tabAtiva:after { border-top-color: #ff4000; }
-.tabTelefone.tabAtiva:after{ border-top-color: #ff4000; }
+  .tabNome.tabAtiva:after, .tabAtividade.tabAtiva:after { border-top-color: #ff4000; }
+  .tabTelefone.tabAtiva:after{ border-top-color: #ff4000; }
 
-.tabNomel.tabAtiva,
-.tabNome.tabInativa:hover,
-.tabAtividade.tabAtiva,
-.tabAtividade.tabInativa:hover,
-.tabTelefone.tabAtiva, .tabTelefone.tabInativa:hover { background: #ff4000; border-top-color: #ff4000;}
+  .tabNomel.tabAtiva,
+  .tabNome.tabInativa:hover,
+  .tabAtividade.tabAtiva,
+  .tabAtividade.tabInativa:hover,
+  .tabTelefone.tabAtiva, .tabTelefone.tabInativa:hover { background: #ff4000; border-top-color: #ff4000;}
 
-.tabs:after, .tabNome.tabInativa:after, .tabAtividade.tabInativa:after { content: ''; display: block; position: absolute; left: 47.33%; bottom: -20px; width: 0; height: 0; border-top: 10px solid rgba(255, 255, 255, 0.12); border-bottom: 10px solid transparent; border-left: 10px solid transparent; border-right: 10px solid transparent; }
+  .tabs:after, .tabNome.tabInativa:after, .tabAtividade.tabInativa:after { content: ''; display: block; position: absolute; left: 47.33%; bottom: -20px; width: 0; height: 0; border-top: 10px solid rgba(255, 255, 255, 0.12); border-bottom: 10px solid transparent; border-left: 10px solid transparent; border-right: 10px solid transparent; }
 
-.tabNome.tabInativa, .tabAtividade.tabInativa, .tabTelefone.tabInativa { background: rgba(255, 255, 255, 0.15); }
+  .tabNome.tabInativa, .tabAtividade.tabInativa, .tabTelefone.tabInativa { background: rgba(255, 255, 255, 0.15); }
 
-.icone{ float: left; width: 48px; height: 42px; padding: 0; margin: 5px 0 0 0; background: none; }
-
-
-
-.labelTab{ /*float: left;*/ font-size: 22px; height: 52px; line-height: 52px; margin-left: 5px; font-weight: lighter; color:#FFF; }
-
-.tiposFormularios{ margin-top:0; height: 94px; }
-
-input.forms { background: #FFF; height:89px; border: 2px solid #FFF; margin: 0; padding: 5px; float: left; width: 90%; border-radius: 3px 0 0 3px;  font-weight: lighter; font-size: 35px; line-height: 75px; outline: none; }
-button.btnPesquisar{ height: 89px; width: 10%; border-top: 2px solid #FFF; border-right: 2px solid #FFF; border-bottom: 2px solid #FFF; border-left:none; border-radius: 0; outline: none; }
-
-#nome{ display: block; }
-#atividade{ display: none; }
-#telefone { display: none; }
-
-.formNome,
-.formAtividade,
-.formTelefone { background: #FFF; border-radius: 3px; padding: 0; border: 4px solid #ff4000; height: 97px; }
-
-.formNome button.btnPesquisar,
-.formAtividade button.btnPesquisar,
-.formTelefone button.btnPesquisar { background: url("/image/ico-pesquisa.png") center center no-repeat #ff4000; padding: 5px;}
-
-.formNome button.btnPesquisar:hover,
-.formAtividade button.btnPesquisar:hover,
-.formTelefone button.btnPesquisar:hover{ background: url("/image/ico-pesquisa.png") center center no-repeat #c7254e;}
+  .icone{ float: left; width: 48px; height: 42px; padding: 0; margin: 5px 0 0 0; background: none; }
 
 
 
-.barraPaginas, .wrapperPaginas { background: #c7254e; }
-.wrapperPaginas h1{ min-height: 30px; line-height: 80px; font-size: 40px; font-weight: lighter; color:#FFF; margin: 0; padding: 0; }
+  .labelTab{ /*float: left;*/ font-size: 22px; height: 52px; line-height: 52px; margin-left: 5px; font-weight: lighter; color:#FFF; }
 
-input.has-warning, select.has-warning, textarea.has-warning, input.has-warningPesquisa{ color:#c7254e; background: #ecd8e0; border-color: #c7254e; }
-label.has-warning{ color: #FFF; background: #c7254e; padding: 3px 10px; font-weight: normal; font-size:12px; float: right; margin-right: 0; margin-top:-23px; border-radius: 0 0 5px 0; }
-label.has-warningPesquisa{ color: #FFF; background: #c7254e; padding: 3px 10px; font-weight: normal; font-size:14px; float: left; margin-left: 6px; margin-top:0;}
+  .tiposFormularios{ margin-top:0; height: 94px; }
 
-.form-group.aviso{ margin-bottom: 0; margin-top: 10px; }
-label.aviso { color:#c7254e; font-size: 16px; }
+  input.forms { background: #FFF; height:89px; border: 2px solid #FFF; margin: 0; padding: 5px; float: left; width: 90%; border-radius: 3px 0 0 3px;  font-weight: lighter; font-size: 35px; line-height: 75px; outline: none; }
+  button.btnPesquisar{ height: 89px; width: 10%; border-top: 2px solid #FFF; border-right: 2px solid #FFF; border-bottom: 2px solid #FFF; border-left:none; border-radius: 0; outline: none; }
 
-.btn-primary { color: #ffffff; background-color: #c7254e; border-color: #6E00B0; }
+  #nome{ display: block; }
+  #atividade{ display: none; }
+  #telefone { display: none; }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary { color: #ffffff; background-color: #6E00B0; border-color: #c7254e; }
+  .formNome,
+  .formAtividade,
+  .formTelefone { background: #FFF; border-radius: 3px; padding: 0; border: 4px solid #ff4000; height: 97px; }
 
-.bg-info{ background: #e9e7ff; }
-.bg-alerta {background: #c7254e; }
-.bg-alerta h4, .bg-alerta p{ color: #FFF;}
-.arredondar { border-radius: 5px; }
+  .formNome button.btnPesquisar,
+  .formAtividade button.btnPesquisar,
+  .formTelefone button.btnPesquisar { background: url("/image/ico-pesquisa.png") center center no-repeat #ff4000; padding: 5px;}
 
-h4.titulo{ color: #c7254e;  }
-h3.titulo{ color: #3e3e3e; font-size:20px; font-weight:300; line-height: 20px; }
-h3.titulo span.pesquisa { font-size:26px; color: #c7254e; font-weight: 500;}
-
-#motivo, #mensagem { height:100px; }
-
-#website { display: none !important; }
+  .formNome button.btnPesquisar:hover,
+  .formAtividade button.btnPesquisar:hover,
+  .formTelefone button.btnPesquisar:hover{ background: url("/image/ico-pesquisa.png") center center no-repeat #c7254e;}
 
 
 
+  .barraPaginas, .wrapperPaginas { background: #c7254e; }
+  .wrapperPaginas h1{ min-height: 30px; line-height: 80px; font-size: 40px; font-weight: lighter; color:#FFF; margin: 0; padding: 0; }
 
-/* tamanhos telas */
-@media (min-width: 768px) {
-    /*body { background: red; }*/
-    .container { width: 736px; }
-    .navbar-default .navbar-nav>li>a{ padding: 15px 6px; font-size: 12px; }
-    ul li.home{ margin-left:5px; }
-    ul li a.favoritos{ margin: 10px 0 0 5px; padding: 0;}
-    .cidadeSmall { width: 68%; }
-    .cidade{ margin: 0 0 0 5px; width: 170px; height: 133px; }
-    .cidade h5{ font-size: 16px; margin: 6px 0 0 45px; width: 108px; }
-    .cidade p{ font-size: 14px; margin: 10px 0 0 45px; width: 108px; }
-    .cidade a.trocar{ font-size: 12px; margin: 5px 0 0 45px; width: 108px; }
-    input.forms { width: 85%; font-size: 30px; }
-    button.btnPesquisar{ width: 15%; }
-    /* .wrapperPesquisa, .tiposPesquisa, .divForm { padding: 0; } */
-    .tiposFormularios { padding: 0 15px;}
-    .labelTab{ font-size: 22px; }
-    .anunciosHome { padding-right: 0; padding-left: 15px; }
-    .flash{ margin:20px 13px 0 0; }
-    #cidades{ margin-left:26px; font-size:13px; }
-    .dadosPatrocinador h1.nome{ font-size: 25px; margin: 0; }
-    .dadosPatrocinador h2.telefone a{ font-size: 31px; margin: 8px 15px 4px 0; }
-    .dadosPatrocinador address.endereco{ font-size: 14px; margin: 6px 0 0 0; }
-    .dadosPatrocinador address.endereco a{ font-size: 10px; }
-    .dadosNaoPatrocinador h1.nome{ font-size: 16px; margin: 0 0 0 5px; }
-    .dadosNaoPatrocinador h2.telefone a{ font-size: 18px; margin: 5px 10px 5px 0; }
-    .dadosNaoPatrocinador address.endereco{ font-size: 12px; margin: 0 0 0 5px; }
-    .icoEmail a, .icoSite a, .icoMapa a, .icoSkype a, .icoFacebook a, .icoWhatsapp a, .icoCardapio a, .icoInstagram a{ font-size: 10px; }
-    .pagination>li>a, .pagination>li>span { padding: 6px 6px; }
-    p.rodape { font-size: 13px; }
-    #popup { top:15%; left:17%; }
-    .loading { width: 660px; }
-    .flashObj { height: 80px; width: 100%; }
-    .flashResultado { padding-right: 0; }
-    .btnVejaMais { padding: 5px 10px; margin-top:13px; font-size: 14px; }
-    .logos-troca { width: 150px; height:45px; margin: 5px 0 0 28px; }
-    a.logo-troca { width: 45px; height: 45px; margin: 0 4px 0 0; }
-    p.linhaContato{line-height: 15px; margin: 0;}
-}
+  input.has-warning, select.has-warning, textarea.has-warning, input.has-warningPesquisa{ color:#c7254e; background: #ecd8e0; border-color: #c7254e; }
+  label.has-warning{ color: #FFF; background: #c7254e; padding: 3px 10px; font-weight: normal; font-size:12px; float: right; margin-right: 0; margin-top:-23px; border-radius: 0 0 5px 0; }
+  label.has-warningPesquisa{ color: #FFF; background: #c7254e; padding: 3px 10px; font-weight: normal; font-size:14px; float: left; margin-left: 6px; margin-top:0;}
 
-@media (min-width: 992px) {
-    /*body { background: green; }*/
-    .container { width: 960px; }
-    .navbar-default .navbar-nav>li>a{ padding: 15px 12px; font-size: 15px; }
-    ul li.home{ margin-left:20px; }
-    ul li a.favoritos {margin: 10px 0 0 13px; padding: 0;}
-    .cidade{ margin: 0 0 0 5px; width:220px; height: 133px; }
-    .cidade h5{ font-size: 18px; margin: 0 0 0 55px; width: 135px; }
-    .cidade p{ font-size: 16px; margin: 15px 0 0 55px; width: 135px; }
-    .cidade a.trocar{ font-size: 14px; margin: 2px 0 0 55px; width: 135px; }
-    input.forms { width: 87%; font-size: 30px; }
-    button.btnPesquisar{ width: 13%; }
-    .wrapperPesquisa, .tiposPesquisa, .tiposFormularios, .divForm { padding: 0 15px; }
-    .labelTab{ font-size: 24px; }
-    .anunciosHome { padding-right: 0; padding-left: 20px; }
-    .flash{ margin:20px 18px 0 0; }
-    #cidades{ margin-left:43px; }
-    .dadosPatrocinador h1.nome{ font-size: 26px; margin: 0 0 3px 0; }
-    .dadosPatrocinador h2.telefone a{ font-size: 32px; margin: 0 15px 4px 0; }
-    .dadosPatrocinador address.endereco{ font-size: 15px; margin: 0; }
-    .dadosPatrocinador address.endereco a{ font-size: 11px; }
-    .dadosNaoPatrocinador h1.nome{ font-size: 18px; margin: 0 0 0 5px; }
-    .dadosNaoPatrocinador h2.telefone a{ font-size: 19px; margin: 5px 15px 5px 0; }
-    .dadosNaoPatrocinador address.endereco{ font-size: 12px; margin: 0 0 0 5px; }
-    .icoEmail a, .icoSite a, .icoMapa a, .icoSkype a, .icoFacebook a, .icoWhatsapp a, .icoCardapio a, .icoInstagram a{ font-size: 13px; }
-    .pagination>li>a, .pagination>li>span { padding: 6px 8px; }
-    p.rodape { font-size: 14px; }
-    #popup { top:15%; left:20%; }
-    .loading { width: 880px; }
-    .flashObj { height: 100px; width: 100%; }
-    .flashResultado {padding-right: 0; }
-    .btnVejaMais { margin-top:10px; padding: 10px 20px; font-size: 18px; }
-    .logos-troca { width: 178px; height:45px; margin: 0 0 0 42px; }
-    a.logo-troca { width: 45px; height: 45px; margin: 0 14px 0 0; }
-    p.linhaContato{line-height: 15px; margin: 0;}
-}
+  .form-group.aviso{ margin-bottom: 0; margin-top: 10px; }
+  label.aviso { color:#c7254e; font-size: 16px; }
 
-@media (min-width: 1200px) {
-    /*body { background: blue; }*/
-    .container { width: 1168px; }
-    .navbar-default .navbar-nav>li>a{ padding: 15px 20px; font-size: 16px; }
-    ul li.home{ margin-left:35px; }
-    ul li a.favoritos {margin: 10px 0 0 13px; padding: 0;}
-    .cidade{ margin: 0 0 0 35px; width: 244px; }
-    .cidade h5{ font-size: 18px; margin: 0 0 0 55px; width: 135px; }
-    .cidade p{ font-size: 16px; margin: 15px 0 0 55px; width: 135px; }
-    .cidade a.trocar{ font-size: 14px; margin: 2px 0 0 55px; width: 135px; }
-    input.forms { width: 90%; font-size: 35px; }
-    button.btnPesquisar{ width: 10%; }
-    .wrapperPesquisa, .tiposPesquisa, .tiposFormularios, .divForm { padding: 0 15px; }
-    .labelTab{ font-size: 26px; }
-    .anunciosHome { padding-right: 0; padding-left: 55px; }
-    .flash{ margin:30px 52px 0 0; }
-    .flashResultado .flash { margin: 0; padding: 0; }
-    #cidades{ margin-left:50px; }
-    .dadosPatrocinador { min-height: 118px; }
-    .dadosPatrocinador h1.nome{ font-size: 28px; margin: 0 0 10px 0; }
-    .dadosPatrocinador h2.telefone a{ font-size: 33px; margin: 0 15px 4px 0; }
-    .dadosPatrocinador address.endereco{ font-size: 16px; margin: 2px 0 0 0; }
-    .dadosPatrocinador address.endereco a{ font-size: 12px; }
-    .dadosNaoPatrocinador h1.nome{ font-size: 20px; margin: 0 0 0 5px; }
-    .dadosNaoPatrocinador h2.telefone a{ font-size: 20px; margin: 5px 20px 5px 0; }
-    .dadosNaoPatrocinador address.endereco{ font-size: 14px; margin: 0 0 0 5px; }
-    .icoEmail a, .icoSite a, .icoMapa a, .icoSkype a, .icoFacebook a, .icoWhatsapp a, .icoCardapio a, .icoInstagram a{ font-size: 14px; }
-    .pagination>li>a, .pagination>li>span { padding: 6px 12px; }
-    p.rodape { font-size: 14px; }
-    #popup { top:10%; left:30%; }
+  .btn-primary { color: #ffffff; background-color: #c7254e; border-color: #6E00B0; }
 
-    .loading{ width: 1080px; }
-    .flashObj { height: 100px; width: 100%; }
+  .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary { color: #ffffff; background-color: #6E00B0; border-color: #c7254e; }
 
-    .btnVejaMais { margin-top:8px; padding: 13px 25px; font-size: 20px; }
+  .bg-info{ background: #e9e7ff; }
+  .bg-alerta {background: #c7254e; }
+  .bg-alerta h4, .bg-alerta p{ color: #FFF;}
+  .arredondar { border-radius: 5px; }
 
-}
+  h4.titulo{ color: #c7254e;  }
+  h3.titulo{ color: #3e3e3e; font-size:20px; font-weight:300; line-height: 20px; }
+  h3.titulo span.pesquisa { font-size:26px; color: #c7254e; font-weight: 500;}
 
-@media (max-width: 767px) {
-    /*body { background: pink; }*/
-    #corpo { margin-top:320px; }
-    .navbar-toggle { margin-top: 24px; }
-    .navbar-default .navbar-collapse { margin: 0; float: left; width: 100%;}
-    .navbar-header{ height: 300px; }
-    .navbar>.container .navbar-brand { margin: 5px 0 0 0; width: 300px; height: 100px; padding: 0; }
-    .navbar-nav { margin: 0;  }
-    ul li.home{ margin-left:0; }
-    .navbar-default .navbar-nav>li>a { padding-right: 0; }
-    
-    .cidadeSmall{ height: 95px; margin: 0; width: 68%; }
-    .cidadeSmall .nomeCidade{ width: 110px; float: left; border-radius: 5px; padding: 10px; margin: 20px 5px 0 5px;}
-    .cidadeSmall p.ddd { cursor: pointer; font-size: 14px; color: #FFF; font-weight: normal; margin: 0; text-align: left; line-height: 15px; }
-    .cidadeSmall p, .cidadeSmall a { font-size: 14px; color: #FFF; font-weight: normal; margin: 0; text-align: left; }
-    .cidadeSmall a { float: left; width: 100%; }
-    .cidadeSmall h5{ font-size: 15px; color: #FFF; font-weight: bold; margin: 0; text-align: left; }
+  #motivo, #mensagem { height:100px; }
 
-    .cidadeSmall .trocar { float: left; border-radius: 5px; width: 110px; padding: 3px 10px; margin-top:20px; margin-left: 4px; height: 51px; background: #c7254e;}
-    .cidadeSmall .trocar .trocarIcone { float: left; width: 40px; height: 44px; margin-top:4px;}
-    .cidadeSmall .trocar .trocarIcone img{ float: left; width: 32px;}
-    .cidadeSmall .trocar .trocarTexto { float: left; width: 50px; height: 26px; line-height: 14px; margin-top: 8px; }
-    
-    input.forms { width: 85%; font-size: 30px; height: 75px; line-height: 75px; }
-    .formNome, .formAtividade, .formTelefone {height: 83px; }
-    button.btnPesquisar{ width: 15%; height: 75px; }
-    .tiposFormularios{ margin-top:4px; height: 75px; }
-    .divForm, .wrapperTab { padding: 0 10px; }
-    .tiposFormularios { padding: 0 15px;}
-    .tabNome, .tabAtividade, .tabTelefone { padding: 0 !important; }
-    .labelTab{ font-size: 20px; }
-    .anunciosHome { padding-right: 0; padding-left: 72px; }
-    .flash{ margin:20px 36px 0 0; }
-    h4.titulo{ font-size: 17px; }
-    h3.titulo{ font-size:16px; line-height: 16px; }
-    h3.titulo span.pesquisa { font-size:20px;}
-    .dadosPatrocinador{ min-height: 86px; width: 75%; }
-    .dadosPatrocinador h1.nome{ font-size: 24px; margin: 0; }
-    .dadosPatrocinador h2.telefone a{ font-size: 30px; margin: 8px 0 0 0; }
-    .dadosPatrocinador address.endereco{ font-size: 14px; margin: 8px 0 0 0; }
-    .dadosPatrocinador address.endereco a{ font-size: 9px; }
-    .dadosNaoPatrocinador h1.nome{ font-size: 15px; margin: 0 0 0 5px; }
-    .dadosNaoPatrocinador h2.telefone a{ font-size: 17px; margin: 5px 10px 5px 0; }
-    .dadosNaoPatrocinador address.endereco{ font-size: 12px; margin: 0 0 0 5px; }
-    .pagination>li>a, .pagination>li>span { padding: 6px; font-size: 12px; }
-    p.rodape { font-size: 11px; }
-    #popup { top:15%; left:15%; }
-    .loading { width: 93%; height: 83px; top: 64px; left: 25px; padding-top: 26px; }
-    .flashObj { height: 80px; width: 100%; }
-    .flashResultado {padding-right: 0; }
-    .btnVejaMais { margin:6px 0; padding: 8px 15px; font-size: 16px; }
-    a.botaoCidade {  width: 80%; margin-left: 10%; }
-    p.linhaContato{line-height: 15px; margin: 0;}
-}
+  #website { display: none !important; }
 
-@media (max-width: 700px) {
-    /*body { background: deeppink;}*/
-    .anunciosHome { padding-right: 0; padding-left: 62px; }
-    .flash{ margin:20px 34px 0 0; }
-    .whatsappNumero{ left:-27px; }
-    p.rodape { font-size: 12px; }
-    .loading { top: 64px; width: 92.3%; height: 83px; left:20px; padding-top: 26px;  }
-    .flashResultado {padding-right: 0; }
-    p.linhaContato{line-height: 15px; margin: 0;}
-}
 
-@media (max-width: 684px) {
-   /* body { background: #2b542c; }*/
-    .anunciosHome { padding-right: 0; padding-left: 45px; }
-    .flash{ margin:20px 28px 0 0; }
-    .escondeLabel { display: none; }
-    .loading { top: 90px; width: 100%; height: 83px; left:0; padding-top: 26px; }
-    .flashResultado {padding-right: 0; }
-    p.linhaContato{line-height: 15px; margin: 0;}
-}
 
-@media (max-width: 650px) {
-    /*body { background: #544737; }*/
-    .anunciosHome { padding-right: 0; padding-left: 36px; }
-    .flash{ margin:20px 15px 0 0; }
-    .pesquisaPatrocinador .flashResultado .verAnuncioLink { font-size: 10px; }
-    .dadosPatrocinador { min-height: 80px; }
-    .dadosPatrocinador h1.nome{ font-size: 24px; margin: 0; }
-    .dadosPatrocinador h2.telefone a{ font-size: 30px; margin: 2px 0 0 0; }
-    .dadosPatrocinador address.endereco{ font-size: 14px; margin: 2px 0 0 0; }
-    .dadosPatrocinador address.endereco a{ font-size: 9px; }
-    .flashObj { height: 66px; width: 100%; }
-    .flashResultado {padding-right: 0; }
-    p.linhaContato{line-height: 15px; margin: 0;}
-}
 
-@media (max-width: 605px) {
-    /*body { background: #80b403; }*/
-    .divForm, .wrapperTab { padding: 0 5px; }
-    .labelTab {margin-left:0;}
-    .anunciosHome { padding-right: 0; padding-left: 30px; }
-    .flash{ margin:20px 14px 0 0; }
-    .flashResultado {padding-right: 0; }
-    h3.titulo{ font-size:14px; line-height: 14px; }
-    h3.titulo span.pesquisa { font-size:18px;}
-    p.linhaContato{line-height: 15px; margin: 0;}
-}
-
-@media (max-width: 585px) {
-    /*body { background: #270054; }*/
-    .anunciosHome { padding-right: 0; padding-left: 15px; }
-    .flash{ margin:20px 12px 0 0; }
-    .flashResultado {padding-right: 0; }
-    .whatsappNumero{ left:-20px; }
-}
-
-@media (max-width: 565px) {
-   /* body { background: #4c4454; }*/
-    .anunciosHome { padding-right: 0; padding-left: 15px; }
-    .flash{ margin:20px 12px 0 0; }
-    .anunciosHome { padding-right: 0; padding-left: 75px; }
-    .flashResultado {padding-right: 0; }
-}
-
-@media (max-width: 535px) {
-    /*body { background: yellow; }*/
-    .divForm, .wrapperTab { padding: 0 5px; }
-    .labelTab{ font-size: 18px; }
-    .anunciosHome { padding-right: 0; padding-left: 50px; }
-    .dadosPatrocinador { min-height: 64px; }
-    .dadosPatrocinador h1.nome{ font-size: 18px; margin: 0 0 2px 0; }
-    .links .row div:first-of-type{margin-left: -11px; }
-    h3.titulo{ font-size:12px; line-height: 12px; }
-    h3.titulo span.pesquisa { font-size:13px;}
-    .flash{ margin:20px 38px 0 0; }
-    .flashResultado {padding-right: 0; }
-    .btnVejaMais { margin:6px 0; padding: 7px 12px; font-size: 14px; }
-}
-
-@media (max-width: 495px) {
-    /*body { background: #b1ea73; }*/
-    .cidadeSmall{ height: 95px; margin: 0 auto; width: 67%; }
-    input.forms { width: 82%; font-size: 30px; }
-    button.btnPesquisar{ width: 18%; }
-    .wrapperPesquisa, .tiposPesquisa, .tiposFormularios, .divForm { padding: 0; }
-    .tabNome, .tabAtividade, .tabTelefone { padding: 0 !important; }
-    .labelTab{ font-size: 18px; }
-    .anunciosHome { padding-right: 0; padding-left: 41px; }
-    .flash{ margin:20px 36px 0 0; }
-    .flashResultado {padding-right: 0; }
-    .wrapperPaginas h1{ font-size: 30px; line-height: 28px; margin:10px 0; }
-    .form-group .form-control.input-lg{ font-size: 16px; }
-    .dadosPatrocinador h1.nome{ font-size: 16px; margin: 0 0 3px 0; }
-    .dadosPatrocinador h2.telefone a{ font-size: 20px; margin: 0 10px 0 0; }
-    .dadosPatrocinador{ min-height: 64px; }
-}
-
-@media (max-width: 470px) {
-    /*body { background: #1f5254; }*/
-    .anunciosHome { padding-right: 0; padding-left: 29px; }
-    .flash{ margin:20px 26px 0 0; }
-    .flashResultado {padding-right: 0; }
-}
-
-@media (max-width: 425px) {
-    /*body { background: #b93f8b; }*/
-    .cidadeSmall{ height: 95px; margin: 0 auto; width: 63%; }
-
-    .cidadeSmall .nomeCidade {width: 100px; margin: 20px 0 0 0; }
-    .cidadeSmall .trocar { width: 100px; padding: 3px 5px;}
-    .cidadeSmall .trocar .trocarIcone { float: left; width: 35px; height: 40px; margin-top: 6px;}
-    .cidadeSmall .trocar .trocarIcone img{ float: left; width: 30px;}
-    .cidadeSmall .trocar .trocarTexto { float: left; width: 50px; height: 26px; line-height: 14px; margin-top: 8px; }
-
-    input.forms { width: 81%; font-size: 28px; }
-    button.btnPesquisar{ width: 19%; }
-    .tabNome, .tabAtividade, .tabTelefone { padding: 0 !important; }
-    .labelTab{ font-size: 18px; }
-    .anunciosHome { padding-right: 0; padding-left: 15px; }
-    .flash{ margin:20px 10px 0 0; }
-    .flashResultado {padding-right: 0; }
-    .dadosPatrocinador{ min-height: 64px; }
-    .whatsappNumero{ left:-22px; }
-    .margemTopo2 { margin-top: 12px; }
-    .loading { padding-right: 78px; }
-}
-
-@media (max-width: 385px) {
-    /*body { background: #f9e79f; }*/
-    .tiposPesquisa { height: 70px; }
-
-    .cidadeSmall{ height: 90px; margin: 0 auto; width: 55%; padding: 0; }
-    .cidadeSmall .nomeCidade { padding: 5px 2px; width: 75px; margin-top:22px; margin-left:4px; background: #00c49a; }
-    .cidadeSmall .trocar { width: 85px; padding: 3px; margin-top:22px; margin-left: 4px; height: 40px; background: #c7254e;}
-    .cidadeSmall .trocar .trocarIcone { float: left; width: 30px; height: 30px; margin-top:1px;}
-    .cidadeSmall .trocar .trocarIcone img{ float: left; width: 30px;}
-    .cidadeSmall .trocar .trocarTexto { float: left; width: 43px; height: 26px; line-height: 12px; margin-top: 4px; }
-    .cidadeSmall p, .cidadeSmall p.ddd, .cidadeSmall a { font-size: 13px; }
-    .cidadeSmall h5 { font-size: 14px; }
-
-    input.forms { width: 78%; font-size: 22px; }
-    button.btnPesquisar{ width: 22%; }
-    .tabNome, .tabAtividade, .tabTelefone { padding: 0 !important; margin: 0 auto; float: none !important; text-align: center; }
-    .labelTab{  line-height: 30px; padding: 0; margin: 0; float: left; width: 100%; } /* update fev 2016 */
-    .icone { margin: 5px 0 0 0; width: 100%; }
-    .anunciosHome { padding-right: 0; padding-left: 95px; }
-    .form-group .form-control.input-lg{ font-size: 14px;}
-    .wrapperPaginas h1{ font-size: 25px; line-height: 24px; margin:13px 0; }
-    label.has-warning{ padding: 3px 15px; font-weight: normal; font-size:12px; float: none; margin: 0 0 0 5px; border-radius: 0; }
-
-    .tabs { height: 40px; }
-    input.forms {padding: 5px; line-height: 50px; }
-  
-}
-
-@media (max-width: 330px) {
-    /*body { background: #0a091e; }*/
-    .tiposPesquisa { height: 70px; }
-
-    .tabNome, .tabAtividade, .tabTelefone { padding: 0 !important; }
-    .labelTab{ display: block; height: 12px; line-height: 12px; padding: 0; margin: 0; } /* update fev 2016 */
-    .icone { margin: 5px 0 0 0; width: 100%; }
-    .anunciosHome { padding-right: 0; padding-left: 55px; }
-    .flash{ margin:10px 0 0 0; }
-    .tabs { height: 70px; }
-    .loading { top:100px; padding-right: 62px; }
-    .flashResultado {padding-right: 0; }
-}
-
-.pesquisaPatrocinador, .pesquisaNaoPatrocinador, .links, .verAnuncioLink, address.endereco a{
-    -webkit-transition: all 250ms linear;
-    -moz-transition: all 250ms linear;
-    -o-transition: all 250ms linear;
-    transition: all 250ms linear;
-}
-.card {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+  /* tamanhos telas */
+  @media (min-width: 768px) {
+      /*body { background: red; }*/
+      .container { width: 736px; }
+      .navbar-default .navbar-nav>li>a{ padding: 15px 6px; font-size: 12px; }
+      ul li.home{ margin-left:5px; }
+      ul li a.favoritos{ margin: 10px 0 0 5px; padding: 0;}
+      .cidadeSmall { width: 68%; }
+      .cidade{ margin: 0 0 0 5px; width: 170px; height: 133px; }
+      .cidade h5{ font-size: 16px; margin: 6px 0 0 45px; width: 108px; }
+      .cidade p{ font-size: 14px; margin: 10px 0 0 45px; width: 108px; }
+      .cidade a.trocar{ font-size: 12px; margin: 5px 0 0 45px; width: 108px; }
+      input.forms { width: 85%; font-size: 30px; }
+      button.btnPesquisar{ width: 15%; }
+      /* .wrapperPesquisa, .tiposPesquisa, .divForm { padding: 0; } */
+      .tiposFormularios { padding: 0 15px;}
+      .labelTab{ font-size: 22px; }
+      .anunciosHome { padding-right: 0; padding-left: 15px; }
+      .flash{ margin:20px 13px 0 0; }
+      #cidades{ margin-left:26px; font-size:13px; }
+      .dadosPatrocinador h1.nome{ font-size: 25px; margin: 0; }
+      .dadosPatrocinador h2.telefone a{ font-size: 31px; margin: 8px 15px 4px 0; }
+      .dadosPatrocinador address.endereco{ font-size: 14px; margin: 6px 0 0 0; }
+      .dadosPatrocinador address.endereco a{ font-size: 10px; }
+      .dadosNaoPatrocinador h1.nome{ font-size: 16px; margin: 0 0 0 5px; }
+      .dadosNaoPatrocinador h2.telefone a{ font-size: 18px; margin: 5px 10px 5px 0; }
+      .dadosNaoPatrocinador address.endereco{ font-size: 12px; margin: 0 0 0 5px; }
+      .icoEmail a, .icoSite a, .icoMapa a, .icoSkype a, .icoFacebook a, .icoWhatsapp a, .icoCardapio a, .icoInstagram a{ font-size: 10px; }
+      .pagination>li>a, .pagination>li>span { padding: 6px 6px; }
+      p.rodape { font-size: 13px; }
+      #popup { top:15%; left:17%; }
+      .loading { width: 660px; }
+      .flashObj { height: 80px; width: 100%; }
+      .flashResultado { padding-right: 0; }
+      .btnVejaMais { padding: 5px 10px; margin-top:13px; font-size: 14px; }
+      .logos-troca { width: 150px; height:45px; margin: 5px 0 0 28px; }
+      a.logo-troca { width: 45px; height: 45px; margin: 0 4px 0 0; }
+      p.linhaContato{line-height: 15px; margin: 0;}
   }
-  
-  /* On mouse-over, add a deeper shadow */
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+  @media (min-width: 992px) {
+      /*body { background: green; }*/
+      .container { width: 960px; }
+      .navbar-default .navbar-nav>li>a{ padding: 15px 12px; font-size: 15px; }
+      ul li.home{ margin-left:20px; }
+      ul li a.favoritos {margin: 10px 0 0 13px; padding: 0;}
+      .cidade{ margin: 0 0 0 5px; width:220px; height: 133px; }
+      .cidade h5{ font-size: 18px; margin: 0 0 0 55px; width: 135px; }
+      .cidade p{ font-size: 16px; margin: 15px 0 0 55px; width: 135px; }
+      .cidade a.trocar{ font-size: 14px; margin: 2px 0 0 55px; width: 135px; }
+      input.forms { width: 87%; font-size: 30px; }
+      button.btnPesquisar{ width: 13%; }
+      .wrapperPesquisa, .tiposPesquisa, .tiposFormularios, .divForm { padding: 0 15px; }
+      .labelTab{ font-size: 24px; }
+      .anunciosHome { padding-right: 0; padding-left: 20px; }
+      .flash{ margin:20px 18px 0 0; }
+      #cidades{ margin-left:43px; }
+      .dadosPatrocinador h1.nome{ font-size: 26px; margin: 0 0 3px 0; }
+      .dadosPatrocinador h2.telefone a{ font-size: 32px; margin: 0 15px 4px 0; }
+      .dadosPatrocinador address.endereco{ font-size: 15px; margin: 0; }
+      .dadosPatrocinador address.endereco a{ font-size: 11px; }
+      .dadosNaoPatrocinador h1.nome{ font-size: 18px; margin: 0 0 0 5px; }
+      .dadosNaoPatrocinador h2.telefone a{ font-size: 19px; margin: 5px 15px 5px 0; }
+      .dadosNaoPatrocinador address.endereco{ font-size: 12px; margin: 0 0 0 5px; }
+      .icoEmail a, .icoSite a, .icoMapa a, .icoSkype a, .icoFacebook a, .icoWhatsapp a, .icoCardapio a, .icoInstagram a{ font-size: 13px; }
+      .pagination>li>a, .pagination>li>span { padding: 6px 8px; }
+      p.rodape { font-size: 14px; }
+      #popup { top:15%; left:20%; }
+      .loading { width: 880px; }
+      .flashObj { height: 100px; width: 100%; }
+      .flashResultado {padding-right: 0; }
+      .btnVejaMais { margin-top:10px; padding: 10px 20px; font-size: 18px; }
+      .logos-troca { width: 178px; height:45px; margin: 0 0 0 42px; }
+      a.logo-troca { width: 45px; height: 45px; margin: 0 14px 0 0; }
+      p.linhaContato{line-height: 15px; margin: 0;}
   }
-  
-  /* Add some padding inside the card container */
-  .container {
-    padding: 2px 16px;
+
+  @media (min-width: 1200px) {
+      /*body { background: blue; }*/
+      .container { width: 1168px; }
+      .navbar-default .navbar-nav>li>a{ padding: 15px 20px; font-size: 16px; }
+      ul li.home{ margin-left:35px; }
+      ul li a.favoritos {margin: 10px 0 0 13px; padding: 0;}
+      .cidade{ margin: 0 0 0 35px; width: 244px; }
+      .cidade h5{ font-size: 18px; margin: 0 0 0 55px; width: 135px; }
+      .cidade p{ font-size: 16px; margin: 15px 0 0 55px; width: 135px; }
+      .cidade a.trocar{ font-size: 14px; margin: 2px 0 0 55px; width: 135px; }
+      input.forms { width: 90%; font-size: 35px; }
+      button.btnPesquisar{ width: 10%; }
+      .wrapperPesquisa, .tiposPesquisa, .tiposFormularios, .divForm { padding: 0 15px; }
+      .labelTab{ font-size: 26px; }
+      .anunciosHome { padding-right: 0; padding-left: 55px; }
+      .flash{ margin:30px 52px 0 0; }
+      .flashResultado .flash { margin: 0; padding: 0; }
+      #cidades{ margin-left:50px; }
+      .dadosPatrocinador { min-height: 118px; }
+      .dadosPatrocinador h1.nome{ font-size: 28px; margin: 0 0 10px 0; }
+      .dadosPatrocinador h2.telefone a{ font-size: 33px; margin: 0 15px 4px 0; }
+      .dadosPatrocinador address.endereco{ font-size: 16px; margin: 2px 0 0 0; }
+      .dadosPatrocinador address.endereco a{ font-size: 12px; }
+      .dadosNaoPatrocinador h1.nome{ font-size: 20px; margin: 0 0 0 5px; }
+      .dadosNaoPatrocinador h2.telefone a{ font-size: 20px; margin: 5px 20px 5px 0; }
+      .dadosNaoPatrocinador address.endereco{ font-size: 14px; margin: 0 0 0 5px; }
+      .icoEmail a, .icoSite a, .icoMapa a, .icoSkype a, .icoFacebook a, .icoWhatsapp a, .icoCardapio a, .icoInstagram a{ font-size: 14px; }
+      .pagination>li>a, .pagination>li>span { padding: 6px 12px; }
+      p.rodape { font-size: 14px; }
+      #popup { top:10%; left:30%; }
+
+      .loading{ width: 1080px; }
+      .flashObj { height: 100px; width: 100%; }
+
+      .btnVejaMais { margin-top:8px; padding: 13px 25px; font-size: 20px; }
+
+  }
+
+  @media (max-width: 767px) {
+      /*body { background: pink; }*/
+      #corpo { margin-top:320px; }
+      .navbar-toggle { margin-top: 24px; }
+      .navbar-default .navbar-collapse { margin: 0; float: left; width: 100%;}
+      .navbar-header{ height: 300px; }
+      .navbar>.container .navbar-brand { margin: 5px 0 0 0; width: 300px; height: 50px; padding: 0; }
+      .navbar-nav { margin: 0;  }
+      ul li.home{ margin-left:0; }
+      .navbar-default .navbar-nav>li>a { padding-right: 0; }
+      
+      .cidadeSmall{ height: 95px; margin: 0; width: 68%; }
+      .cidadeSmall .nomeCidade{ width: 110px; float: left; border-radius: 5px; padding: 10px; margin: 20px 5px 0 5px;}
+      .cidadeSmall p.ddd { cursor: pointer; font-size: 14px; color: #FFF; font-weight: normal; margin: 0; text-align: left; line-height: 15px; }
+      .cidadeSmall p, .cidadeSmall a { font-size: 14px; color: #FFF; font-weight: normal; margin: 0; text-align: left; }
+      .cidadeSmall a { float: left; width: 100%; }
+      .cidadeSmall h5{ font-size: 15px; color: #FFF; font-weight: bold; margin: 0; text-align: left; }
+
+      .cidadeSmall .trocar { float: left; border-radius: 5px; width: 110px; padding: 3px 10px; margin-top:20px; margin-left: 4px; height: 51px; background: #c7254e;}
+      .cidadeSmall .trocar .trocarIcone { float: left; width: 40px; height: 44px; margin-top:4px;}
+      .cidadeSmall .trocar .trocarIcone img{ float: left; width: 32px;}
+      .cidadeSmall .trocar .trocarTexto { float: left; width: 50px; height: 26px; line-height: 14px; margin-top: 8px; }
+      
+      input.forms { width: 85%; font-size: 30px; height: 75px; line-height: 75px; }
+      .formNome, .formAtividade, .formTelefone {height: 83px; }
+      button.btnPesquisar{ width: 15%; height: 75px; }
+      .tiposFormularios{ margin-top:4px; height: 75px; }
+      .divForm, .wrapperTab { padding: 0 10px; }
+      .tiposFormularios { padding: 0 15px;}
+      .tabNome, .tabAtividade, .tabTelefone { padding: 0 !important; }
+      .labelTab{ font-size: 20px; }
+      .anunciosHome { padding-right: 0; padding-left: 72px; }
+      .flash{ margin:20px 36px 0 0; }
+      h4.titulo{ font-size: 17px; }
+      h3.titulo{ font-size:16px; line-height: 16px; }
+      h3.titulo span.pesquisa { font-size:20px;}
+      .dadosPatrocinador{ min-height: 86px; width: 75%; }
+      .dadosPatrocinador h1.nome{ font-size: 24px; margin: 0; }
+      .dadosPatrocinador h2.telefone a{ font-size: 30px; margin: 8px 0 0 0; }
+      .dadosPatrocinador address.endereco{ font-size: 14px; margin: 8px 0 0 0; }
+      .dadosPatrocinador address.endereco a{ font-size: 9px; }
+      .dadosNaoPatrocinador h1.nome{ font-size: 15px; margin: 0 0 0 5px; }
+      .dadosNaoPatrocinador h2.telefone a{ font-size: 17px; margin: 5px 10px 5px 0; }
+      .dadosNaoPatrocinador address.endereco{ font-size: 12px; margin: 0 0 0 5px; }
+      .pagination>li>a, .pagination>li>span { padding: 6px; font-size: 12px; }
+      p.rodape { font-size: 11px; }
+      #popup { top:15%; left:15%; }
+      .loading { width: 93%; height: 83px; top: 64px; left: 25px; padding-top: 26px; }
+      .flashObj { height: 80px; width: 100%; }
+      .flashResultado {padding-right: 0; }
+      .btnVejaMais { margin:6px 0; padding: 8px 15px; font-size: 16px; }
+      a.botaoCidade {  width: 80%; margin-left: 10%; }
+      p.linhaContato{line-height: 15px; margin: 0;}
+  }
+
+  @media (max-width: 700px) {
+      /*body { background: deeppink;}*/
+      .anunciosHome { padding-right: 0; padding-left: 62px; }
+      .flash{ margin:20px 34px 0 0; }
+      .whatsappNumero{ left:-27px; }
+      p.rodape { font-size: 12px; }
+      .loading { top: 64px; width: 92.3%; height: 83px; left:20px; padding-top: 26px;  }
+      .flashResultado {padding-right: 0; }
+      p.linhaContato{line-height: 15px; margin: 0;}
+  }
+
+  @media (max-width: 684px) {
+    /* body { background: #2b542c; }*/
+      .anunciosHome { padding-right: 0; padding-left: 45px; }
+      .flash{ margin:20px 28px 0 0; }
+      .escondeLabel { display: none; }
+      .loading { top: 90px; width: 100%; height: 83px; left:0; padding-top: 26px; }
+      .flashResultado {padding-right: 0; }
+      p.linhaContato{line-height: 15px; margin: 0;}
+  }
+
+  @media (max-width: 650px) {
+      /*body { background: #544737; }*/
+      .anunciosHome { padding-right: 0; padding-left: 36px; }
+      .flash{ margin:20px 15px 0 0; }
+      .pesquisaPatrocinador .flashResultado .verAnuncioLink { font-size: 10px; }
+      .dadosPatrocinador { min-height: 80px; }
+      .dadosPatrocinador h1.nome{ font-size: 24px; margin: 0; }
+      .dadosPatrocinador h2.telefone a{ font-size: 30px; margin: 2px 0 0 0; }
+      .dadosPatrocinador address.endereco{ font-size: 14px; margin: 2px 0 0 0; }
+      .dadosPatrocinador address.endereco a{ font-size: 9px; }
+      .flashObj { height: 66px; width: 100%; }
+      .flashResultado {padding-right: 0; }
+      p.linhaContato{line-height: 15px; margin: 0;}
+  }
+
+  @media (max-width: 605px) {
+      /*body { background: #80b403; }*/
+      .divForm, .wrapperTab { padding: 0 5px; }
+      .labelTab {margin-left:0;}
+      .anunciosHome { padding-right: 0; padding-left: 30px; }
+      .flash{ margin:20px 14px 0 0; }
+      .flashResultado {padding-right: 0; }
+      h3.titulo{ font-size:14px; line-height: 14px; }
+      h3.titulo span.pesquisa { font-size:18px;}
+      p.linhaContato{line-height: 15px; margin: 0;}
+  }
+
+  @media (max-width: 585px) {
+      /*body { background: #270054; }*/
+      .anunciosHome { padding-right: 0; padding-left: 15px; }
+      .flash{ margin:20px 12px 0 0; }
+      .flashResultado {padding-right: 0; }
+      .whatsappNumero{ left:-20px; }
+  }
+
+  @media (max-width: 565px) {
+    /* body { background: #4c4454; }*/
+      .anunciosHome { padding-right: 0; padding-left: 15px; }
+      .flash{ margin:20px 12px 0 0; }
+      .anunciosHome { padding-right: 0; padding-left: 75px; }
+      .flashResultado {padding-right: 0; }
+  }
+
+  @media (max-width: 535px) {
+      /*body { background: yellow; }*/
+      .divForm, .wrapperTab { padding: 0 5px; }
+      .labelTab{ font-size: 18px; }
+      .anunciosHome { padding-right: 0; padding-left: 50px; }
+      .dadosPatrocinador { min-height: 64px; }
+      .dadosPatrocinador h1.nome{ font-size: 18px; margin: 0 0 2px 0; }
+      .links .row div:first-of-type{margin-left: -11px; }
+      h3.titulo{ font-size:12px; line-height: 12px; }
+      h3.titulo span.pesquisa { font-size:13px;}
+      .flash{ margin:20px 38px 0 0; }
+      .flashResultado {padding-right: 0; }
+      .btnVejaMais { margin:6px 0; padding: 7px 12px; font-size: 14px; }
+  }
+
+  @media (max-width: 495px) {
+      /*body { background: #b1ea73; }*/
+      .cidadeSmall{ height: 95px; margin: 0 auto; width: 67%; }
+      input.forms { width: 82%; font-size: 30px; }
+      button.btnPesquisar{ width: 18%; }
+      .wrapperPesquisa, .tiposPesquisa, .tiposFormularios, .divForm { padding: 0; }
+      .tabNome, .tabAtividade, .tabTelefone { padding: 0 !important; }
+      .labelTab{ font-size: 18px; }
+      .anunciosHome { padding-right: 0; padding-left: 41px; }
+      .flash{ margin:20px 36px 0 0; }
+      .flashResultado {padding-right: 0; }
+      .wrapperPaginas h1{ font-size: 30px; line-height: 28px; margin:10px 0; }
+      .form-group .form-control.input-lg{ font-size: 16px; }
+      .dadosPatrocinador h1.nome{ font-size: 16px; margin: 0 0 3px 0; }
+      .dadosPatrocinador h2.telefone a{ font-size: 20px; margin: 0 10px 0 0; }
+      .dadosPatrocinador{ min-height: 64px; }
+  }
+
+  @media (max-width: 470px) {
+      /*body { background: #1f5254; }*/
+      .anunciosHome { padding-right: 0; padding-left: 29px; }
+      .flash{ margin:20px 26px 0 0; }
+      .flashResultado {padding-right: 0; }
+  }
+
+  @media (max-width: 425px) {
+      /*body { background: #b93f8b; }*/
+      .cidadeSmall{ height: 95px; margin: 0 auto; width: 63%; }
+
+      .cidadeSmall .nomeCidade {width: 100px; margin: 20px 0 0 0; }
+      .cidadeSmall .trocar { width: 100px; padding: 3px 5px;}
+      .cidadeSmall .trocar .trocarIcone { float: left; width: 35px; height: 40px; margin-top: 6px;}
+      .cidadeSmall .trocar .trocarIcone img{ float: left; width: 30px;}
+      .cidadeSmall .trocar .trocarTexto { float: left; width: 50px; height: 26px; line-height: 14px; margin-top: 8px; }
+
+      input.forms { width: 81%; font-size: 28px; }
+      button.btnPesquisar{ width: 19%; }
+      .tabNome, .tabAtividade, .tabTelefone { padding: 0 !important; }
+      .labelTab{ font-size: 18px; }
+      .anunciosHome { padding-right: 0; padding-left: 15px; }
+      .flash{ margin:20px 10px 0 0; }
+      .flashResultado {padding-right: 0; }
+      .dadosPatrocinador{ min-height: 64px; }
+      .whatsappNumero{ left:-22px; }
+      .margemTopo2 { margin-top: 12px; }
+      .loading { padding-right: 78px; }
+  }
+
+  @media (max-width: 385px) {
+      /*body { background: #f9e79f; }*/
+      .tiposPesquisa { height: 35px; }
+
+      .cidadeSmall{ height: 90px; margin: 0 auto; width: 55%; padding: 0; }
+      .cidadeSmall .nomeCidade { padding: 5px 2px; width: 75px; margin-top:22px; margin-left:4px; background: #00c49a; }
+      .cidadeSmall .trocar { width: 85px; padding: 3px; margin-top:22px; margin-left: 4px; height: 40px; background: #c7254e;}
+      .cidadeSmall .trocar .trocarIcone { float: left; width: 30px; height: 30px; margin-top:1px;}
+      .cidadeSmall .trocar .trocarIcone img{ float: left; width: 30px;}
+      .cidadeSmall .trocar .trocarTexto { float: left; width: 43px; height: 26px; line-height: 12px; margin-top: 4px; }
+      .cidadeSmall p, .cidadeSmall p.ddd, .cidadeSmall a { font-size: 13px; }
+      .cidadeSmall h5 { font-size: 14px; }
+
+      input.forms { width: 78%; font-size: 22px; }
+      button.btnPesquisar{ width: 22%; }
+      .tabNome, .tabAtividade, .tabTelefone { padding: 0 !important; margin: 0 auto; float: none !important; text-align: center; }
+      .labelTab{  line-height: 30px; padding: 0; margin: 0; float: left; width: 100%; } /* update fev 2016 */
+      .icone { margin: 5px 0 0 0; width: 100%; }
+      .anunciosHome { padding-right: 0; padding-left: 95px; }
+      .form-group .form-control.input-lg{ font-size: 14px;}
+      .wrapperPaginas h1{ font-size: 25px; line-height: 24px; margin:13px 0; }
+      label.has-warning{ padding: 3px 15px; font-weight: normal; font-size:12px; float: none; margin: 0 0 0 5px; border-radius: 0; }
+
+      .tabs { height: 40px; }
+      input.forms {padding: 5px; line-height: 50px; }
+    
+  }
+
+  @media (max-width: 330px) {
+      /*body { background: #0a091e; }*/
+      .tiposPesquisa { height: 70px; }
+
+      .tabNome, .tabAtividade, .tabTelefone { padding: 0 !important; }
+      .labelTab{ display: block; height: 12px; line-height: 12px; padding: 0; margin: 0; } /* update fev 2016 */
+      .icone { margin: 5px 0 0 0; width: 100%; }
+      .anunciosHome { padding-right: 0; padding-left: 55px; }
+      .flash{ margin:10px 0 0 0; }
+      .tabs { height: 70px; }
+      .loading { top:100px; padding-right: 62px; }
+      .flashResultado {padding-right: 0; }
+  }
+
+  .pesquisaPatrocinador, .pesquisaNaoPatrocinador, .links, .verAnuncioLink, address.endereco a{
+      -webkit-transition: all 250ms linear;
+      -moz-transition: all 250ms linear;
+      -o-transition: all 250ms linear;
+      transition: all 250ms linear;
   }
   .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 5px; /* 5px rounded corners */
-  }
-  
-  /* Add rounded corners to the top left and the top right corner of the image */
-  img {
-    border-radius: 5px 5px 0 0;
-  }
-  .resp-container {
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%;
-}
-
-.resp-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-    p{
-        font-family: 'Roboto', sans-serif;
-
+      /* Add shadows to create the "card" effect */
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
     }
-
-    h1{
-        font-family: 'Roboto', sans-serif;
-
-    }
-
-    h2{
-        font-family: 'Roboto', sans-serif;
-
-    }
-
-    h3{
-        font-family: 'Roboto', sans-serif;
-    }
-
-    h4{
-       font-family: 'Roboto', sans-serif;
-
-    }
-
-    h5{
-        font-family: 'Roboto', sans-serif;
-
-    }
-
-    .card-content {
-        padding: 12px;
-        padding-top: 12px;
-        padding-right: 12px;
-        padding-bottom: 12px;
-        padding-left: 12px;
-    }
-                      
     
-      .fixarRodape 
-      { 
-          bottom: 0; position: bottom; width:100%; text-align: center; 
-        } 
+    /* On mouse-over, add a deeper shadow */
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+    
+    /* Add some padding inside the card container */
+    .container {
+      padding: 2px 16px;
+    }
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      border-radius: 5px; /* 5px rounded corners */
+    }
+    
+    /* Add rounded corners to the top left and the top right corner of the image */
+    img {
+      border-radius: 5px 5px 0 0;
+    }
+    .resp-container {
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%;
+  }
 
-        .fa-facebook {
-            background: #3B5998;
-            color: white;
-          }
+  .resp-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+  }
 
-          .facebook {
-            padding: 20px;
-            font-size: 30px;
-            width: 70px;
-            text-align: center;
-            text-decoration: none;
-            margin: 5px 2px;
-          }
+      p{
+          font-family: 'Roboto', sans-serif;
 
-          .mx-auto{
-            margin-right: auto!important;
-            margin-left: auto!important;
-          }
+      }
 
-          * {box-sizing:border-box}
+      h1{
+          font-family: 'Roboto', sans-serif;
 
+      }
 
+      h2{
+          font-family: 'Roboto', sans-serif;
+
+      }
+
+      h3{
+          font-family: 'Roboto', sans-serif;
+      }
+
+      h4{
+        font-family: 'Roboto', sans-serif;
+
+      }
+
+      h5{
+          font-family: 'Roboto', sans-serif;
+
+      }
+
+      .card-content {
+          padding: 12px;
+          padding-top: 12px;
+          padding-right: 12px;
+          padding-bottom: 12px;
+          padding-left: 12px;
+      }
+                        
       
+        .fixarRodape 
+        { 
+            bottom: 0; position: bottom; width:100%; text-align: center; 
+          } 
+
+          .fa-facebook {
+              background: #3B5998;
+              color: white;
+            }
+
+            .facebook {
+              padding: 20px;
+              font-size: 30px;
+              width: 70px;
+              text-align: center;
+              text-decoration: none;
+              margin: 5px 2px;
+            }
+
+            .mx-auto{
+              margin-right: auto!important;
+              margin-left: auto!important;
+            }
+
+            * {box-sizing:border-box}
+
+
         
-       
+          
+        
+        
+        .carousel-showmanymoveone .carousel-control {
+    width: 4%;
+    background-image: none;
+  }
+  .carousel-control.right {
+    right: 0;
+    left: auto;
+    background-image: -webkit-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,0) 100%);
+    background-image: -o-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,0) 100%);
+
+    background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+    background-repeat: repeat-x;
+  }
+
+  .carousel-control.left {
+    background-image: -webkit-linear-gradient(left,rgba(0,0,0,0) 0,rgba(0,0,0,.0001) 100%);
+    background-image: -o-linear-gradient(left,rgba(0,0,0,0) 0,rgba(0,0,0,.0001) 100%);
+    background-image: linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,.0001) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+    background-repeat: repeat-x;
+  }
+
+  .carousel-showmanymoveone .carousel-control.left {
+    margin-left: 15px;
+  }
+  .carousel-showmanymoveone .carousel-control.right {
+    margin-right: 15px;
+  }
+  .carousel-showmanymoveone .cloneditem-1,
+  .carousel-showmanymoveone .cloneditem-2,
+  .carousel-showmanymoveone .cloneditem-3 {
+    display: none;
+  }
+  @media all and (min-width: 768px) {
+    .carousel-showmanymoveone .carousel-inner > .active.left,
+    .carousel-showmanymoveone .carousel-inner > .prev {
+      left: -50%;
+    }
+    .carousel-showmanymoveone .carousel-inner > .active.right,
+    .carousel-showmanymoveone .carousel-inner > .next {
+      left: 50%;
+    }
+    .carousel-showmanymoveone .carousel-inner > .left,
+    .carousel-showmanymoveone .carousel-inner > .prev.right,
+    .carousel-showmanymoveone .carousel-inner > .active {
+      left: 0;
+    }
+    .carousel-showmanymoveone .carousel-inner .cloneditem-1 {
+      display: block;
+    }
+  }
+  @media all and (min-width: 768px) and (transform-3d),
+    all and (min-width: 768px) and (-webkit-transform-3d) {
+    .carousel-showmanymoveone .carousel-inner > .item.active.right,
+    .carousel-showmanymoveone .carousel-inner > .item.next {
+      -webkit-transform: translate3d(50%, 0, 0);
+      transform: translate3d(50%, 0, 0);
+      left: 0;
+    }
+    .carousel-showmanymoveone .carousel-inner > .item.active.left,
+    .carousel-showmanymoveone .carousel-inner > .item.prev {
+      -webkit-transform: translate3d(-50%, 0, 0);
+      transform: translate3d(-50%, 0, 0);
+      left: 0;
+    }
+    .carousel-showmanymoveone .carousel-inner > .item.left,
+    .carousel-showmanymoveone .carousel-inner > .item.prev.right,
+    .carousel-showmanymoveone .carousel-inner > .item.active {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      left: 0;
+    }
+  }
+  @media all and (min-width: 992px) {
+    .carousel-showmanymoveone .carousel-inner > .active.left,
+    .carousel-showmanymoveone .carousel-inner > .prev {
+      left: -33.3%;
+    }
+    .carousel-showmanymoveone .carousel-inner > .active.right,
+    .carousel-showmanymoveone .carousel-inner > .next {
+      left: 33.3%;
+    }
+    .carousel-showmanymoveone .carousel-inner > .left,
+    .carousel-showmanymoveone .carousel-inner > .prev.right,
+    .carousel-showmanymoveone .carousel-inner > .active {
+      left: 0;
+    }
+    .carousel-showmanymoveone .carousel-inner .cloneditem-2,
+    .carousel-showmanymoveone .carousel-inner .cloneditem-3 {
+      display: block;
+    }
+  }
+  @media all and (min-width: 950px) and (transform-3d),
+    all and (min-width: 950px) and (-webkit-transform-3d) {
+    .carousel-showmanymoveone .carousel-inner > .item.active.right,
+    .carousel-showmanymoveone .carousel-inner > .item.next {
+      -webkit-transform: translate3d(33.3%, 0, 0);
+      transform: translate3d(33.3%, 0, 0);
+      left: 0;
+    }
+    .carousel-showmanymoveone .carousel-inner > .item.active.left,
+    .carousel-showmanymoveone .carousel-inner > .item.prev {
+      -webkit-transform: translate3d(-33.3%, 0, 0);
+      transform: translate3d(-33.3%, 0, 0);
+      left: 0;
+    }
+    .carousel-showmanymoveone .carousel-inner > .item.left,
+    .carousel-showmanymoveone .carousel-inner > .item.prev.right,
+    .carousel-showmanymoveone .carousel-inner > .item.active {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      left: 0;
+    }
+  }
+
+  .carousel-control:hover,
+  .carousel-control:focus {
+    opacity: 1;
+  }
+
+  .carousel-control,
+  .carousel-control {
+    opacity: 1;
+  }
+
+  @media all and (min-width: 1600px) {
+    .carousel-main-container {
+      width: 100%;
+      margin-left: 16.66666667%;
+    }
+  }
+
+  .glyphicon {
+    color: #ffffff;
+    top: 60px;
+  }
+
+  @media all and (min-width: 768px) {
+    .glyphicon {
+      top: 62px;
+    }
+  }
+
+  @media all and (min-width: 992px) {
+    .glyphicon {
+      top: 65px;
+    }
+  }
+
+  @media all and (max-width: 767px) {
+    .glyphicon-menu-right {
+      margin-left: 20px;
+    }
+
+    .glyphicon-menu-left {
+      right: 28px;
+    }
+  }
+
+  .h1-destaque
+  {
+      font-size: 18px;
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      color: #ff4000;
+
+  }
+
+  .h2-destaque
+  {
       
-      .carousel-showmanymoveone .carousel-control {
-  width: 4%;
-  background-image: none;
-}
-.carousel-control.right {
-  right: 0;
-  left: auto;
-  background-image: -webkit-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,0) 100%);
-  background-image: -o-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,0) 100%);
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      color: #b40404;
 
-  background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(0,0,0,0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
-  background-repeat: repeat-x;
-}
-
-.carousel-control.left {
-  background-image: -webkit-linear-gradient(left,rgba(0,0,0,0) 0,rgba(0,0,0,.0001) 100%);
-  background-image: -o-linear-gradient(left,rgba(0,0,0,0) 0,rgba(0,0,0,.0001) 100%);
-  background-image: linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,.0001) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
-  background-repeat: repeat-x;
-}
-
-.carousel-showmanymoveone .carousel-control.left {
-  margin-left: 15px;
-}
-.carousel-showmanymoveone .carousel-control.right {
-  margin-right: 15px;
-}
-.carousel-showmanymoveone .cloneditem-1,
-.carousel-showmanymoveone .cloneditem-2,
-.carousel-showmanymoveone .cloneditem-3 {
-  display: none;
-}
-@media all and (min-width: 768px) {
-  .carousel-showmanymoveone .carousel-inner > .active.left,
-  .carousel-showmanymoveone .carousel-inner > .prev {
-    left: -50%;
-  }
-  .carousel-showmanymoveone .carousel-inner > .active.right,
-  .carousel-showmanymoveone .carousel-inner > .next {
-    left: 50%;
-  }
-  .carousel-showmanymoveone .carousel-inner > .left,
-  .carousel-showmanymoveone .carousel-inner > .prev.right,
-  .carousel-showmanymoveone .carousel-inner > .active {
-    left: 0;
-  }
-  .carousel-showmanymoveone .carousel-inner .cloneditem-1 {
-    display: block;
-  }
-}
-@media all and (min-width: 768px) and (transform-3d),
-  all and (min-width: 768px) and (-webkit-transform-3d) {
-  .carousel-showmanymoveone .carousel-inner > .item.active.right,
-  .carousel-showmanymoveone .carousel-inner > .item.next {
-    -webkit-transform: translate3d(50%, 0, 0);
-    transform: translate3d(50%, 0, 0);
-    left: 0;
-  }
-  .carousel-showmanymoveone .carousel-inner > .item.active.left,
-  .carousel-showmanymoveone .carousel-inner > .item.prev {
-    -webkit-transform: translate3d(-50%, 0, 0);
-    transform: translate3d(-50%, 0, 0);
-    left: 0;
-  }
-  .carousel-showmanymoveone .carousel-inner > .item.left,
-  .carousel-showmanymoveone .carousel-inner > .item.prev.right,
-  .carousel-showmanymoveone .carousel-inner > .item.active {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    left: 0;
-  }
-}
-@media all and (min-width: 992px) {
-  .carousel-showmanymoveone .carousel-inner > .active.left,
-  .carousel-showmanymoveone .carousel-inner > .prev {
-    left: -33.3%;
-  }
-  .carousel-showmanymoveone .carousel-inner > .active.right,
-  .carousel-showmanymoveone .carousel-inner > .next {
-    left: 33.3%;
-  }
-  .carousel-showmanymoveone .carousel-inner > .left,
-  .carousel-showmanymoveone .carousel-inner > .prev.right,
-  .carousel-showmanymoveone .carousel-inner > .active {
-    left: 0;
-  }
-  .carousel-showmanymoveone .carousel-inner .cloneditem-2,
-  .carousel-showmanymoveone .carousel-inner .cloneditem-3 {
-    display: block;
-  }
-}
-@media all and (min-width: 950px) and (transform-3d),
-  all and (min-width: 950px) and (-webkit-transform-3d) {
-  .carousel-showmanymoveone .carousel-inner > .item.active.right,
-  .carousel-showmanymoveone .carousel-inner > .item.next {
-    -webkit-transform: translate3d(33.3%, 0, 0);
-    transform: translate3d(33.3%, 0, 0);
-    left: 0;
-  }
-  .carousel-showmanymoveone .carousel-inner > .item.active.left,
-  .carousel-showmanymoveone .carousel-inner > .item.prev {
-    -webkit-transform: translate3d(-33.3%, 0, 0);
-    transform: translate3d(-33.3%, 0, 0);
-    left: 0;
-  }
-  .carousel-showmanymoveone .carousel-inner > .item.left,
-  .carousel-showmanymoveone .carousel-inner > .item.prev.right,
-  .carousel-showmanymoveone .carousel-inner > .item.active {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    left: 0;
-  }
-}
-
-.carousel-control:hover,
-.carousel-control:focus {
-  opacity: 1;
-}
-
-.carousel-control,
-.carousel-control {
-  opacity: 1;
-}
-
-@media all and (min-width: 1600px) {
-  .carousel-main-container {
-    width: 100%;
-    margin-left: 16.66666667%;
-  }
-}
-
-.glyphicon {
-  color: #ffffff;
-  top: 60px;
-}
-
-@media all and (min-width: 768px) {
-  .glyphicon {
-    top: 62px;
-  }
-}
-
-@media all and (min-width: 992px) {
-  .glyphicon {
-    top: 65px;
-  }
-}
-
-@media all and (max-width: 767px) {
-  .glyphicon-menu-right {
-    margin-left: 20px;
   }
 
-  .glyphicon-menu-left {
-    right: 28px;
+  .cardi
+  {
+    
+      padding-top: 2px;
+      padding-right: 2px;
+      padding-bottom: 2px;
+      padding-left: 5px;
+
+
   }
-}
-
- .h1-destaque
- {
-    font-size: 18px;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-
- }

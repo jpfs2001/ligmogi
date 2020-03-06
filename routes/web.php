@@ -42,7 +42,7 @@ Route::post('/deletar/enderecos/{dados}', 'AdminController@deletar_enderecos');
 Route::post('/deletar/images/{dados}', 'AdminController@deletar_images');
 Route::post('/duplicar/comercios/{dados}', 'AdminController@duplicar_comercios');
 Route::post('/editarComercios', 'AdminController@editarComercios');
-Route::post('/pesquisar/lista', 'AdminController@pesquisarLista');
+Route::get('/pesquisar/lista', 'AdminController@pesquisarLista');
 });
 
 Route::get('/pesquisar/nome', 'ComercioController@pesquisarNome');

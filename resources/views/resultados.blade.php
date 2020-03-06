@@ -9,9 +9,7 @@ $count = count($dados);
 <br>
 <h2 style="color:#b40404">Exibindo {{$count}} resultados</h3>
 <br>
-<div class="card">
-    
-</div>
+
 
 @foreach($dados as $d)
 
@@ -26,14 +24,16 @@ $count = count($dados);
     <?php 
           $nomee = str_replace(' ', '-', $d->nome);
     ?>
-    <a href="/Detalhes/Destaques/{{$d->id}}/{{$nomee}}"> <img src="{{$d->banner}}" alt="Avatar" style="width:100%"></a>
+    
+    <a href="/Detalhes/Destaques/{{$d->id}}/{{$nomee}}"><h1 class="h1-destaque">Clique na imagem para ver mais</h1></a><a href="/Detalhes/Destaques/{{$d->id}}/{{$nomee}}"> <img src="{{$d->banner}}" alt="Avatar" style="width:100%"></a>
     @endif
-    <div class="container">
-    <a href="/Detalhes/Destaques/{{$d->id}}/{{$nomee}}"><h4><p>{{$d->nome}}</p></h4></a> 
+    <div class="cardi">
+    <a href="/Detalhes/Destaques/{{$d->id}}/{{$nomee}}"><h4>{{$d->nome}}</h4></a> 
         <p>{{$d->rua}}, {{$d->numero}} - {{$d->bairro}}</p>
         <p><i class="{{$d->whats == 1 ? 'fa fa-whatsapp' : 'fa fa-phone'}}" style="color:#25d366;font-size:18px"></i> {{$d->telefone}}</p>
-    </div>
-    </div>
+        </div>
+      </div>
+    
     <br><br>
     </div>
 

@@ -22,14 +22,14 @@ $count2 = 0;
     <div class="col-md-6">
     <h1>INFORMAÇÕES</h1 >
       
-      <h4><p>Nome: {{$dados->nome}}</p>
-      <p>Email: {{$dados->email}}</p>
-      <p>site: {{$dados->site}}</p>
-      <p>resumo: {{$dados->resumo}}</p>
-      <p>Facebook: {{$dados->facebook}}</p>
-      <p>Atividade: {{$dados->atividade}}</p>
-      <p>Departamento: {{$dados->departamento}}</p>
-      <p>Capa: {{$dados->capa == 1 ? 'sim' : 'não'}}</p></h4>
+      <h4><p><strong>Nome:</strong> {{$dados->nome}}</p>
+      <p><strong>Email:</strong> {{$dados->email}}</p>
+      <p><strong>site:</strong> {{$dados->site}}</p>
+      <p><strong>resumo:</strong> {{$dados->resumo}}</p>
+      <p><strong>Facebook:</strong> {{$dados->facebook}}</p>
+      <p><strong>Atividade:</strong> {{$dados->atividade}}</p>
+      <p><strong>Departamento: </strong>{{$dados->departamento}}</p>
+      <p><strong>Capa:</strong> {{$dados->capa}}</p></h4>
 
     </div>
 
@@ -57,7 +57,7 @@ $count2 = 0;
     <tr>
         <td>{{$t->telefone}} <i class="{{$t->whats == 1 ? 'fa fa-whatsapp' : ''}}"></i></a></td>
 
-        <form method="post" action="/editar/telefones/{{$t->id}}">
+        <form method="get" action="/editar/telefones/{{$t->id}}">
         {{csrf_field()}}
         <td><button type="submit" class="btn btn-info"><i class="fa fa-edit"></i></button></td>
         </form>
@@ -89,8 +89,11 @@ $count2 = 0;
     <th>Cidade</th>
     <th>CEP</th>
     <th>Complemento</th>
+    <th>latitude</th>
+    <th>longitude</th>
 		<th>editar</th>
     <th>deletar</th>
+    
 		</tr>
 		</thead>
     </div>
@@ -103,8 +106,10 @@ $count2 = 0;
         <td>{{$e->cidade}}</td>
         <td>{{$e->cep}}</td>
         <td>{{$e->complemento}}</td>
+        <td>{{$e->latitude}}</td>
+        <td>{{$e->longitude}}</td>
         
-        <form method="post" action="/editar/enderecos/{{$e->id}}">
+        <form method="get" action="/editar/enderecos/{{$e->id}}">
         {{csrf_field()}}
         <td><button type="submit" class="btn btn-info"><i class="fa fa-edit"></i></button></td>
         </form>

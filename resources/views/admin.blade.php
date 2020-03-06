@@ -2,13 +2,14 @@
 
 @section('content')
 <center>
-    <strong><font size="6"><p>você é um admin!</p></font></strong>
+    <br>
+    <strong><font size="6"><p>você é um administrador!</p></font></strong>
     <br><br><br>
     
-    <font size="5">
+    <font size="7">
 <ul>
-    <p><a href="/inserir/comercio">Inserir comercio</a>
-    <p><a href="/lista/comercios">Ver comércios</a>
+    <p><a href="/inserir/comercio">Inserir um novo comercio</a>
+    <p><a href="/lista/comercios">Lista de Comercios</a>
 </ul>
 </font>
 </center>

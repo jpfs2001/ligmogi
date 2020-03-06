@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'name' => 'LaravelPWA',
+    "name" => "Ligue Mogi",
     'manifest' => [
-        'name' => env('APP_NAME', 'ligmogi'),
-        'short_name' => 'ligmogi',
+        'name' => env('Ligue Mogi', 'Ligue Mogi'),
+        'short_name' => 'Ligue Mogi',
         'start_url' => '/',
         'background_color' => '#ffffff',
         'theme_color' => '#000000',

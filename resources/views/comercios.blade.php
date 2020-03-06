@@ -93,13 +93,15 @@ $nomee = str_replace(' ', '-', $dados->nome);
 
                 @if(isset($dados->site))
 
-                    <h3><a href="{{$dados->site}}"> {{$dados->site}} </a></h3>
+                    <h3>Site: <a href="{{$dados->site}}" target="_blank"> CLIQUE AQUI PARA ACESSAR </a></h3>
 
                 @endif
 
                 @if(isset($dados->facebook))
-                    <a href="{{$dados->facebook}}" aria-label="Pagina do facebook"><i class="fa fa-facebook facebook"></i></a>
+                    <a href="{{$dados->facebook}}" aria-label="Pagina do facebook" target="_blank"><i class="fa fa-facebook facebook"></i></a>
                 @endif
+
+                    <h2 class="h2-destaque"><strong>{{$dados->departamento}}</strong><h2>
 
             </div>
         </div>  

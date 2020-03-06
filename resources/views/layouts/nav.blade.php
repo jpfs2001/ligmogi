@@ -1,3 +1,21 @@
+<?php
+
+//Detect special conditions devices
+$iPod    = stripos($_SERVER['HTTP_USER_AGENT'],"iPod");
+$iPhone  = stripos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+$Android = stripos($_SERVER['HTTP_USER_AGENT'],"Android");
+
+
+//do something with this information
+if( $iPod || $iPhone ){
+    $isAndroid = 0;
+}else if($Android){
+    $isAndroid = 1;
+}else{
+    $isAndroid = 2;
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -37,18 +55,46 @@
 </head>
 
 <body >
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <div class="">
-                <a class="navbar-brand" href="/"><img src="{{URL::asset('image/logo.jpeg')}}" alt="Ligmogi" title="Ligmogi" class="img-responsive" /></a>
+    <nav class="navbar">
+        <div align="center">
+            <div class="navbar-brand col-lg-12">
+
+            @if($isAndroid == 2)
+                <a class="" href="/"><img src="{{URL::asset('image/logo.jpg')}}" alt="Ligmogi" width="35%"title="Ligmogi" class="img-responsive" /></a>
+
+            @else
+            <a class="" href="/"><img src="{{URL::asset('image/logo.jpg')}}" alt="Ligmogi" title="Ligmogi" class="img-responsive" /></a>
+            @endif
+
+
+                </nav>
+            @if($isAndroid == 1)
+
+            <div class="container" align="justify" style="font-size: 22px;color:#b40404" >
+                <p>Clique em <img src="{{URL::asset('image/more.png')}} " width="10%">, no canto superior a direita, e depois em Adicionar a tela inicial para baixar nosso aplicativo</p>
             </div>
-    
+
+            @elseif($isAndroid == 0)
+            <div class="container" align="justify" style="font-size: 22px;color:#b40404" >
+                <p>Clique em <img src="{{URL::asset('image/iphone1.png')}} " width="15%">, na barra inferior, e depois em <img src="{{URL::asset('image/iphone2.png')}}" width="20%"> para baixar nosso aplicativo</p>
+            </div>
+
+
+
+
+
+            @endif
+    </div>
+
+
+            
+            
             <div class="collapse navbar-collapse menuTopo" id="menu_recolhe">
                 <ul class="nav navbar-nav">
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container -->
-    </nav>
+    
     <div class="container-fluid barraPesquisa">
         <div class="container">
     
@@ -57,28 +103,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wrapperPesquisa">
     
                     <div class="row tiposPesquisa">
-                        <!-- nome -->
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 wrapperTab">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabs tabNome tabAtiva">
-                                
-                                <div class="labelTab">Nome</div>
-                            </div>
-                        </div>
-    
-                        <!-- atividade -->
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 wrapperTab">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabs tabAtividade tabInativa">
-                                
-                                <div class="labelTab"><i class="fa fa-file-text-o" aria-hidden="true"></i> Atividade</div>
-                            </div>
-                        </div>
-    
-                        <!-- telefone -->
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabTelefone tabInativa">
-                                <div class="labelTab"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Notícias (Em construção)</div>
-                            </div>
-                        </div>
+                        
                     </div> <!-- ./tiposPesquisa -->
     
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tiposFormularios">
@@ -103,7 +128,41 @@
                             </div>
                         </div>
     
+    <script>
 
+let deferredPrompt;
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+        // Stash the event so it can be triggered later.
+        deferredPrompt = e;
+        ...
+        });
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
+  // Update UI notify the user they can add to home screen
+  showInstallPromotion();
+}); 
+
+btnAdd.addEventListener('click', (e) => {
+  // hide our user interface that shows our A2HS button
+  btnAdd.style.display = 'none';
+  // Show the prompt
+  deferredPrompt.prompt();
+  // Wait for the user to respond to the prompt
+  deferredPrompt.userChoice
+    .then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the A2HS prompt');
+      } else {
+        console.log('User dismissed the A2HS prompt');
+      }
+      deferredPrompt = null;
+    });
+});
+
+    </script>
     
                     </div> <!-- ./tiposformulario -->
                 </div> <!-- ./wrapper pesquisa -->
@@ -113,6 +172,9 @@
     
     <div class="container" id="resultado">
     @yield('content')
+    
+
+
      
     </div> <!-- ./container -->
     
@@ -130,7 +192,7 @@
         <div class="row ">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margemTopo20" align="center">
                 <footer class="fixarRodape">
-                <p class="rodape">&copy; LigMogi - Todos os direitos reservados<br><a href="">Desenvolvido por Altamir Junior</a></p>
+                <p class="rodape">&copy; LigMogi - Todos os direitos reservados<br><a href="https://github.com/Mysfer">Desenvolvido por João Pedro de Freitas S.</a></p>
             </div>
         </div>
     </div>

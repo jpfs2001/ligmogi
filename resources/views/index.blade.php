@@ -5,7 +5,7 @@
 <meta name="description" content="Liguemogi é o guia comercial ideal para você que procura o contado de algum prestador de serviços na região de Mogi Mirim" />
 <meta name="keywords" content="Ligmogi, Liguemogi, Mogi, Mirim, Guia, Empresas, Lista, Telefonia">
 <meta name="robots" content="index, follow">
-<meta name='googlebot' content='index, follow'>
+<meta name="googlebot" content="index, follow">
 @stop
 
 @section('content')
@@ -30,7 +30,7 @@ $count = 0;
             ?>
                 <div class="col-xs-12 col-sm-4 col-md-4">
                 
-                <a href="/Detalhes/Destaques/{{$d->id}}/{{$nomee}}"><h1 class="h1-destaque">{{$d->nome}}</h1><img src="{{$d->banner}}" class="img-responsive" alt="{{$d->nome}}"></a></div> <?php $count++;?> 
+                <a href="/Detalhes/Destaques/{{$d->id}}/{{$nomee}}"><h1 class="h1-destaque">Clique na imagem para ver mais</h1></a> <a href="/Detalhes/Destaques/{{$d->id}}/{{$nomee}}"><img src="{{$d->banner}}" class="img-responsive" alt="{{$d->nome}}"><h1 class="h1-destaque">{{$d->nome}}</h1></a></div> <?php $count++;?> 
 
             </div>
             @endforeach
@@ -44,7 +44,7 @@ $count = 0;
                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                     
           </a>
-       
+          <br><br><br>
       </div>
     </div>
   </div>

@@ -20,25 +20,33 @@ class AdminController extends Controller
     
 
     //inserir comercio
-    public function inserirComercio(Request $request)
+     public function inserirComercio(Request $request)
     {
         //dd($request);
         $this->validate($request,[
             'nome' => 'required',
             'capa' => 'required',
             'banner' => 'mimes:png,jpg,jpeg|max:2048',
+            'rua' => 'required',
+            'numero' => 'required',
+            'cidade' => 'required',
             'icone' => 'mimes:png,jpg,jpeg'
         ],[
             'nome.required' => 'Insira o nome do comércio',
             'capa.required' => 'Selecione uma opção para capa',
             'banner.mimes' => 'O banner precisa estar no formato png, jpg ou jpeg',
+            'rua.required' => 'Insira a rua do comércio',
+            'bairro.required' => 'Insira o bairro do comércio',
+            'numero.required' => 'Insira o numero do comércio',
+            'cidade.required' => 'Insira a cidade do comércio',
             'icone.mimes' => 'A icone precisa estar no formato png, jpg ou jpeg',
             'banner.max' => 'Imagem pesada'
         ]);
 
+
         $comercio = new Comercio();
         $telefone = new Telefone();
-        // 
+         
 
         $comercio->nome = $request->nome;
         $comercio->email = $request->email;
@@ -61,7 +69,7 @@ class AdminController extends Controller
         }
 
         //horarios
-        if($request->semana = 1)
+        if($request->semana == 1)
         {
             $comercio->seg = $request->seg1 . ' - ' . $request->seg2;
             $comercio->ter = $request->seg1 . ' - ' . $request->seg2;
@@ -123,10 +131,27 @@ class AdminController extends Controller
 
         $telefone->save();
 
+        $endereco = new Endereco(); 
+
+        $endereco->comercios_id = $comercio->id;
+        $endereco->rua = $request->rua;
+        $endereco->bairro = $request->bairro;
+        $endereco->numero = $request->numero;
+        $endereco->cidade = $request->cidade;
+        $endereco->cep = $request->cep;
+        $endereco->complemento = $request->complemento;
+        $endereco->latitude = $request->latitude;
+        $endereco->longitude = $request->longitude;
+        
+
+        $endereco->save();
+
+
+
+
         return redirect('/inserir/comercio');
 
     }
-
     //editar comercios
 
     public function editarComercios(Request $request)
@@ -170,7 +195,7 @@ class AdminController extends Controller
 
         //horarios
         
-        if($request->semana = 1 && isset($request->seg1))
+        if($request->semana == 1 && isset($request->seg1))
         {
             $comercio->seg = $request->seg1 . ' - ' . $request->seg2;
             $comercio->ter = $request->seg1 . ' - ' . $request->seg2;
@@ -307,7 +332,8 @@ class AdminController extends Controller
         $endereco->cidade = $request->cidade;
         $endereco->cep = $request->cep;
         $endereco->complemento = $request->complemento;
-
+        $endereco->latitude = $request->latitude;
+        $endereco->longitude = $request->longitude;
         
 
         $endereco->save();
@@ -339,6 +365,8 @@ class AdminController extends Controller
         $endereco->cidade = $request->cidade;
         $endereco->cep = $request->cep;
         $endereco->complemento = $request->complemento;
+        $endereco->latitude = $request->latitude;
+        $endereco->longitude = $request->longitude;
 
 
         
