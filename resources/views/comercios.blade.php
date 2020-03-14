@@ -81,8 +81,20 @@ $nomee = str_replace(' ', '-', $dados->nome);
 
             @foreach($telefones as $t)
 
-                <h3><i class="{{$t->whats == 1 ? 'fa fa-whatsapp' : 'fa fa-phone'}}"  style="color:#25d366"></i> {{$t->telefone}}</h3>
+            <?php  
+            
+            $tel = str_replace('(','', $t->telefone);
+            $tel = str_replace(')','', $tel);
+            $tel = str_replace('-','', $tel);
+            $tel = str_replace(' ','', $tel);
+            
+            ?>
+
+                <h3><a href="{{$t->whats == 1 ? 'https://wa.me/55' : 'tel:'}}{{$tel}}" target="_blank"><i class="{{$t->whats == 1 ? 'fa fa-whatsapp' : 'fa fa-phone'}}"  style="color:#25d366"></i> {{$t->telefone}}</a></h3>
                 
+
+                
+
             @endforeach
 
                 @if(isset($dados->email))

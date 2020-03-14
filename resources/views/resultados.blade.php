@@ -30,7 +30,16 @@ $count = count($dados);
     <div class="cardi">
     <a href="/Detalhes/Destaques/{{$d->id}}/{{$nomee}}"><h4>{{$d->nome}}</h4></a> 
         <p>{{$d->rua}}, {{$d->numero}} - {{$d->bairro}}</p>
-        <p><i class="{{$d->whats == 1 ? 'fa fa-whatsapp' : 'fa fa-phone'}}" style="color:#25d366;font-size:18px"></i> {{$d->telefone}}</p>
+
+        <?php  
+            
+            $tel = str_replace('(','', $d->telefone);
+            $tel = str_replace(')','', $tel);
+            $tel = str_replace('-','', $tel);
+            $tel = str_replace(' ','', $tel);
+            
+            ?>
+        <p><a href="{{$d->whats == 1 ? 'https://wa.me/55' : 'tel:'}}{{$tel}}" target="_blank"><i class="{{$d->whats == 1 ? 'fa fa-whatsapp' : 'fa fa-phone'}}" style="color:#25d366;font-size:18px"></i> {{$d->telefone}}</a></p>
         </div>
       </div>
     
